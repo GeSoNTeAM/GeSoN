@@ -661,7 +661,7 @@ end
 function ReplyStatus(msg,user_id,status,text)
 tdcli_function ({ID = "GetUser",user_id_ = user_id},function(arg,dp) 
 if dp.first_name_ ~= false then
-local UserName = (dp.username_ or "GeSoN")
+local UserName = (dp.username_ or "YV9YV")
 for gmatch in string.gmatch(dp.first_name_, "[^%s]+") do
 dp.first_name_ = gmatch
 end
@@ -1742,7 +1742,7 @@ end end
 if text == '/start' and ChCheck(msg) then  
 if not DevAbs:get(GeSoN..'Abs:Start:Time'..msg.sender_user_id_) then
 tdcli_function({ID="GetUser",user_id_=DevId},function(arg,dp) 
-local inline = {{{text="⌁ المطور .",url="t.me/"..(dp.username_ or "GeSoN")}}}
+local inline = {{{text="⌁ المطور .",url="t.me/"..(dp.username_ or "YV9YV")}}}
 local start = DevAbs:get(GeSoN.."Abs:Start:Bot")
 if start then 
 Start_Source = start
@@ -1758,7 +1758,7 @@ end
 --     Source GeSoN     --
 if not SecondSudo(msg) and not DevAbs:sismember(GeSoN..'Abs:Ban:Pv',msg.sender_user_id_) and not DevAbs:get(GeSoN..'Abs:Texting:Pv') then
 tdcli_function({ID="GetUser",user_id_=DevId},function(arg,chat) 
-Dev_Abs(msg.sender_user_id_, msg.id_, 1, '⌁︙تم ارسال رسالتك الى [المطور](t.me/'..(chat.username_ or "GeSoN")..')', 1, 'md') 
+Dev_Abs(msg.sender_user_id_, msg.id_, 1, '⌁︙تم ارسال رسالتك الى [المطور](t.me/'..(chat.username_ or "YV9YV")..')', 1, 'md') 
 tdcli_function({ID="ForwardMessages",chat_id_=DevId,from_chat_id_= msg.sender_user_id_,message_ids_={[0]=msg.id_},disable_notification_=1,from_background_=1},function(arg,data) 
 tdcli_function({ID="GetUser",user_id_=msg.sender_user_id_},function(arg,dp) 
 if data and data.messages_ and data.messages_[0] ~= false and data.ID ~= "Error" then
@@ -6367,7 +6367,7 @@ if dp.first_name_ == false then
 Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙حساب المنشئ محذوف", 1, "md")
 return false  
 end
-local UserName = (dp.username_ or "GeSoN")
+local UserName = (dp.username_ or "YV9YV")
 Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙مالك المجموعه ↫ ["..dp.first_name_.."](T.me/"..UserName..")", 1, "md")  
 end,nil)   
 end
@@ -6583,7 +6583,7 @@ if dp.first_name_ == false then
 Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙حساب المنشئ محذوف", 1, "md")
 return false  
 end
-local UserName = (dp.username_ or "GeSoN")
+local UserName = (dp.username_ or "YV9YV")
 Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙تم رفع مالك المجموعه ↫ ["..dp.first_name_.."](T.me/"..UserName..")", 1, "md") 
 DevAbs:sadd(GeSoN.."Abs:AbsConstructor:"..msg.chat_id_,dp.id_)
 end,nil)   
@@ -8833,7 +8833,7 @@ if Audios.Info == true then
 local Text ='⌁︙تم اختيار المقطع الصوتي لك'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⌁ GeSoN TeAM .',url="t.me/GeSoN"}},
+{{text = '⌁ GeSoN TeAM .',url="t.me/YV9YV"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id='..msg.chat_id_..'&voice='..URL.escape(Audios.info)..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -9124,7 +9124,7 @@ if data.members_[i].status_.ID == "ChatMemberStatusCreator" then
 Manager_id = admins[i].user_id_
 tdcli_function ({ID = "GetUser",user_id_ = Manager_id},function(arg,Abs) 
 if Abs.first_name_ ~= false then
-ConstructorAbs = "["..Abs.first_name_.."](T.me/"..(Abs.username_ or "GeSoN")..")"
+ConstructorAbs = "["..Abs.first_name_.."](T.me/"..(Abs.username_ or "YV9YV")..")"
 else 
 ConstructorAbs = "حساب محذوف"
 end
