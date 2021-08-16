@@ -3607,7 +3607,7 @@ return false
 end
 if text == 'اسم البوت' or text == 'البوت شنو اسمه' or text == 'شسمه البوت' or text == 'البوت شسمه' then
 NameBot = (DevAbs:get(GeSoN..'Abs:NameBot') or 'جيسون') 
-local rnnni = {"اسمي القميل "..NameBot.." "} 
+local rnnni = {"اسمي "..NameBot.." "} 
 DevAbs2 = math.random(#rnnni) 
 Dev_Abs(msg.chat_id_, msg.id_, 1, rnnni[DevAbs2] , 1, 'html') 
 return false
