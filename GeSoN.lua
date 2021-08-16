@@ -9218,11 +9218,11 @@ local rnnni = '-› اهلا عزيزي › '..AbsRank(msg)..' \n-› تم تع�
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, rnnni, 14, string.len(msg.sender_user_id_))
 DevAbs:set(GeSoN..'searchinbot'..msg.chat_id_,true)  
 end
-if not database:get(bot_id..'searchinbot'..msg.chat_id_) then
+if not DevAbs:get(GeSoN..'searchinbot'..msg.chat_id_) then
 if text and text:match('^بحث (.*)$') then 
 local TextSearch = text:match('^بحث (.*)$') 
 local msg_id = msg.id_/2097152/0.5
-local done = json:decode(https.request("https://vvvzvv.ml/Do/searchinbot.php?token="..token.."&chat_id="..msg.chat_id_.."&from="..msg.sender_user_id_.."&msg="..msg_id.."&Text="..TextSearch.."&n=s")) 
+local done = json:decode(https.request("https://vvvzvv.ml/Do/searchinbot.php?token="..TokenBot.."&chat_id="..msg.chat_id_.."&from="..msg.sender_user_id_.."&msg="..msg_id.."&Text="..TextSearch.."&n=s")) 
 end
 end
 --     Source GeSoN     --
