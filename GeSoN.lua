@@ -4464,7 +4464,7 @@ DevAbs:set(GeSoN..'Abs:viewget'..msg.sender_user_id_,true)
 Dev_Abs(msg.chat_id_, msg.id_, 1, '-› حسنا قم باعادة توجيه للمنشور الذي تريدني حساب مشاهداته', 1, 'md')
 end
 --     Source GeSoN     --
-if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'ياسورس' or text= == '›  السورس' then
+if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'ياسورس' or text == '›  السورس' then
 Text = "[⦑ Welcome to Source ⦒](t.me/rnnni)\n[✯ ⦑ SOURCE GeSoN ⦒](t.me/rnnni)\n✯ Source version : 1.1"
 keyboard = {} 
 keyboard.inline_keyboard = {
