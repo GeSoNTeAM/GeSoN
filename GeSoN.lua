@@ -11,6 +11,7 @@ json    = dofile("./libs/JSON.lua")
 URL     = dofile("./libs/url.lua")
 http    = require("socket.http") 
 HTTPS   = require("ssl.https") 
+http    = require("socket.http")
 https   = require("ssl.https") 
 User    = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '')
 Server  = io.popen("echo $SSH_CLIENT | awk '{ print $1}'"):read('*a') 
@@ -4467,11 +4468,11 @@ if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or te
 Text = "[⦑ Welcome to Source ⦒](t.me/rnnni)\n[✯ ⦑ SOURCE GeSoN ⦒](t.me/rnnni)\n✯ Source version : 1.1"
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𝒄𝒉𝒂𝒏𝒏𝒆𝒍 𝒔𝒐𝒖𝒓𝒄𝒆',url="t.me/rnnni"},
-{text = '𝒖𝒑𝒅𝒂𝒕𝒆 𝒔𝒐𝒖𝒓𝒄𝒆',url="t.me/SourceGeSoN"}},
-{{text = '𝒊𝒏𝒔𝒕𝒂𝒍𝒍 𝒔𝒐𝒖𝒓𝒄𝒆',url="https://t.me/SourceGeSoN"},
-{text = '𝒔𝒐𝒖𝒓𝒄𝒆 𝒈𝒓𝒐𝒖𝒑',url="https://t.me/joinchat/i3u45a0k5JViNzQ0"}},
-{{text = '𝒅𝒆𝒗𝒆𝒍𝒐𝒑𝒆𝒓',url="t.me/GGI55"}},
+{{text = 'Channel Source',url="t.me/rnnni"},
+{text = 'Update Source',url="t.me/SourceGeSoN"}},
+{{text = 'Install Source',url="https://t.me/SourceGeSoN"},
+{text = 'Source Group',url="https://t.me/joinchat/i3u45a0k5JViNzQ0"}},
+{{text = 'developer',url="t.me/GGI55"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/rnnni&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -10874,7 +10875,7 @@ os.execute('wget https://raw.githubusercontent.com/GeSoNTeaM/GeSoN/main/GeSoN.lu
 dofile('GeSoN.lua') 
 io.popen("rm -rf ../.telegram-cli/*")
 print("\27[31;47m\n          ( تم تحديث السورس )          \n\27[0;34;49m\n") 
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› تم التحديث الى الاصدار 2.0', 1, 'md') 
+Dev_Abs(msg.chat_id_, msg.id_, 1, '-› تم التحديث الى الاصدار 1.1', 1, 'md') 
 end
 if text == 'تحديث' and ChCheck(msg) or text == 'تحديث البوت' and ChCheck(msg) or text == '› تحديث' and ChCheck(msg) then  
 dofile('GeSoN.lua') 
