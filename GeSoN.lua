@@ -8757,7 +8757,7 @@ end
 end
 --     Source GeSoN     --
 if text and text:match("^قول(.*)$") and ChCheck(msg) then
-local txt = {string.match(text, "^(كول) (.*)$")}
+local txt = {string.match(text, "^(قول) (.*)$")}
 Dev_Abs(msg.chat_id_,0, 1, txt[2], 1, 'md')
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 end
@@ -10407,42 +10407,40 @@ return false
 end
 end 
 if text == "وضع شعار" or text == "ضع شعار" then 
-    redis:set("tt:add1"..bot_id..msg.chat_id_..msg.sender_user_id_,"GeSoN")
-    faederdx(msg.chat_id_, msg.id_, 1, "⇽ ارسل لي الشعار الان", 1, 'md')
-    return "GeSoN"
-    end
-    if redis:get("tt:add1"..bot_id..msg.chat_id_..msg.sender_user_id_) then 
-    SourceGeSoN(msg.chat_id_, msg.id_, 1, "⇽ تم تعيين : { "..text.." }", 1, 'md')
-    redis:del("tt:add1"..bot_id..msg.chat_id_..msg.sender_user_id_)
-    redis:set("tohd1"..bot_id..msg.chat_id_,text)
-    end 
-    if text == "تفعيل الشعار" then 
-    SourceGeSoN(msg.chat_id_, msg.id_, 1, "⇽ تم تفعيل الشعار", 1, 'md')
-    redis:set("tohd1_Dx"..bot_id..msg.chat_id_,"Dx")
-    end
-    if text == "تعطيل الشعار" then 
-    SourceGeSoN(msg.chat_id_, msg.id_, 1, "⇽ تم تعطيل الشعار", 1, 'md')
-    redis:del("tohd1_Dx"..bot_id..msg.chat_id_)
-    end
+redis:set("tt:add1"..bot_id..msg.chat_id_..msg.sender_user_id_,"GeSoN")
+SourceGeSoN(msg.chat_id_, msg.id_, 1, "⇽ ارسل لي الشعار الان", 1, 'md')
+return "GeSoN"
+end
+if redis:get("tt:add1"..bot_id..msg.chat_id_..msg.sender_user_id_) then 
+SourceGeSoN(msg.chat_id_, msg.id_, 1, "⇽ تم تعيين : { "..text.." }", 1, '
+redis:del("tt:add1"..bot_id..msg.chat_id_..redis:set("tohd1"..bot_id..msg.chat_id_,text)
+end 
+if text == "تفعيل الشعار" then 
+SourceGeSoN(msg.chat_id_, msg.id_, 1, "⇽ تم تفعيل الشعار", 1, '
+redis:set("tohd1_Dx"..bot_id..msg.chat_id_,"Dx")
+end
+if text == "تعطيل الشعار" then 
+SourceGeSoN(msg.chat_id_, msg.id_, 1, "⇽ تم تعطيل الشعار", 1, 'md')
+redis:del("tohd1_Dx"..bot_id..msg.chat_id_)
+end
     
-    if not msg.forward_info_  then
-    if redis:get("tohd1_Dx"..bot_id..msg.chat_id_) and redis:get("tohd1"..bot_id..msg.chat_id_) then 
-    id = msg.sender_user_id_
-    function Faeder_FaederDx(FaederDx1,FaederDx2)
-    if FaederDx2 and FaederDx2.first_name_ then 
-    if FaederDx2.first_name_:match("(.*)"..redis:get("tohd1"..bot_id..msg.chat_id_).."(.*)") then 
-    redis:srem('SourceGeSoN:'..bot_id..'muted:'..msg.chat_id_, msg.sender_user_id_)
-    else
-    local SourceGeSoN_F = redis:get("tohd"..bot_id..msg.chat_id_) or 5
-    local SourceGeSoN_F2 = redis:get("tohd22"..bot_id..msg.chat_id_..msg.sender_user_id_) or 0
-    if (tonumber(SourceGeSoN_F2) == tonumber(FaederDx_F) or tonumber(SourceGeSoN_F2) > tonumber(SourceGeSoN_F)) then 
-    redis:sadd(GeSoN..'bot:muted:'..msg.chat_id_, msg.sender_user_id_)
-    else
-    redis:incrby("tohd22"..bot_id..msg.chat_id_..msg.sender_user_id_,1)
-    SourceGeSoN(msg.chat_id_, msg.id_, 1, "⇽ يالطيب  ["..SourceGeSoN2.first_name_.."](https://t.me/"..(SourceGeSoN2.username_ or "GeSoN_ch")..")\n⇽ لازم تحط شعار الحزب  { "..redis:get("tohd1"..bot_id..msg.chat_id_).." } جنب اسمك\n⇽ اذا ماحطيته بكتمك\n\n⇽ عدد المحاولات المتبقيه {"..(tonumber(SourceGeSoN_F) - tonumber(SourceGeSoN_F2)).."}", 1, 'md')
-    end end end end
-    getUser(id, GeSoN_ https://t.me/SourceGeSoN)
-    end
+if not msg.forward_info_  then
+if redis:get("tohd1_Dx"..bot_id..msg.chat_id_) and redis:get("tohd1"..bot_id..msg.chat_id_) then 
+id = msg.sender_user_id_
+function GeSoN_SourceGeSoN(SourceGeSoN1,SourceGeSoN2)
+if SourceGeSoN2 and SourceGeSoN2.first_name_ then 
+if SourceGeSoN2.first_name_:match("(.*)"..redis:get("tohd1"..bot_id..msg.chat_id_).."(.*)") then 
+redis:srem('SourceGeSoN:'..bot_id..'muted:'..msg.chat_id_, msg.sender_user_id_)
+else
+local SourceGeSoN_F = redis:get("tohd"..bot_id..msg.chat_id_) or 5
+local SourceGeSoN_F2 = redis:get("tohd22"..bot_id..msg.chat_id_..msg.sender_user_id_) or 0
+if (tonumber(SourceGeSoN_F2) == tonumber(SourceGeSoN_F) or tonumber(SourceGeSoN_F2) > tonumber(SourceGeSoN_F)) then 
+redis:sadd(GeSoN..'bot:muted:'..msg.chat_id_, msg.sender_user_id_)
+else
+redis:incrby("tohd22"..bot_id..msg.chat_id_..msg.sender_user_id_,1)
+SourceGeSoN(msg.chat_id_, msg.id_, 1, "⇽ يالطيب  ["..SourceGeSoN2.first_name_.."](https://t.me/"..(SourceGeSoN2.username_ or "GeSoN_ch")..")\n⇽ لازم تحط شعار الحزب  { "..redis:get("tohd1"..bot_id..msg.chat_id_).." } جنب اسمك\n⇽ اذا ماحطيته بكتمك\n\n⇽ عدد المحاولات المتبقيه {"..(tonumber(SourceGeSoN_F) - tonumber(SourceGeSoN_F2)).."}", 1, 'md')
+end end end end
+getUser(id, GeSoN_ https://t.me/SourceGeSoN)
 end
 
 $uo=json_decode(file_get_contents("https://api.telegram.org/bot$api/getchat?chat_id=$fromid"))->result;
