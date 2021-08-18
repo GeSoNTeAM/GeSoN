@@ -10408,7 +10408,7 @@ end
 end 
 if text == "وضع شعار" or text == "ضع شعار" then 
 redis:set("tt:add1"..bot_id..msg.chat_id_..msg.sender_user_id_,"GeSoN")
-SourceGeSoN(msg.chat_id_, msg.id_, 1, "⇽ ارسل لي الشعار الان", 1, 'md')
+GeSoN(msg.chat_id_, msg.id_, 1, "⇽ ارسل لي الشعار الان", 1, 'md')
 return "GeSoN"
 end
 if redis:get("tt:add1"..bot_id..msg.chat_id_..msg.sender_user_id_) then 
@@ -10416,11 +10416,11 @@ SourceGeSoN(msg.chat_id_, msg.id_, 1, "⇽ تم تعيين : { "..text.." }", 1,
 redis:del("tt:add1"..bot_id..msg.chat_id_..redis:set("tohd1"..bot_id..msg.chat_id_,text)
 end 
 if text == "تفعيل الشعار" then 
-SourceGeSoN(msg.chat_id_, msg.id_, 1, "⇽ تم تفعيل الشعار", 1, '
+GeSoN(msg.chat_id_, msg.id_, 1, "⇽ تم تفعيل الشعار", 1, '
 redis:set("tohd1_Dx"..bot_id..msg.chat_id_,"Dx")
 end
 if text == "تعطيل الشعار" then 
-SourceGeSoN(msg.chat_id_, msg.id_, 1, "⇽ تم تعطيل الشعار", 1, 'md')
+GeSoN(msg.chat_id_, msg.id_, 1, "⇽ تم تعطيل الشعار", 1, 'md')
 redis:del("tohd1_Dx"..bot_id..msg.chat_id_)
 end
     
