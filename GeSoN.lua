@@ -1006,8 +1006,8 @@ local Text = [[
 -› م2 › اوامر الادمنيه
 -› م3 › اوامر المدراء
 -› م4 › اوامر المنشئين
--› م5 › اوامر المطورين
--› م6 › اوامر Dev
+-› م5 › اوامر Dev
+-› م6 › اوامر الاعضاء
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› [Source Channel](https://t.me/rnnni)
 ]] 
@@ -1290,7 +1290,7 @@ local Text = [[
 -› رفع • تنزيل › مميز عام
 -› حذف • المميزين عام 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
--› اوامر المطور الاساسي › ⤈
+-› اوامر Dev الاساسي › ⤈
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› تحديث
 -› الملفات
@@ -1705,7 +1705,7 @@ end
 if ChatType == 'pv' then 
 if text == '/start' or text == '› رجوع' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '-› مرحبا عزيزي المطور \n-› انت المطور الاساسي هنا \n-› اليك ازرار سورس جيسون \n-› تستطيع التحكم بكل الاوامر فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '-› مرحبا عزيزي Dev \n-› انت Dev الاساسي هنا \n-› اليك ازرار سورس جيسون \n-› تستطيع التحكم بكل الاوامر فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'› السورس','وضع اسم البوت'},
 {'›  المطورين','› الاحصائيات'},
@@ -1719,7 +1719,7 @@ return false
 end end
 if text == '› تعيين كلايش الاوامر' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '-› اهلا بك مجددا عزيزي المطور \n-› اليك الازرار الخاصه بتعديل وتغيير كلايش سورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev \n-› اليك الازرار الخاصه بتعديل وتغيير كلايش سورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'تغير معلومات الترحيب'},
 {'حذف كليشة الايدي','تعيين كليشة الايدي'},
@@ -1734,7 +1734,7 @@ return false
 end end
 if text == '› السورس' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '-› اهلا بك مجددا عزيزي المطور \n-› اليك الازرار الخاصه بتحديث  سورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev \n-› اليك الازرار الخاصه بتحديث  سورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'› تحديث السورس','› تحديث'},
 {'› السيرفر'},
@@ -1747,7 +1747,7 @@ return false
 end end
 if text == '› الاحصائيات' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '-› اهلا بك مجددا عزيزي المطور \n-› اليك الازرار الخاصه ب أحصائيات  سورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev \n-› اليك الازرار الخاصه ب أحصائيات  سورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'›  الاحصائيات'},
 {'› المشتركين','› المجموعات'},
@@ -1761,7 +1761,7 @@ return false
 end end
 if text == '›  المطورين' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '-› اهلا بك مجددا عزيزي المطور \n-› اليك الازرار الخاصه ب المطورين لسورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev \n-› اليك الازرار الخاصه ب المطورين لسورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'› الاساسيين','مسح الاساسيين'},
 {'› الثانويين','مسح الثانويين'},
@@ -1774,7 +1774,7 @@ return false
 end end
 if text == '› التفعيل والتعطيل' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '-› اهلا بك مجددا عزيزي المطور \n-› اليك الازرار الخاصه ب التفعيل والتعطيل لسورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev \n-› اليك الازرار الخاصه ب التفعيل والتعطيل لسورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'› تعطيل التواصل','› تفعيل التواصل'},
 {'› تعطيل ترحيب البوت','› تفعيل ترحيب البوت'},
@@ -1788,7 +1788,7 @@ return false
 end end
 if text == '› الاذاعه' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '-› اهلا بك مجددا عزيزي المطور \n-› اليك الازرار الخاصه بالاذاعه لسورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev \n-› اليك الازرار الخاصه بالاذاعه لسورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'› اذاعه بالتثبيت'},
 {'› اذاعه خاص','› اذاعه عام'},
@@ -1801,7 +1801,7 @@ return false
 end end
 if text == '› العام' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '-› اهلا بك مجددا عزيزي المطور \n-› اليك الازرار الخاصه بالعام لسورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev \n-› اليك الازرار الخاصه بالعام لسورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'› اضف رد عام','› حذف رد عام'},
 {'› ردود العام','› مسح ردود العام'},
@@ -1813,7 +1813,7 @@ return false
 end end
 if text == '› ردود الخاص' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '-› اهلا بك مجددا عزيزي المطور \n-› اليك الازرار الخاصه بردود الخاص لسورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev \n-› اليك الازرار الخاصه بردود الخاص لسورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'› تعيين رد الخاص','› حذف رد الخاص'},
 {'› جلب رد الخاص'},
@@ -1824,7 +1824,7 @@ return false
 end end
 if text == '› الاشتراك الاجباري' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '-› اهلا بك مجددا عزيزي المطور \n-› اليك الازرار الخاصه بالاشتراك الاجباري لسورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev \n-› اليك الازرار الخاصه بالاشتراك الاجباري لسورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'›  تفعيل الاشتراك الاجباري','›  تعطيل الاشتراك الاجباري'},
 {'› تعيين قناة الاشتراك',' › حذف قناة الاشتراك'},
@@ -1837,7 +1837,7 @@ return false
 end end
 if text == '› المتجر' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '-› اهلا بك مجددا عزيزي المطور \n-› اليك الازرار الخاصه بمتجر سورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev \n-› اليك الازرار الخاصه بمتجر سورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'›  المتجر'},
 {'تفعيل ملف AddedMe.lua','تعطيل ملف AddedMe.lua'},
@@ -2345,7 +2345,7 @@ end,nil)
 end,nil)
 end,nil)
 else
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› لا تستطيع تفعيل هذه المجموعه بسبب تعطيل البوت الخدمي من قبل المطور الاساسي', 1, 'md') 
+Dev_Abs(msg.chat_id_, msg.id_, 1, '-› لا تستطيع تفعيل هذه المجموعه بسبب تعطيل البوت الخدمي من قبل Dev الاساسي', 1, 'md') 
 end 
 end 
 --     Source GeSoN     --
@@ -3600,7 +3600,7 @@ end
 if ChatType == 'sp' or ChatType == 'gp' or ChatType == 'pv' then
 if text == 'بوت' or text == 'بوتت' then 
 NameBot = (DevAbs:get(GeSoN..'Abs:NameBot') or 'جيسون')
-local rnnni = {' قولحبيبي ؟ اني '..NameBot..' ',' شتبي يا ورع  '..NameBot..' ',' اسمي القميل '..NameBot..' '}
+local rnnni = {' قولحبيبي ؟ اني '..NameBot..' ',' شتبي يا ورع  '..NameBot..' ',' اسمي الملك '..NameBot..' '}
 DevAbs2 = math.random(#rnnni) 
 Dev_Abs(msg.chat_id_, msg.id_, 1, rnnni[DevAbs2] , 1, 'html') 
 return false
@@ -6964,7 +6964,7 @@ else
 Tked = '' 
 end
 if DevAbs:sismember(GeSoN..'Abs:SudoBot:',res.id_) and SudoBot(msg) then
-sudobot = '\n-› عدد القروب ات › '..(DevAbs:get(GeSoN..'Abs:Sudos'..res.id_) or 0)..'' 
+sudobot = '\n-› عدد القروبات › '..(DevAbs:get(GeSoN..'Abs:Sudos'..res.id_) or 0)..'' 
 else 
 sudobot = '' 
 end
@@ -7010,7 +7010,7 @@ else
 Tked = '' 
 end
 if DevAbs:sismember(GeSoN..'Abs:SudoBot:',iduser) and SudoBot(msg) then
-sudobot = '\n-› عدد القروب ات › '..(DevAbs:get(GeSoN..'Abs:Sudos'..iduser) or 0)..'' 
+sudobot = '\n-› عدد القروبات › '..(DevAbs:get(GeSoN..'Abs:Sudos'..iduser) or 0)..'' 
 else 
 sudobot = '' 
 end
@@ -9232,7 +9232,33 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..P..'&caption=' .. URL.escape(ttx).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
-
+vardump(data)
+if Text and Text:match('@id/(.*)') then
+local Id_Link = Text:match('@id/(.*)') 
+tdcli_function ({ID = "GetUser",user_id_ = bot_id,},function(arg,data) 
+DeleteMessage(Chat_id,{[0] = Msg_id})  
+local textt = '  .'
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'Mahmoud', url="t.me/mahmoudm2"},
+},
+}
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id='..Chat_id..'&photo='..'https://youtu.be/'..Id_Link..'&reply_to_message_id=0&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end,nil)
+elseif Text and Text:match('mp3/(.*)') then
+local Id_Link = Text:match('mp3/(.*)') 
+DeleteMessage(Chat_id,{[0] = Msg_id})    
+http.request('http://78.141.220.60/Pascar.php?url='..Id_Link..'&token='..token..'&chat='..data.chat_id_..'&type=mp3&msg=0')
+elseif Text and Text:match('ogg/(.*)') then
+local Id_Link = Text:match('ogg/(.*)') 
+DeleteMessage(Chat_id,{[0] = Msg_id})    
+http.request('http://78.141.220.60/Pascar.php?url='..Id_Link..'&token='..token..'&chat='..data.chat_id_..'&type=ogg&msg=0')
+elseif Text and Text:match('mp4/(.*)') then
+local Id_Link = Text:match('mp4/(.*)') 
+DeleteMessage(Chat_id,{[0] = Msg_id})    
+http.request('http://78.141.220.60/Pascar.php?url='..Id_Link..'&token='..token..'&chat='..data.chat_id_..'&type=mp4&msg=0')
+end
 --     Source GeSoN     --
 if text == "تفعيل انمي" and Manager(msg) and ChCheck(msg) or text == "تفعيل الانمي" and Manager(msg) and ChCheck(msg) then
 local rnnni = '-› اهلا عزيزي › '..AbsRank(msg)..' \n-› تم تفعيل الانمي'
