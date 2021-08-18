@@ -1006,7 +1006,7 @@ local Text = [[
 -› م2 › اوامر الادمنيه
 -› م3 › اوامر المدراء
 -› م4 › اوامر المنشئين
--› م5 › اوامر المطورين
+-› م5 › اوامر Dev
 -› م6 › اوامر الاعضاء
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› [Source Channel](https://t.me/rnnni)
@@ -1270,9 +1270,9 @@ return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackq
 end
 local Help = DevAbs:get(GeSoN..'Abs:Help5')
 local Text = [[
--› اوامر المطورين › ⤈
+-› اوامر Dev › ⤈
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
--› القروب ات
+-› القروبات
 -› المطورين
 -› المشتركين
 -› الاحصائيات
@@ -1296,9 +1296,9 @@ local Text = [[
 -› الملفات
 -› المتجر
 -› السيرفر
--› روابط القروب ات
+-› روابط القروبات
 -› تحديث السورس
--› تنظيف القروب ات
+-› تنظيف القروبات
 -› تنظيف المشتركين
 -› حذف جميع الملفات
 -› تعيين الايدي العام
@@ -3600,7 +3600,7 @@ end
 if ChatType == 'sp' or ChatType == 'gp' or ChatType == 'pv' then
 if text == 'بوت' or text == 'بوتت' then 
 NameBot = (DevAbs:get(GeSoN..'Abs:NameBot') or 'جيسون')
-local rnnni = {' قولحبيبي ؟ اني '..NameBot..' ',' شتبي يا ورع  '..NameBot..' ',' اسمي القميل '..NameBot..' '}
+local rnnni = {' قولحبيبي ؟ اني '..NameBot..' ',' شتبي يا ورع  '..NameBot..' ',' اسمي الملك '..NameBot..' '}
 DevAbs2 = math.random(#rnnni) 
 Dev_Abs(msg.chat_id_, msg.id_, 1, rnnni[DevAbs2] , 1, 'html') 
 return false
@@ -5660,7 +5660,7 @@ send(msg.chat_id_, msg.id_,'-› لقبك › '..GetCustomTitle(msg.sender_user_
 end
 end
 if text == "راسلني" and ChCheck(msg) then
-rnnni = {"ها هلاو","انطق","كول","تفضل","احبك","عمري","لاف"};
+rnnni = {"ها هلاو","انطق","قول","تفضل","احبك","عمري","لاف"};
 send(msg.sender_user_id_, 0,rnnni[math.random(#rnnni)])
 end
 --     Source GeSoN     --
@@ -9208,21 +9208,29 @@ end
 end
 end
 --     Source GeSoN     --
-if text == "تفعيل اليوتيوب" and Manager(msg) and ChCheck(msg) or text == "تفعيل يوتيوب" and Manager(msg) and ChCheck(msg) then
-local rnnni = '-› اهلا عزيزي › '..AbsRank(msg)..' \n-› تم تفعيل اليوتيوب'
-Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, rnnni, 14, string.len(msg.sender_user_id_))
-DevAbs:del(GeSoN..'searchinbot'..msg.chat_id_) 
-end
-if text == "تعطيل اليوتيوب" and Manager(msg) and ChCheck(msg) or text == "تعطيل يوتيوب" and Manager(msg) and ChCheck(msg) then
-local rnnni = '-› اهلا عزيزي › '..AbsRank(msg)..' \n-› تم تعطيل اليوتيوب'
-Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, rnnni, 14, string.len(msg.sender_user_id_))
-DevAbs:set(GeSoN..'searchinbot'..msg.chat_id_,true)  
-end
-if not DevAbs:get(GeSoN..'searchinbot'..msg.chat_id_) then
-if text and text:match('^بحث (.*)$') then 
-local TextSearch = text:match('^بحث (.*)$') 
+if text and text:match("^بحث (.*)$") then
+local m = text:match("^بحث (.*)$")
+tgg = https.request('https://mahmoudm50.xyz/7oda/ytsearch.php?search='..URL.escape(m)..'')
+gg = JSON.decode(tgg)
+S = '٭ العنوان = '..gg.title
+A = '٭ مدتها = '..gg.time
+V = '٭ عدد المشاهدات = '..gg.view
+P = gg.image
+ttx = ''..S..'\n'..A..'\n'..V..''
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'تنزيل صوت', callback_data="mp3/"..gg.url},
+},
+{
+{text = 'تنزيل بصمه', callback_data="ogg/"..gg.url},
+},
+{
+{text = 'تنزيل فيديو', callback_data="mp4/"..gg.url},
+},
+}
 local msg_id = msg.id_/2097152/0.5
-local done = json:decode(https.request("https://vvvzvv.ml/Do/searchinbot.php?token="..TokenBot.."&chat_id="..msg.chat_id_.."&from="..msg.sender_user_id_.."&msg="..msg_id.."&Text="..TextSearch.."&n=s")) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..P..'&caption=' .. URL.escape(ttx).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 end
 --     Source GeSoN     --
@@ -9862,7 +9870,7 @@ end,nil)
 end,nil)
 end
 --     Source GeSoN     --
-if text == 'روابط القروب ات' or text == 'روابط المجموعات' or text == '› روابط المجموعات' then
+if text == 'روابط المجوعات' or text == 'روابط المجموعات' or text == '› روابط المجموعات' then
 if not AbsSudo(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '-› للمطور الاساسي فقط ', 1, 'md')
 else
@@ -10398,6 +10406,60 @@ ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","-› تم حذف ردود الم�
 return false
 end
 end 
+if text == "وضع شعار" or text == "ضع شعار" then 
+    redis:set("tt:add1"..bot_id..msg.chat_id_..msg.sender_user_id_,"GeSoN")
+    faederdx(msg.chat_id_, msg.id_, 1, "⇽ ارسل لي الشعار الان", 1, 'md')
+    return "GeSoN"
+    end
+    if redis:get("tt:add1"..bot_id..msg.chat_id_..msg.sender_user_id_) then 
+    SourceGeSoN(msg.chat_id_, msg.id_, 1, "⇽ تم تعيين : { "..text.." }", 1, 'md')
+    redis:del("tt:add1"..bot_id..msg.chat_id_..msg.sender_user_id_)
+    redis:set("tohd1"..bot_id..msg.chat_id_,text)
+    end 
+    if text == "تفعيل الشعار" then 
+    SourceGeSoN(msg.chat_id_, msg.id_, 1, "⇽ تم تفعيل الشعار", 1, 'md')
+    redis:set("tohd1_Dx"..bot_id..msg.chat_id_,"Dx")
+    end
+    if text == "تعطيل الشعار" then 
+    SourceGeSoN(msg.chat_id_, msg.id_, 1, "⇽ تم تعطيل الشعار", 1, 'md')
+    redis:del("tohd1_Dx"..bot_id..msg.chat_id_)
+    end
+    
+    if not msg.forward_info_  then
+    if redis:get("tohd1_Dx"..bot_id..msg.chat_id_) and redis:get("tohd1"..bot_id..msg.chat_id_) then 
+    id = msg.sender_user_id_
+    function Faeder_FaederDx(FaederDx1,FaederDx2)
+    if FaederDx2 and FaederDx2.first_name_ then 
+    if FaederDx2.first_name_:match("(.*)"..redis:get("tohd1"..bot_id..msg.chat_id_).."(.*)") then 
+    redis:srem('SourceGeSoN:'..bot_id..'muted:'..msg.chat_id_, msg.sender_user_id_)
+    else
+    local SourceGeSoN_F = redis:get("tohd"..bot_id..msg.chat_id_) or 5
+    local SourceGeSoN_F2 = redis:get("tohd22"..bot_id..msg.chat_id_..msg.sender_user_id_) or 0
+    if (tonumber(SourceGeSoN_F2) == tonumber(FaederDx_F) or tonumber(SourceGeSoN_F2) > tonumber(SourceGeSoN_F)) then 
+    redis:sadd(GeSoN..'bot:muted:'..msg.chat_id_, msg.sender_user_id_)
+    else
+    redis:incrby("tohd22"..bot_id..msg.chat_id_..msg.sender_user_id_,1)
+    SourceGeSoN(msg.chat_id_, msg.id_, 1, "⇽ يالطيب  ["..SourceGeSoN2.first_name_.."](https://t.me/"..(SourceGeSoN2.username_ or "GeSoN_ch")..")\n⇽ لازم تحط شعار الحزب  { "..redis:get("tohd1"..bot_id..msg.chat_id_).." } جنب اسمك\n⇽ اذا ماحطيته بكتمك\n\n⇽ عدد المحاولات المتبقيه {"..(tonumber(SourceGeSoN_F) - tonumber(SourceGeSoN_F2)).."}", 1, 'md')
+    end end end end
+    getUser(id, GeSoN_ https://t.me/SourceGeSoN)
+    end end
+$uo=json_decode(file_get_contents("https://api.telegram.org/bot$api/getchat?chat_id=$fromid"))->result;
+$io=$uo->first_name;
+$word = json_decode(file_get_contents("https://translate.yandex.net/api/v1.5/tr.json/detect?key=trnsl.1.1.20170725T151635Z.31fe7a5603917164.915fed1f5a9aaebef43860694075516e7af7aa47&text=".urlencode($io)))->lang;
+$new = $update->message->new_chat_member; 
+if($new and $word !="ar" and $word !="en"){
+bot('SendMessage', [
+'chat_id'=>$chatid,
+'text'=>"غير مرحب بك هنا : [$io](tg://user?id=$fromid)",
+'parse_mode'=>"Markdown",
+]);
+bot('kickChatMember',[
+'chat_id'=>$chatid,
+'user_id'=>$fromid,
+]);
+}
+end
+
 --     Source GeSoN     --
 if text and text == "تغيير اسم البوت" and ChCheck(msg) or text and text == "وضع اسم البوت" and ChCheck(msg) or text and text == "تغير اسم البوت" and ChCheck(msg) then
 if not SecondSudo(msg) then
@@ -10446,7 +10508,7 @@ local Text = [[
 -› م2 › اوامر الادمنيه
 -› م3 › اوامر المدراء
 -› م4 › اوامر المنشئين
--› م5 › اوامر المطورين
+-› م5 › اوامر Dev
 -› م6 › اوامر الاعضاء
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› [Source Channel](https://t.me/rnnni)
