@@ -1007,7 +1007,7 @@ local Text = [[
 -› م3 › اوامر المدراء
 -› م4 › اوامر المنشئين
 -› م5 › اوامر المطورين
--› م6 › اوامر الاعضاء
+-› م6 › اوامر Dev
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› [Source Channel](https://t.me/rnnni)
 ]] 
@@ -1270,9 +1270,9 @@ return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackq
 end
 local Help = DevAbs:get(GeSoN..'Abs:Help5')
 local Text = [[
--› اوامر المطورين › ⤈
+-› اوامر Dev › ⤈
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
--› القروب ات
+-› القروبات
 -› المطورين
 -› المشتركين
 -› الاحصائيات
@@ -3390,7 +3390,7 @@ ReplyStatus(msg,msg.sender_user_id_,"WrongWay","-› ممنوع التكلم ب�
 end end
 --     Source GeSoN     --
 if SecondSudo(msg) then
-if text == 'جلب نسخه القروب ات' and ChCheck(msg) or text == 'جلب نسخه احتياطيه' and ChCheck(msg) or text == 'جلب النسخه الاحتياطيه' and ChCheck(msg) or text == '› جلب نسخه احتياطيه' and ChCheck(msg) then
+if text == 'جلب نسخه القروبات' and ChCheck(msg) or text == 'جلب نسخه احتياطيه' and ChCheck(msg) or text == 'جلب النسخه الاحتياطيه' and ChCheck(msg) or text == '› جلب نسخه احتياطيه' and ChCheck(msg) then
 local List = DevAbs:smembers(GeSoN..'Abs:Groups') 
 local BotName = (DevAbs:get(GeSoN.."Abs:NameBot") or 'جيسون')
 local GetJson = '{"BotId": '..GeSoN..',"BotName": "'..BotName..'","GroupsList":{'  
@@ -7723,7 +7723,7 @@ end
 return false
 end
 --     Source GeSoN     --
-if text == "تنظيف القروب ات" and SecondSudo(msg) and ChCheck(msg) or text == "تنظيف المجموعات" and SecondSudo(msg) and ChCheck(msg) or text == "› تنظيف المجموعات" and SecondSudo(msg) and ChCheck(msg) then 
+if text == "تنظيف القروبات" and SecondSudo(msg) and ChCheck(msg) or text == "تنظيف المجموعات" and SecondSudo(msg) and ChCheck(msg) or text == "› تنظيف المجموعات" and SecondSudo(msg) and ChCheck(msg) then 
 local group = DevAbs:smembers(GeSoN.."Abs:Groups")
 local w = 0
 local q = 0
@@ -8757,7 +8757,7 @@ end
 end
 --     Source GeSoN     --
 if text and text:match("^قول(.*)$") and ChCheck(msg) then
-local txt = {string.match(text, "^(كول) (.*)$")}
+local txt = {string.match(text, "^(قول) (.*)$")}
 Dev_Abs(msg.chat_id_,0, 1, txt[2], 1, 'md')
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 end
@@ -9208,23 +9208,31 @@ end
 end
 end
 --     Source GeSoN     --
-if text == "تفعيل اليوتيوب" and Manager(msg) and ChCheck(msg) or text == "تفعيل يوتيوب" and Manager(msg) and ChCheck(msg) then
-local rnnni = '-› اهلا عزيزي › '..AbsRank(msg)..' \n-› تم تفعيل اليوتيوب'
-Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, rnnni, 14, string.len(msg.sender_user_id_))
-DevAbs:del(GeSoN..'searchinbot'..msg.chat_id_) 
-end
-if text == "تعطيل اليوتيوب" and Manager(msg) and ChCheck(msg) or text == "تعطيل يوتيوب" and Manager(msg) and ChCheck(msg) then
-local rnnni = '-› اهلا عزيزي › '..AbsRank(msg)..' \n-› تم تعطيل اليوتيوب'
-Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, rnnni, 14, string.len(msg.sender_user_id_))
-DevAbs:set(GeSoN..'searchinbot'..msg.chat_id_,true)  
-end
-if not DevAbs:get(GeSoN..'searchinbot'..msg.chat_id_) then
-if text and text:match('^بحث (.*)$') then 
-local TextSearch = text:match('^بحث (.*)$') 
+if text and text:match("^بحث (.*)$") then
+local m = text:match("^بحث (.*)$")
+tgg = https.request('https://mahmoudm50.xyz/7oda/ytsearch.php?search='..URL.escape(m)..'')
+gg = JSON.decode(tgg)
+S = '٭ العنوان = '..gg.title
+A = '٭ مدتها = '..gg.time
+V = '٭ عدد المشاهدات = '..gg.view
+P = gg.image
+ttx = ''..S..'\n'..A..'\n'..V..''
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'تنزيل صوت', callback_data="mp3/"..gg.url},
+},
+{
+{text = 'تنزيل بصمه', callback_data="ogg/"..gg.url},
+},
+{
+{text = 'تنزيل فيديو', callback_data="mp4/"..gg.url},
+},
+}
 local msg_id = msg.id_/2097152/0.5
-local done = json:decode(https.request("https://vvvzvv.ml/Do/searchinbot.php?token="..TokenBot.."&chat_id="..msg.chat_id_.."&from="..msg.sender_user_id_.."&msg="..msg_id.."&Text="..TextSearch.."&n=s")) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..P..'&caption=' .. URL.escape(ttx).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
-end
+
 --     Source GeSoN     --
 if text == "تفعيل انمي" and Manager(msg) and ChCheck(msg) or text == "تفعيل الانمي" and Manager(msg) and ChCheck(msg) then
 local rnnni = '-› اهلا عزيزي › '..AbsRank(msg)..' \n-› تم تفعيل الانمي'
@@ -9251,6 +9259,7 @@ https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' ..
 end
 end
 end
+
 --     Source GeSoN     --
 if text == "تفعيل فلم" and Manager(msg) and ChCheck(msg) then
 local rnnni = '-› اهلا عزيزي › '..AbsRank(msg)..' \n-› تم تفعيل الافلام'
