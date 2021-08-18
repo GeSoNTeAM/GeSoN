@@ -1575,24 +1575,6 @@ DevAbs:del(GeSoN.."Comd:New"..msg.chat_id_..msg.sender_user_id_)
 return false  
 end 
 end
-
-$uo=json_decode(file_get_contents("https://api.telegram.org/bot$api/getchat?chat_id=$fromid"))->result;
-$io=$uo->first_name;
-$word = json_decode(file_get_contents("https://translate.yandex.net/api/v1.5/tr.json/detect?key=trnsl.1.1.20170725T151635Z.31fe7a5603917164.915fed1f5a9aaebef43860694075516e7af7aa47&text=".urlencode($io)))->lang;
-$new = $update->message->new_chat_member; 
-if($new and $word !="ar" and $word !="en"){
-bot('SendMessage', 
-'chat_id'=>$chatid,
-'text'=>"غير مرحب بك هنا : [$io",
-'parse_mode'=>"Markdown",
-]);
-bot('kickChatMember',[
-'chat_id'=>$chatid,
-'user_id'=>$fromid,
-]);
-}
-end
-
 if text and text:match("رفع (.*)") and tonumber(msg.reply_to_message_id_) > 0 then 
 local DEV_Abs = text:match("رفع (.*)")
 if DevAbs:sismember(GeSoN.."Coomds"..msg.chat_id_,DEV_Abs) then
