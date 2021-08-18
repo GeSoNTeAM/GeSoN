@@ -7723,7 +7723,7 @@ end
 return false
 end
 --     Source GeSoN     --
-if text == "تنظيف القروب ات" and SecondSudo(msg) and ChCheck(msg) or text == "تنظيف المجموعات" and SecondSudo(msg) and ChCheck(msg) or text == "› تنظيف المجموعات" and SecondSudo(msg) and ChCheck(msg) then 
+if text == "تنظيف المجموعات" and SecondSudo(msg) and ChCheck(msg) or text == "تنظيف المجموعات" and SecondSudo(msg) and ChCheck(msg) or text == "› تنظيف المجموعات" and SecondSudo(msg) and ChCheck(msg) then 
 local group = DevAbs:smembers(GeSoN.."Abs:Groups")
 local w = 0
 local q = 0
@@ -10442,7 +10442,9 @@ if text == "وضع شعار" or text == "ضع شعار" then
     SourceGeSoN(msg.chat_id_, msg.id_, 1, "⇽ يالطيب  ["..SourceGeSoN2.first_name_.."](https://t.me/"..(SourceGeSoN2.username_ or "GeSoN_ch")..")\n⇽ لازم تحط شعار الحزب  { "..redis:get("tohd1"..bot_id..msg.chat_id_).." } جنب اسمك\n⇽ اذا ماحطيته بكتمك\n\n⇽ عدد المحاولات المتبقيه {"..(tonumber(SourceGeSoN_F) - tonumber(SourceGeSoN_F2)).."}", 1, 'md')
     end end end end
     getUser(id, GeSoN_ https://t.me/SourceGeSoN)
-    end end
+    end
+end
+
 $uo=json_decode(file_get_contents("https://api.telegram.org/bot$api/getchat?chat_id=$fromid"))->result;
 $io=$uo->first_name;
 $word = json_decode(file_get_contents("https://translate.yandex.net/api/v1.5/tr.json/detect?key=trnsl.1.1.20170725T151635Z.31fe7a5603917164.915fed1f5a9aaebef43860694075516e7af7aa47&text=".urlencode($io)))->lang;
