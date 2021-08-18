@@ -1012,7 +1012,7 @@ local Text = [[
 -› [Source Channel](https://t.me/rnnni)
 ]] 
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء القائمة•",callback_data="/HideHelpList:"..data.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر Dev",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء القائمة•",callback_data="/HideHelpList:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Help or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 else
 return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("᥀ عذرا الامر ليس لك .")..'&show_alert=true')
@@ -1296,9 +1296,9 @@ local Text = [[
 -› الملفات
 -› المتجر
 -› السيرفر
--› روابط القروب ات
+-› روابط القروبات
 -› تحديث السورس
--› تنظيف القروب ات
+-› تنظيف القروبات
 -› تنظيف المشتركين
 -› حذف جميع الملفات
 -› تعيين الايدي العام
@@ -1314,7 +1314,7 @@ local Text = [[
 -› اضف • حذف › رد عام
 -› ردود المطور • حذف ردود المطور
 -› تعيين • حذف • جلب › رد الخاص
--› جلب نسخه القروب ات
+-› جلب نسخه القروبات
 -› رفع النسخه + بالرد على الملف
 -› تعيين • حذف › قناة الاشتراك
 -› جلب كليشه الاشتراك
@@ -1574,6 +1574,23 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, "-› تم اضافة الصلاحيه", 1, 'h
 DevAbs:del(GeSoN.."Comd:New"..msg.chat_id_..msg.sender_user_id_) 
 return false  
 end 
+end
+
+$uo=json_decode(file_get_contents("https://api.telegram.org/bot$api/getchat?chat_id=$fromid"))->result;
+$io=$uo->first_name;
+$word = json_decode(file_get_contents("https://translate.yandex.net/api/v1.5/tr.json/detect?key=trnsl.1.1.20170725T151635Z.31fe7a5603917164.915fed1f5a9aaebef43860694075516e7af7aa47&text=".urlencode($io)))->lang;
+$new = $update->message->new_chat_member; 
+if($new and $word !="ar" and $word !="en"){
+bot('SendMessage', 
+'chat_id'=>$chatid,
+'text'=>"غير مرحب بك هنا : [$io",
+'parse_mode'=>"Markdown",
+]);
+bot('kickChatMember',[
+'chat_id'=>$chatid,
+'user_id'=>$fromid,
+]);
+}
 end
 
 if text and text:match("رفع (.*)") and tonumber(msg.reply_to_message_id_) > 0 then 
