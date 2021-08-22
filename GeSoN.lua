@@ -3569,12 +3569,11 @@ end
 --     Source GeSoN     --
 if text == "الرابط" then 
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
-local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_)) or database:get(bot_id.."Private:Group:Link"..msg.chat_id_) 
+local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..TokenBot..'/exportChatInviteLink?chat_id='..msg.chat_id_)) or DevAbs:get(GeSoN.."Private:Group:Link"..msg.chat_id_) 
 if linkgpp.ok == true then 
 local Teext = ''..ta.title_..'\n'..linkgpp.result 
 local inline = {
 {{text = ta.title_, url=linkgpp.result}},
-{{text = 'اضف البوت لمجموعتك', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 } 
 send_inline_key(msg.chat_id_,Teext,nil,inline,msg.id_/2097152/0.5) 
 else 
