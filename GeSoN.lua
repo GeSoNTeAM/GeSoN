@@ -1002,12 +1002,12 @@ local Help = DevAbs:get(GeSoN..'Abs:Help')
 local Text = [[
 -› اهلا بك في قائمة الاوامر › 🎖 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
--› م1 › اوامر الحمايه
--› م2 › اوامر الادمنيه
--› م3 › اوامر المدراء
--› م4 › اوامر المنشئين
+-› م1 › 🎖اوامر الحمايه
+-› م2 › 🎖اوامر الادمنيه
+-› م3 ›🎖اوامر المدراء
+-› م4 › 🎖اوامر المنشئين
 -› م5 › اوامر Dev🎖
--› م6 › اوامر الاعضاء
+-› م6 › 🎖اوامر الاعضاء
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› [Source Channel](https://t.me/rnnni)
 ]] 
@@ -1704,7 +1704,7 @@ end
 if ChatType == 'pv' then 
 if text == '/start' or text == '› رجوع' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '-› مرحبا عزيزي Dev \n-› انت Dev الاساسي هنا \n-› اليك ازرار سورس جيسون \n-› تستطيع التحكم بكل الاوامر فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '-› مرحبا عزيزي Dev🎖 \n-› انت Dev الاساسي هنا \n-› اليك ازرار سورس جيسون \n-› تستطيع التحكم بكل الاوامر فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'› السورس','وضع اسم البوت'},
 {'›  المطورين','› الاحصائيات'},
@@ -1718,7 +1718,7 @@ return false
 end end
 if text == '› تعيين كلايش الاوامر' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev \n-› اليك الازرار الخاصه بتعديل وتغيير كلايش سورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev🎖 \n-› اليك الازرار الخاصه بتعديل وتغيير كلايش سورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'تغير معلومات الترحيب'},
 {'حذف كليشة الايدي','تعيين كليشة الايدي'},
@@ -1733,7 +1733,7 @@ return false
 end end
 if text == '› السورس' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev \n-› اليك الازرار الخاصه بتحديث  سورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev🎖 \n-› اليك الازرار الخاصه بتحديث  سورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'› تحديث السورس','› تحديث'},
 {'› السيرفر'},
@@ -1746,7 +1746,7 @@ return false
 end end
 if text == '› الاحصائيات' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev \n-› اليك الازرار الخاصه ب أحصائيات  سورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev🎖 \n-› اليك الازرار الخاصه ب أحصائيات  سورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'›  الاحصائيات'},
 {'› المشتركين','› المجموعات'},
@@ -1760,7 +1760,7 @@ return false
 end end
 if text == '›  المطورين' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev \n-› اليك الازرار الخاصه ب المطورين لسورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev🎖 \n-› اليك الازرار الخاصه ب المطورين لسورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'› الاساسيين','مسح الاساسيين'},
 {'› الثانويين','مسح الثانويين'},
@@ -1773,7 +1773,7 @@ return false
 end end
 if text == '› التفعيل والتعطيل' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev \n-› اليك الازرار الخاصه ب التفعيل والتعطيل لسورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev🎖 \n-› اليك الازرار الخاصه ب التفعيل والتعطيل لسورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'› تعطيل التواصل','› تفعيل التواصل'},
 {'› تعطيل ترحيب البوت','› تفعيل ترحيب البوت'},
@@ -1787,7 +1787,7 @@ return false
 end end
 if text == '› الاذاعه' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev \n-› اليك الازرار الخاصه بالاذاعه لسورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev🎖 \n-› اليك الازرار الخاصه بالاذاعه لسورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'› اذاعه بالتثبيت'},
 {'› اذاعه خاص','› اذاعه عام'},
@@ -1800,7 +1800,7 @@ return false
 end end
 if text == '› العام' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev \n-› اليك الازرار الخاصه بالعام لسورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev🎖 \n-› اليك الازرار الخاصه بالعام لسورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'› اضف رد عام','› حذف رد عام'},
 {'› ردود العام','› مسح ردود العام'},
@@ -1812,7 +1812,7 @@ return false
 end end
 if text == '› ردود الخاص' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev \n-› اليك الازرار الخاصه بردود الخاص لسورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev🎖 \n-› اليك الازرار الخاصه بردود الخاص لسورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'› تعيين رد الخاص','› حذف رد الخاص'},
 {'› جلب رد الخاص'},
@@ -1823,7 +1823,7 @@ return false
 end end
 if text == '› الاشتراك الاجباري' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev \n-› اليك الازرار الخاصه بالاشتراك الاجباري لسورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev🎖 \n-› اليك الازرار الخاصه بالاشتراك الاجباري لسورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'›  تفعيل الاشتراك الاجباري','›  تعطيل الاشتراك الاجباري'},
 {'› تعيين قناة الاشتراك',' › حذف قناة الاشتراك'},
@@ -1836,7 +1836,7 @@ return false
 end end
 if text == '› المتجر' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev \n-› اليك الازرار الخاصه بمتجر سورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '-› اهلا بك مجددا عزيزي Dev🎖 \n-› اليك الازرار الخاصه بمتجر سورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'›  المتجر'},
 {'تفعيل ملف AddedMe.lua','تعطيل ملف AddedMe.lua'},
@@ -1854,7 +1854,7 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '› الاوامر الخدميه' or text == '/play' or text == '›  رجوع ' or text == 'اوامر الخدميه' or text == '/free' then
-local Sudo_Welcome = '-› اهلا بك مجددا عزيزي \n-› اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '-› اهلا بك مجددا عزيزي🎖 \n-› اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس جيسون فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'› اوامر التسليه','› الاوامر الخدميه '},
 {'› اوامر النسب','› البوتات'},
@@ -1934,14 +1934,14 @@ if text == '/start' and ChCheck(msg) then
 if not DevAbs:get(GeSoN..'Abs:Start:Time'..msg.sender_user_id_) then
 tdcli_function({ID="GetUser",user_id_=DevId},function(arg,dp) 
 local inline = {
-{{text="᥀ المطور .",url="t.me/"..(dp.username_ or "rnnni")}},
+{{text="᥀ المطور🎖 .",url="t.me/"..(dp.username_ or "rnnni")}},
 {{text="᥀ السورس .",url="https://t.me/rnnni"},{text="᥀ لتنصيب بوت .",url="https://t.me/GGI55"}},
 }
 local start = DevAbs:get(GeSoN.."Abs:Start:Bot")
 if start then 
 Start_Source = start
 else
-Start_Source = "-› مرحبا انا بوت اسمي "..NameBot.."\n-› اختصاصي حماية المجموعات\n-› من التفليش والسبام والخخ .. . ،\n-› تفعيلي سهل ومجانا فقط قم برفعي ادمن في مجموعتك وارسل امر › تفعيل\n-› سيتم رفع الادمنيه والمنشئ تلقائيا\n-› ارسل امر /free او /play للتمتع باوامر الاعضاء"
+Start_Source = "-› مرحبا انا بوت اسمي🎖 "..NameBot.."\n-› اختصاصي حماية المجموعات\n-› من التفليش والسبام والخخ .. . ،\n-› تفعيلي سهل ومجانا فقط قم برفعي ادمن في مجموعتك وارسل امر › تفعيل\n-› سيتم رفع الادمنيه والمنشئ تلقائيا\n-› ارسل امر /free او /play للتمتع باوامر الاعضاء"
 end 
 SendInline(msg.chat_id_,Start_Source,nil,inline)
 end,nil)
@@ -2034,7 +2034,7 @@ local start = DevAbs:get(GeSoN.."Abs:Start:Bot")
 if start then 
 Start_Source = start
 else
-Start_Source = "-› مرحبا انا بوت اسمي "..NameBot.."\n-› اختصاصي حماية المجموعات\n-› من التفليش والسبام والخخ .. . ،\n-› تفعيلي سهل ومجانا فقط قم برفعي ادمن في مجموعتك وارسل امر › تفعيل\n-› سيتم رفع الادمنيه والمنشئ تلقائيا"
+Start_Source = "-› مرحبا انا بوت اسمي🎖 "..NameBot.."\n-› اختصاصي حماية المجموعات\n-› من التفليش والسبام والخخ .. . ،\n-› تفعيلي سهل ومجانا فقط قم برفعي ادمن في مجموعتك وارسل امر › تفعيل\n-› سيتم رفع الادمنيه والمنشئ تلقائيا"
 end 
 Dev_Abs(msg.chat_id_, msg.id_, 1, Start_Source, 1, 'md')
 return false
@@ -3613,7 +3613,7 @@ return false
 end
 if text and text == (DevAbs:get(GeSoN..'Abs:NameBot') or 'جيسون') then 
 NameBot = (DevAbs:get(GeSoN..'Abs:NameBot') or 'جيسون')
-local namebot = {'قولحبيبي ؟ اني '..NameBot..' ',' شتبي يا ورع  '..NameBot..' '} 
+local namebot = {'قولحبيبي ؟ اني '..NameBot..' ',' شتبي يا عيون  '..NameBot..' '} 
 name = math.random(#namebot) 
 Dev_Abs(msg.chat_id_, msg.id_, 1, namebot[name] , 1, 'html') 
 return false 
@@ -4464,13 +4464,13 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '-› حسنا قم باعادة توجيه ل
 end
 --     Source GeSoN     --
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'ياسورس' or text == '›  السورس' then
-Text = "[⦑ Welcome to Source ⦒](t.me/rnnni)\n[🎖 ⦑ SOURCE GeSoN ⦒](t.me/rnnni)\n🎖 Source version : 1.1"
+Text = "[🎖 Welcome to Source -](t.me/rnnni)\n[🎖 - SOURCE GeSoN -](t.me/rnnni)\n🎖 Source version : 1.1"
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'Channel Source',url="t.me/rnnni"},
-{text = 'Update Source',url="t.me/SourceGeSoN"}},
-{{text = 'Install Source',url="https://t.me/SourceGeSoN"},
-{text = 'Source Group',url="https://t.me/joinchat/VWldbmm1mhJjOTFk"}},
+{{text = 'Channel Source🎖',url="t.me/rnnni"},
+{text = 'Update Source🎖',url="t.me/SourceGeSoN"}},
+{{text = 'Install Source🎖',url="https://t.me/SourceGeSoN"},
+{text = 'Source Group🎖',url="https://t.me/joinchat/VWldbmm1mhJjOTFk"}},
 {{text = 'Dev🎖',url="t.me/GGI55"}},
 }
 local msg_id = msg.id_/2097152/0.5
@@ -6621,7 +6621,7 @@ end
 --     Source GeSoN     --
 if text == "المقيدين" and ChCheck(msg) then 
 local List = DevAbs:smembers(GeSoN..'Abs:Tkeed:'..msg.chat_id_)
-text = "-› قائمة المقيدين › ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
+text = "-› قائمة المقيدين › 🎖 \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 for k,v in pairs(List) do
 local username = DevAbs:get(GeSoN..'Save:UserName'..v)
 if username then
@@ -6637,7 +6637,7 @@ end
 --     Source GeSoN     --
 if text == "المحظورين" and ChCheck(msg) or text == "المحضورين" and ChCheck(msg) then 
 local List = DevAbs:smembers(GeSoN..'Abs:Ban:'..msg.chat_id_)
-text = "-› قائمة المحظورين › ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
+text = "-› قائمة المحظورين › 🎖 \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 for k,v in pairs(List) do
 local username = DevAbs:get(GeSoN..'Save:UserName'..v)
 if username then
@@ -6728,7 +6728,7 @@ else
 text = ""
 end
 if #MuteAll ~= 0 then 
-text = text.."-› قائمة المكتومين عام › ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
+text = text.."-› قائمة المكتومين عام › 🎖 \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 for k,v in pairs(MuteAll) do
 local username = DevAbs:get(GeSoN..'Save:UserName'..v)
 if username then
@@ -6749,7 +6749,7 @@ end
 --     Source GeSoN     --
 if text == "المطورين" and ChCheck(msg) or text == "› المطورين" and ChCheck(msg) then 
 local List = DevAbs:smembers(GeSoN..'Abs:SudoBot:')
-text = "-› قائمة المطورين › ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
+text = "-› قائمة المطورين › 🎖 \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 for k,v in pairs(List) do
 local sudouser = DevAbs:get(GeSoN..'Abs:Sudos'..v) 
 local username = DevAbs:get(GeSoN..'Save:UserName'..v)
@@ -7761,7 +7761,7 @@ GeSoNgp1 = ''
 else
 GeSoNgp1 = '\n-› تم حذف › { '..w..' } مجموعه بسبب تنزيل البوت الى عضو'
 end
-Dev_Abs(msg.chat_id_, msg.id_, 1,'-› عدد القروب ات الان › { '..#group..' }'..GeSoNgp1..GeSoNgp2..'\n-› العدد الحقيقي الان  › ( '..GeSoNgp3..' ) \n ', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1,'-› عدد القروبات الان › { '..#group..' }'..GeSoNgp1..GeSoNgp2..'\n-› العدد الحقيقي الان  › ( '..GeSoNgp3..' ) \n ', 1, 'md')
 end end
 end,nil)
 end
@@ -8447,7 +8447,7 @@ end
 if text == "كشف البوتات" and ChCheck(msg) then 
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersBots"},offset_ = 0,limit_ = 100 },function(extra,result,success)
 local admins = result.members_  
-text = '-› *قائمة البوتات* › ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n'
+text = '-› *قائمة البوتات* › 🎖 \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n'
 local n = 0
 local t = 0
 for i=0 , #admins do 
@@ -8830,7 +8830,7 @@ return false
 end 
 UrlZrf = https.request('https://apiabs.ml/zrf.php?abs='..URL.escape(text)) 
 Zrf = JSON.decode(UrlZrf) 
-t = "-› قائمة الزخرفه › ⤈\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
+t = "-› قائمة الزخرفه › 🎖\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 i = 0
 for k,v in pairs(Zrf.ok) do
 i = i + 1
@@ -8851,7 +8851,7 @@ if text and text:match("^زخرفه (.*)$") and ChCheck(msg) or text and text:ma
 local TextZrf = text:match("^زخرفه (.*)$") or text:match("^زخرف (.*)$") 
 UrlZrf = https.request('https://apiabs.ml/zrf.php?abs='..URL.escape(TextZrf)) 
 Zrf = JSON.decode(UrlZrf) 
-t = "-› قائمة الزخرفه › ⤈\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
+t = "-› قائمة الزخرفه › 🎖\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 i = 0
 for k,v in pairs(Zrf.ok) do
 i = i + 1
@@ -9456,7 +9456,7 @@ end
 if data.message_ == "CHAT_ADMIN_REQUIRED" then
 send(msg.chat_id_,msg.id_,"-› ليست لدي صلاحية تغير معلومات المجموعه يرجى التحقق من الصلاحيات")  
 else
-local rnnni = '-› اهلا عزيزي › '..AbsRank(msg)..' \n-› تم تغير اسم المجموعه'
+local rnnni = '-› اهلا عزيزي🎖 › '..AbsRank(msg)..' \n-› تم تغير اسم المجموعه'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, rnnni, 14, string.len(msg.sender_user_id_))
 end
 end,nil) 
@@ -9478,7 +9478,7 @@ if data.message_ == "CHAT_ADMIN_REQUIRED" then
 send(msg.chat_id_, msg.id_,"-› ليست لدي صلاحية تغير معلومات المجموعه يرجى التحقق من الصلاحيات") 
 DevAbs:del(GeSoN..'Abs:SetPhoto'..msg.chat_id_..':'..msg.sender_user_id_)
 else
-local rnnni = '-› اهلا عزيزي › '..AbsRank(msg)..' \n-› تم تغير صورة المجموعه'
+local rnnni = '-› اهلا عزيزي🎖 › '..AbsRank(msg)..' \n-› تم تغير صورة المجموعه'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, rnnni, 14, string.len(msg.sender_user_id_))
 end
 end,nil) 
@@ -9505,7 +9505,7 @@ end
 tdcli_function({ID="UnpinChannelMessage",channel_id_ = msg.chat_id_:gsub("-100","")},function(arg,data) 
 if data.ID == "Ok" then
 DevAbs:del(GeSoN..'Abs:PinnedMsg'..msg.chat_id_)
-local rnnni = '-› اهلا عزيزي › '..AbsRank(msg)..' \n-› تم الغاء تثبيت الرساله'
+local rnnni = '-› اهلا عزيزي🎖 › '..AbsRank(msg)..' \n-› تم الغاء تثبيت الرساله'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, rnnni, 14, string.len(msg.sender_user_id_))
 return false  
 end
@@ -9527,7 +9527,7 @@ return false
 end
 tdcli_function({ID="UnpinChannelMessage",channel_id_ = msg.chat_id_:gsub("-100","")},function(arg,data) 
 if data.ID == "Ok" then
-local rnnni = '-› اهلا عزيزي › '..AbsRank(msg)..' \n-› تم الغاء تثبيت الكل'
+local rnnni = '-› اهلا عزيزي🎖 › '..AbsRank(msg)..' \n-› تم الغاء تثبيت الكل'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, rnnni, 14, string.len(msg.sender_user_id_))
 https.request('https://api.telegram.org/bot'..TokenBot..'/unpinAllChatMessages?chat_id='..msg.chat_id_)
 DevAbs:del(GeSoN.."Abs:PinnedMsg"..msg.chat_id_)
@@ -9552,7 +9552,7 @@ end
 local PinId = DevAbs:get(GeSoN..'Abs:PinnedMsg'..msg.chat_id_)
 if PinId then
 Pin(msg.chat_id_,PinId,0)
-local rnnni = '-› اهلا عزيزي › '..AbsRank(msg)..' \n-› تم اعادة تثبيت الرساله'
+local rnnni = '-› اهلا عزيزي🎖 › '..AbsRank(msg)..' \n-› تم اعادة تثبيت الرساله'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, rnnni, 14, string.len(msg.sender_user_id_))
 end end
 end
@@ -9706,13 +9706,13 @@ Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, rnnni, 14, string.len(msg.s
 DevAbs:del(GeSoN..'Abs:Lock:Gamesinline'..msg.chat_id_) 
 end
 if text == 'تعطيل الالعاب المتطوره' and Manager(msg) and ChCheck(msg) or text == 'تعطيل الالعاب الاحترافيه' and Manager(msg) and ChCheck(msg) then  
-local rnnni = '-› اهلا عزيزي › '..AbsRank(msg)..' \n-› تم تعطيل الالعاب المتطوره بنجاح'
+local rnnni = '-› اهلا عزيزي🎖 › '..AbsRank(msg)..' \n-› تم تعطيل الالعاب المتطوره بنجاح'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, rnnni, 14, string.len(msg.sender_user_id_))
 DevAbs:set(GeSoN..'Abs:Lock:Gamesinline'..msg.chat_id_,true)  
 end
 if text == "تفعيل الرابط" and ChCheck(msg) or text == "تفعيل جلب الرابط" and ChCheck(msg) then 
 if Admin(msg) then
-local rnnni = '-› اهلا عزيزي › '..AbsRank(msg)..' \n-› تم تفعيل جلب رابط المجموعه'
+local rnnni = '-› اهلا عزيزي🎖 › '..AbsRank(msg)..' \n-› تم تفعيل جلب رابط المجموعه'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, rnnni, 14, string.len(msg.sender_user_id_))
 DevAbs:del(GeSoN.."Abs:Lock:GpLinks"..msg.chat_id_)
 return false  
@@ -9720,7 +9720,7 @@ end
 end
 if text == "تعطيل الرابط" and ChCheck(msg) or text == "تعطيل جلب الرابط" and ChCheck(msg) then 
 if Admin(msg) then
-local rnnni = '-› اهلا عزيزي › '..AbsRank(msg)..' \n-› تم تعطيل جلب رابط المجموعه'
+local rnnni = '-› اهلا عزيزي🎖 › '..AbsRank(msg)..' \n-› تم تعطيل جلب رابط المجموعه'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, rnnni, 14, string.len(msg.sender_user_id_))
 DevAbs:set(GeSoN.."Abs:Lock:GpLinks"..msg.chat_id_,"ok")
 return false  
@@ -9728,7 +9728,7 @@ end
 end
 if text == "تفعيل حذف الردود" and ChCheck(msg) or text == "تفعيل مسح الردود" and ChCheck(msg) then 
 if AbsConstructor(msg) then
-local rnnni = '-› اهلا عزيزي › '..AbsRank(msg)..' \n-› تم تفعيل حذف ردود المدير'
+local rnnni = '-› اهلا عزيزي🎖 › '..AbsRank(msg)..' \n-› تم تفعيل حذف ردود المدير'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, rnnni, 14, string.len(msg.sender_user_id_))
 DevAbs:del(GeSoN.."Abs:Lock:Rd"..msg.chat_id_)
 return false  
@@ -9856,7 +9856,7 @@ LinkGroup = 'لا يوجد'
 end
 DevAbs:set(GeSoN.."Abs:Groups:Links"..msg.chat_id_,LinkGroup) 
 if not Sudo(msg) then
-SendText(DevId,"-› تم تعطيل مجموعه جديده › ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n-› بواسطة › "..Name.."\n-› اسم المجموعه › ["..NameChat.."]\n-› ايدي المجموعه › ⤈ \n❨ `"..msg.chat_id_.."` ❩\n-› رابط المجموعه › ⤈\n❨ ["..LinkGroup.."] ❩\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n-› الوقت › "..os.date("%I:%M%p").."\n-› التاريخ › "..os.date("%Y/%m/%d").."",0,'md')
+SendText(DevId,"-› تم تعطيل مجموعه جديده › 🎖 \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n-› بواسطة › "..Name.."\n-› اسم المجموعه › ["..NameChat.."]\n-› ايدي المجموعه › ⤈ \n❨ `"..msg.chat_id_.."` ❩\n-› رابط المجموعه › ⤈\n❨ ["..LinkGroup.."] ❩\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n-› الوقت › "..os.date("%I:%M%p").."\n-› التاريخ › "..os.date("%Y/%m/%d").."",0,'md')
 end
 end
 end,nil)
@@ -9885,7 +9885,7 @@ local NameChat = NameChat:gsub("}","")
 local LinkGp = json:decode(https.request('https://api.telegram.org/bot'..TokenBot..'/exportChatInviteLink?chat_id='..msg.chat_id_))
 if LinkGp.ok == true then 
 LinkGroup = LinkGp.result
-LinkGroup = "-› رابط المجموعه › ⤈\n❨ ["..LinkGroup.."] ❩"
+LinkGroup = "-› رابط المجموعه › 🎖\n❨ ["..LinkGroup.."] ❩"
 else
 LinkGroup = '-› ليست لدي صلاحية الدعوه لهذه المجموعه !'
 end
@@ -10309,7 +10309,7 @@ end end
 --     Source GeSoN     --
 if text == 'الردود المتعدده' and Manager(msg) and ChCheck(msg) then
 local redod = DevAbs:smembers(GeSoN..'Abs:Manager:GpRedod'..msg.chat_id_)
-MsgRep = '-› قائمة الردود المتعدده › ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n'
+MsgRep = '-› قائمة الردود المتعدده › 🎖 \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n'
 for k,v in pairs(redod) do
 MsgRep = MsgRep..k..'~ (`'..v..'`) • {*العدد › '..#DevAbs:smembers(GeSoN..'Abs:Text:GpTexts'..v..msg.chat_id_)..'*}\n' 
 end
@@ -10334,7 +10334,7 @@ end
 --     Source GeSoN     --
 if text == 'الردود' and Manager(msg) and ChCheck(msg) or text == 'ردود المدير' and Manager(msg) and ChCheck(msg) then
 local redod = DevAbs:smembers(GeSoN..'Abs:Manager:GpRed'..msg.chat_id_)
-MsgRep = '-› ردود المدير › ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n'
+MsgRep = '-› ردود المدير › 🎖 \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n'
 for k,v in pairs(redod) do
 if DevAbs:get(GeSoN.."Abs:Gif:GpRed"..v..msg.chat_id_) then
 dp = 'متحركه 🎭'
@@ -10385,7 +10385,7 @@ end
 --     Source GeSoN     --
 if  text == "ردود المطور" and SecondSudo(msg) and ChCheck(msg) or text == "الردود العام" and SecondSudo(msg) and ChCheck(msg) or text == "› ردود العام" and SecondSudo(msg) and ChCheck(msg) or text == "ردود العام" and SecondSudo(msg) and ChCheck(msg) then
 local redod = DevAbs:smembers(GeSoN.."Abs:Sudo:AllRed")
-MsgRep = '-› ردود المطور › ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n'
+MsgRep = '-› ردود المطور › 🎖 \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n'
 for k,v in pairs(redod) do
 if DevAbs:get(GeSoN.."Abs:Gif:AllRed"..v) then
 dp = 'متحركه 🎭'
@@ -10476,12 +10476,12 @@ local Help = DevAbs:get(GeSoN..'Abs:Help')
 local Text = [[
 -› اهلا بك في قائمة الاوامر › 🎖 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
--› م1 › اوامر الحمايه
--› م2 › اوامر الادمنيه
--› م3 › اوامر المدراء
--› م4 › اوامر المنشئين
+-› م1 › 🎖اوامر الحمايه
+-› م2 › 🎖اوامر الادمنيه
+-› م3 › 🎖اوامر المدراء
+-› م4 › 🎖اوامر المنشئين
 -› م5 › اوامر Dev🎖
--› م6 › اوامر الاعضاء
+-› م6 › 🎖اوامر الاعضاء
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› [Source Channel](https://t.me/rnnni)
 ]] 
@@ -10544,9 +10544,9 @@ local Text = [[
 -› قفل • فتح › الفارسيه
 -› قفل • فتح › التفليش
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
--› اوامر حمايه اخرى › ⤈
+-› اوامر حمايه اخرى › 🎖
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
--› قفل • فتح + الامر › ⤈
+-› قفل • فتح + الامر › 🎖
 -› التكرار بالطرد
 -› التكرار بالكتم
 -› التكرار بالتقيد
@@ -11167,7 +11167,7 @@ Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '᥀ مبرمج السورس',url="t.me/GGI55"}},
+{{text = '🎖 مبرمج السورس',url="t.me/GGI55"}},
 {{text = 'قناة السورس',url="t.me/rnnni"}},
 }
 local msg_id = msg.id_/2097152/0.5
