@@ -1000,19 +1000,19 @@ local Abs = DataText:match('/HelpList:(.*)')
 if tonumber(Abs) == tonumber(data.sender_user_id_) then
 local Help = DevAbs:get(GeSoN..'Abs:Help')
 local Text = [[
--› اهلا بك في قائمة الاوامر › ⤈ 
+-› اهلا بك في قائمة الاوامر › 🎖 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› م1 › اوامر الحمايه
 -› م2 › اوامر الادمنيه
 -› م3 › اوامر المدراء
 -› م4 › اوامر المنشئين
--› م5 › اوامر Dev
+-› م5 › اوامر Dev🎖
 -› م6 › اوامر الاعضاء
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› [Source Channel](https://t.me/rnnni)
 ]] 
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر Dev",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء القائمة•",callback_data="/HideHelpList:"..data.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="🎖اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="🎖اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="🎖اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="🎖اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="🎖اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر Dev🎖",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء القائمة•",callback_data="/HideHelpList:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Help or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 else
 return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("᥀ عذرا الامر ليس لك .")..'&show_alert=true')
@@ -1026,7 +1026,7 @@ return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackq
 end
 local Help = DevAbs:get(GeSoN..'Abs:Help1')
 local Text = [[
--› اوامر حماية المجموعه › ⤈
+-› اوامر حماية المجموعه › 🎖
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› قفل • فتح › الروابط
 -› قفل • فتح › المعرفات
@@ -1074,7 +1074,7 @@ local Text = [[
 -› [Source Channel](https://t.me/rnnni)
 ]]
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر Dev",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء القائمة•",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="🎖اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_}},{{text="🎖اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="🎖اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="🎖اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر Dev🎖",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء القائمة•",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Help or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 else
 return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("᥀ عذرا الامر ليس لك .")..'&show_alert=true')
@@ -1088,7 +1088,7 @@ return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackq
 end
 local Help = DevAbs:get(GeSoN..'Abs:Help2')
 local Text = [[
--› اوامر الادمنيه › ⤈
+-› اوامر الادمنيه › 🎖
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› الاعدادت
 -› تاك للكل 
@@ -1144,7 +1144,7 @@ local Text = [[
 -› [Source Channel](https://t.me/rnnni)
 ]]
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر Dev",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء القائمة•",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="🎖اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="🎖اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="🎖اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="🎖اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر Dev🎖",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء القائمة•",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Help or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 else
 return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("᥀ عذرا الامر ليس لك .")..'&show_alert=true')
@@ -1158,7 +1158,7 @@ return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackq
 end
 local Help = DevAbs:get(GeSoN..'Abs:Help3')
 local Text = [[
--› اوامر المدراء › ⤈
+-› اوامر المدراء › 🎖
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› فحص البوت
 -› ضع اسم + الاسم
@@ -1203,7 +1203,7 @@ local Text = [[
 -› [Source Channel](https://t.me/rnnni)
 ]]
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر Dev",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء القائمة•",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="🎖اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="🎖اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="🎖اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_}},{{text="🎖اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر Dev🎖",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء القائمة•",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Help or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 else
 return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("᥀ عذرا الامر ليس لك .")..'&show_alert=true')
@@ -1217,7 +1217,7 @@ return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackq
 end
 local Help = DevAbs:get(GeSoN..'Abs:Help4')
 local Text = [[
--› اوامر المنشئين › ⤈
+-› اوامر المنشئين › 🎖
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› تنزيل الكل
 -› الميديا • امسح
@@ -1256,7 +1256,7 @@ local Text = [[
 -› [Source Channel](https://t.me/rnnni)
 ]]
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر Dev",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء القائمة•",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="🎖اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="🎖اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="🎖اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="🎖اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر Dev🎖",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء القائمة•",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Help or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 else
 return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("᥀ عذرا الامر ليس لك .")..'&show_alert=true')
@@ -1270,7 +1270,7 @@ return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackq
 end
 local Help = DevAbs:get(GeSoN..'Abs:Help5')
 local Text = [[
--› اوامر Dev › ⤈
+-› اوامر Dev › 🎖
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› القروبات
 -› المطورين
@@ -1290,7 +1290,7 @@ local Text = [[
 -› رفع • تنزيل › مميز عام
 -› حذف • المميزين عام 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
--› اوامر Dev الاساسي › ⤈
+-› اوامر Dev الاساسي › 🎖
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› تحديث
 -› الملفات
@@ -1336,7 +1336,7 @@ local Text = [[
 -› [Source Channel](https://t.me/rnnni)
 ]]
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_}},{{text="• اخفاء القائمة•",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="🎖اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="🎖اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="🎖اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="🎖اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="🎖اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_}},{{text="• اخفاء القائمة•",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Help or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 else
 return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("᥀ عذرا الامر ليس لك .")..'&show_alert=true')
@@ -1347,7 +1347,7 @@ local Abs = DataText:match('/HelpList6:(.*)')
 if tonumber(Abs) == tonumber(data.sender_user_id_) then
 local Help = DevAbs:get(GeSoN..'Abs:Help6')
 local Text = [[
--› اوامر الاعضاء › ⤈
+-› اوامر الاعضاء › 🎖
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› السورس • موقعي • رتبتي • معلوماتي 
 -› رقمي • لقبي • نبذتي • صلاحياتي • غنيلي
@@ -1379,7 +1379,7 @@ local Text = [[
 -› [Source Channel](https://t.me/rnnni)
 ]]
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر Dev",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء القائمة•",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="🎖اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="🎖اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="🎖اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="🎖اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر Dev🎖",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء القائمة•",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Help or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 else
 return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("᥀ عذرا الامر ليس لك .")..'&show_alert=true')
@@ -3570,7 +3570,7 @@ end
 if text == "الرابط" and ChCheck(msg) then
 if not DevAbs:get(GeSoN.."Abs:Lock:GpLinks"..msg.chat_id_) then 
 if DevAbs:get(GeSoN.."Abs:Groups:Links"..msg.chat_id_) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, "-› 𝖦𝗋𝗈𝗎𝗉 𝖫𝗂𝗇𝗄 ↬ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"..DevAbs:get(GeSoN.."Abs:Groups:Links"..msg.chat_id_), 1, "html")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "-› 𝖦𝗋𝗈𝗎𝗉 𝖫𝗂𝗇𝗄 🎖 \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"..DevAbs:get(GeSoN.."Abs:Groups:Links"..msg.chat_id_), 1, "html")
 else 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '-› لايوجد رابط ارسل › ضع رابط او ارسل › انشاء رابط للانشاء', 1, 'md')
 end
@@ -4279,7 +4279,7 @@ end
 if text == 'الالعاب' and ChCheck(msg) or text == 'العاب' and ChCheck(msg) or text == 'اللعبه' and ChCheck(msg) or text == '› الالعاب' and ChCheck(msg) then
 if not DevAbs:get(GeSoN..'Abs:Lock:Games'..msg.chat_id_) then
 Dev_Abs(msg.chat_id_, msg.id_, 1,[[
--› قائمة العاب المجموعه › ⤈
+-› قائمة العاب المجموعه › 🎖
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› لعبة التخمين › خمن
 -› لعبة الامثله › امثله
@@ -4464,14 +4464,14 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '-› حسنا قم باعادة توجيه ل
 end
 --     Source GeSoN     --
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'ياسورس' or text == '›  السورس' then
-Text = "[⦑ Welcome to Source ⦒](t.me/rnnni)\n[✯ ⦑ SOURCE GeSoN ⦒](t.me/rnnni)\n✯ Source version : 1.1"
+Text = "[⦑ Welcome to Source ⦒](t.me/rnnni)\n[🎖 ⦑ SOURCE GeSoN ⦒](t.me/rnnni)\n🎖 Source version : 1.1"
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'Channel Source',url="t.me/rnnni"},
 {text = 'Update Source',url="t.me/SourceGeSoN"}},
 {{text = 'Install Source',url="https://t.me/SourceGeSoN"},
-{text = 'Source Group',url="https://t.me/joinchat/i3u45a0k5JViNzQ0"}},
-{{text = 'developer',url="t.me/GGI55"}},
+{text = 'Source Group',url="https://t.me/joinchat/VWldbmm1mhJjOTFk"}},
+{{text = 'Dev🎖',url="t.me/GGI55"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/rnnni&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -8717,7 +8717,7 @@ if DevAbs:get(GeSoN..'Abs:Lock:Taf'..msg.chat_id_) then lock_taf = 'مفتوحه
 if DevAbs:get(GeSoN..'Abs:Lock:Farsi'..msg.chat_id_) then lock_farsi = 'مقفله' else lock_farsi = 'مفتوحه' end
 local Flood_Num = DevAbs:hget(GeSoN.."Abs:Spam:Group:User"..msg.chat_id_,"Num:Spam") or 5
 --     Source GeSoN     --
-local TXTE = "-› اعدادات المجموعه › ⤈\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
+local TXTE = "-› اعدادات المجموعه › 🎖\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 .."-› الروابط › "..mute_links.."\n"
 .."-› المعرف › "..lock_tag.."\n"
 .."-› البوتات › "..lock_bots.."\n"
@@ -10474,7 +10474,7 @@ end
 if text == "الاوامر" and ChCheck(msg) or text == "اوامر" and ChCheck(msg) or text == "مساعده" and ChCheck(msg) then
 local Help = DevAbs:get(GeSoN..'Abs:Help')
 local Text = [[
--› اهلا بك في قائمة الاوامر › ⤈ 
+-› اهلا بك في قائمة الاوامر › 🎖 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› م1 › اوامر الحمايه
 -› م2 › اوامر الادمنيه
@@ -10486,7 +10486,7 @@ local Text = [[
 -› [Source Channel](https://t.me/rnnni)
 ]] 
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..msg.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..msg.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..msg.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..msg.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..msg.sender_user_id_},{text="اوامر Dev🎖",callback_data="/HelpList5:"..msg.sender_user_id_}},{{text="• اخفاء القائمة•",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="🎖اوامر الادمنيه",callback_data="/HelpList2:"..msg.sender_user_id_},{text="🎖اوامر الحمايه",callback_data="/HelpList1:"..msg.sender_user_id_}},{{text="🎖اوامر المنشئين",callback_data="/HelpList4:"..msg.sender_user_id_},{text="🎖اوامر المدراء",callback_data="/HelpList3:"..msg.sender_user_id_}},{{text="🎖اوامر الاعضاء",callback_data="/HelpList6:"..msg.sender_user_id_},{text="اوامر Dev🎖",callback_data="/HelpList5:"..msg.sender_user_id_}},{{text="• اخفاء القائمة•",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
 Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Help or Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
@@ -10509,7 +10509,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '-› هذا الامر يخص الرتب ال
 else
 local Help = DevAbs:get(GeSoN..'Abs:Help1')
 local Text = [[
--› اوامر حماية المجموعه › ⤈
+-› اوامر حماية المجموعه › 🎖
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› قفل • فتح › الروابط
 -› قفل • فتح › المعرفات
@@ -10577,7 +10577,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '-› هذا الامر يخص الرتب ال
 else
 local Help = DevAbs:get(GeSoN..'Abs:Help2')
 local Text = [[
--› اوامر الادمنيه › ⤈
+-› اوامر الادمنيه › 🎖
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› الاعدادت
 -› تاك للكل 
@@ -10653,7 +10653,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '-› هذا الامر يخص الرتب ال
 else
 local Help = DevAbs:get(GeSoN..'Abs:Help3')
 local Text = [[
--› اوامر المدراء › ⤈
+-› اوامر المدراء › 🎖
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› فحص البوت
 -› ضع اسم + الاسم
@@ -10718,7 +10718,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '-› هذا الامر يخص الرتب ال
 else
 local Help = DevAbs:get(GeSoN..'Abs:Help4')
 local Text = [[
--› اوامر المنشئين › ⤈
+-› اوامر المنشئين › 🎖
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› تنزيل الكل
 -› الميديا • امسح
@@ -10777,7 +10777,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '-› هذا الامر للمطورين فق�
 else
 local Help = DevAbs:get(GeSoN..'Abs:Help5')
 local Text = [[
--› اوامر Dev🎖 › ⤈
+-› اوامر Dev › 🎖
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› القروبات
 -› المطورين
@@ -10797,7 +10797,7 @@ local Text = [[
 -› رفع • تنزيل › مميز عام
 -› حذف • المميزين عام 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
--› اوامر المطور الاساسي › ⤈
+-› اوامر المطور الاساسي › 🎖
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› تحديث
 -› الملفات
@@ -10860,7 +10860,7 @@ end
 if text == "م٦" and ChCheck(msg) or text == "م6" and ChCheck(msg) or text == "اوامر6" and ChCheck(msg) or text == "اوامر٦" and ChCheck(msg) then
 local Help = DevAbs:get(GeSoN..'Abs:Help6')
 local Text = [[
--› اوامر الاعضاء › ⤈
+-› اوامر الاعضاء › 🎖
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› السورس • موقعي • رتبتي • معلوماتي 
 -› رقمي • لقبي • نبذتي • صلاحياتي • غنيلي
