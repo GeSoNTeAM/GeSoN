@@ -3567,19 +3567,16 @@ DevAbs:set(GeSoN..'Abs:NameBot', text)
 return false 
 end
 --     Source GeSoN     --
-if text == "الرابط" then 
-tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
-local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..TokenBot..'/exportChatInviteLink?chat_id='..msg.chat_id_)) or DevAbs:get(GeSoN.."Private:Group:Link"..msg.chat_id_) 
-if linkgpp.ok == true then 
-local Teext = ''..ta.title_..'\n'..linkgpp.result 
-local inline = {
-{{text = ta.title_, url=linkgpp.result}},
-} 
-send_inline_key(msg.chat_id_,Teext,nil,inline,msg.id_/2097152/0.5) 
+if text == "الرابط" and ChCheck(msg) then
+if not DevAbs:get(GeSoN.."Abs:Lock:GpLinks"..msg.chat_id_) then 
+if DevAbs:get(GeSoN.."Abs:Groups:Links"..msg.chat_id_) then
+Dev_Abs(msg.chat_id_, msg.id_, 1, "-› 𝖦𝗋𝗈𝗎𝗉 𝖫𝗂𝗇𝗄 ↬ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"..DevAbs:get(GeSoN.."Abs:Groups:Links"..msg.chat_id_), 1, "html")
 else 
-send(msg.chat_id_, msg.id_,'لا يوجد رابط ارسل ضع رابط') 
-end 
-end,nil) 
+Dev_Abs(msg.chat_id_, msg.id_, 1, '-› لايوجد رابط ارسل › ضع رابط او ارسل › انشاء رابط للانشاء', 1, 'md')
+end
+else
+Dev_Abs(msg.chat_id_, msg.id_, 1, '-› جلب رابط المجموعه معطل', 1, 'md')
+end
 end
 --     Source GeSoN     --
 if msg.chat_id_ then
