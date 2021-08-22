@@ -9896,7 +9896,7 @@ end,nil)
 end,nil)
 end
 --     Source GeSoN     --
-if text == 'روابط القروب ات' or text == 'روابط المجموعات' or text == '› روابط المجموعات' then
+if text == 'روابط القروبات' or text == 'روابط المجموعات' or text == '› روابط المجموعات' then
 if not AbsSudo(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '-› للمطور الاساسي فقط ', 1, 'md')
 else
@@ -10480,13 +10480,13 @@ local Text = [[
 -› م2 › اوامر الادمنيه
 -› م3 › اوامر المدراء
 -› م4 › اوامر المنشئين
--› م5 › اوامر المطورين
+-› م5 › اوامر Dev🎖
 -› م6 › اوامر الاعضاء
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› [Source Channel](https://t.me/rnnni)
 ]] 
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..msg.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..msg.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..msg.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..msg.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..msg.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..msg.sender_user_id_}},{{text="• اخفاء القائمة•",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..msg.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..msg.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..msg.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..msg.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..msg.sender_user_id_},{text="اوامر Dev🎖",callback_data="/HelpList5:"..msg.sender_user_id_}},{{text="• اخفاء القائمة•",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
 Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Help or Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
@@ -10777,9 +10777,9 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '-› هذا الامر للمطورين فق�
 else
 local Help = DevAbs:get(GeSoN..'Abs:Help5')
 local Text = [[
--› اوامر المطورين › ⤈
+-› اوامر Dev🎖 › ⤈
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
--› القروب ات
+-› القروبات
 -› المطورين
 -› المشتركين
 -› الاحصائيات
