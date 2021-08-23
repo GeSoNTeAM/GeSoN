@@ -3377,7 +3377,7 @@ if DevAbs:get(GeSoN.."Abs:Lock:FarsiBan"..msg.chat_id_) and not VipMem(msg) then
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 ChatKick(msg.chat_id_, msg.sender_user_id_)
 end end 
-if text and (text:match("خره بالله") or text:match("خبربك") or text:match("كسدينربك") or text:match("خرب بالله") or text:match("خرب الله") or text:match("خره بربك") or text:match("الله الكواد") or text:match("خره بمحمد") or text:match("كسم الله") or text:match("كسم ربك") or text:match("كسربك") or text:match("كسختالله") or text:match("كسخت الله") or text:match("خره بدينك") or text:match("خرهبدينك") or text:match("كسالله") or text:match("خربالله")) then
+if text and (text:match("خره بحظي") or text:match("خبربك") or text:match("كسدينربك") or text:match("خرب بالله") or text:match("خرب الله") or text:match("خره بربك") or text:match("الله الكواد") or text:match("خره بمحمد") or text:match("كسم الله") or text:match("كسم ربك") or text:match("كسربك") or text:match("كسختالله") or text:match("كسخت الله") or text:match("خره بدينك") or text:match("خرهبدينك") or text:match("كسالله") or text:match("خربالله")) then
 if not DevAbs:get(GeSoN.."Abs:Lock:Kfr"..msg.chat_id_) and not VipMem(msg) then
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 ReplyStatus(msg,msg.sender_user_id_,"WrongWay","-› ممنوع الكفر في المجموعه") 
@@ -3599,7 +3599,7 @@ end
 if ChatType == 'sp' or ChatType == 'gp' or ChatType == 'pv' then
 if text == 'بوت' or text == 'بوتت' then 
 NameBot = (DevAbs:get(GeSoN..'Abs:NameBot') or 'جيسون')
-local rnnni = {' قولحبيبي ؟ اني '..NameBot..' ',' شتبي يا ورع  '..NameBot..' ',' اسمي الملك '..NameBot..' '}
+local rnnni = {' قولحبيبي ؟ اني '..NameBot..' ',' لبييه  '..NameBot..' ',' اسمي اسمي '..NameBot..' '}
 DevAbs2 = math.random(#rnnni) 
 Dev_Abs(msg.chat_id_, msg.id_, 1, rnnni[DevAbs2] , 1, 'html') 
 return false
@@ -4467,10 +4467,14 @@ if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or te
 Text = "[🎖 Welcome to Source -](t.me/rnnni)\n[🎖 - SOURCE GeSoN -](t.me/rnnni)\n🎖 Source version : 1.1"
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'Channel Source🎖',url="t.me/rnnni"},
-{text = 'Update Source🎖',url="t.me/SourceGeSoN"}},
-{{text = 'Install Source🎖',url="https://t.me/SourceGeSoN"},
-{text = 'Source Group🎖',url="https://t.me/joinchat/VWldbmm1mhJjOTFk"}},
+{{text = 'قناة سورس🎖',url="t.me/rnnni"},
+
+{text = 'شروحات سورس🎖',url="t.me/SourceGeSoN"}},
+
+{{text = 'تنصيب سورس🎖',url="https://t.me/SourceGeSoN"},
+
+{text = 'Dev🎖',url="t.me/IIIZIIII"}},
+
 {{text = 'Dev🎖',url="t.me/GGI55"}},
 }
 local msg_id = msg.id_/2097152/0.5
