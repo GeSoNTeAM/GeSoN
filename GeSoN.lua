@@ -1000,16 +1000,32 @@ local Abs = DataText:match('/HelpList:(.*)')
 if tonumber(Abs) == tonumber(data.sender_user_id_) then
 local Help = DevAbs:get(GeSoN..'Abs:Help')
 local Text = [[
--› اهلا بك في قائمة الاوامر › 🎖 
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
--› م1 › 🎖اوامر الحمايه
--› م2 › 🎖اوامر الادمنيه
--› م3 ›🎖اوامر المدراء
--› م4 › 🎖اوامر المنشئين
--› م5 › اوامر Dev🎖
--› م6 › 🎖اوامر الاعضاء
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
--› [Source Channel](https://t.me/rnnni)
+
+    ◈︙ اهلا بك في قسم الاوامر .
+    ◈︙ اختر الامر الذي تريده من الازرار بلاسفل .
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '- اوامر الحماية .', callback_data=msg.sender_user_id_.."/help1"},{text = '- اوامر الادمنية .', callback_data=msg.sender_user_id_.."/help2"},
+},
+{
+{text = '- اوامر المدراء .', callback_data=msg.sender_user_id_.."/help3"},
+},
+{
+{text = '- اوامر المنشئين .', callback_data=msg.sender_user_id_.."/help4"},{text = '- اوامر المطورين .', callback_data=msg.sender_user_id_.."/help5"},
+},
+{
+{text = '- اوامر التعطيل .', callback_data=msg.sender_user_id_.."/homeaddrem"},{text = '- اوامر القفل .', callback_data=msg.sender_user_id_.."/homelocks"},
+},
+{
+{text = '- Sorce GeSoN .', url = "https://t.me/rnnni"}
+},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+end
 ]] 
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="🎖اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="🎖اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="🎖اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="🎖اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="🎖اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر Dev🎖",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء القائمة•",callback_data="/HideHelpList:"..data.sender_user_id_}}}
@@ -10474,16 +10490,32 @@ end
 if text == "الاوامر" and ChCheck(msg) or text == "اوامر" and ChCheck(msg) or text == "مساعده" and ChCheck(msg) then
 local Help = DevAbs:get(GeSoN..'Abs:Help')
 local Text = [[
--› اهلا بك في قائمة الاوامر › 🎖 
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
--› م1 › 🎖اوامر الحمايه
--› م2 › 🎖اوامر الادمنيه
--› م3 › 🎖اوامر المدراء
--› م4 › 🎖اوامر المنشئين
--› م5 › اوامر Dev🎖
--› م6 › 🎖اوامر الاعضاء
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
--› [Source Channel](https://t.me/rnnni)
+
+    ◈︙ اهلا بك في قسم الاوامر .
+    ◈︙ اختر الامر الذي تريده من الازرار بلاسفل .
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '- اوامر الحماية .', callback_data=msg.sender_user_id_.."/help1"},{text = '- اوامر الادمنية .', callback_data=msg.sender_user_id_.."/help2"},
+},
+{
+{text = '- اوامر المدراء .', callback_data=msg.sender_user_id_.."/help3"},
+},
+{
+{text = '- اوامر المنشئين .', callback_data=msg.sender_user_id_.."/help4"},{text = '- اوامر المطورين .', callback_data=msg.sender_user_id_.."/help5"},
+},
+{
+{text = '- اوامر التعطيل .', callback_data=msg.sender_user_id_.."/homeaddrem"},{text = '- اوامر القفل .', callback_data=msg.sender_user_id_.."/homelocks"},
+},
+{
+{text = '- Sorce GeSoN .', url = "https://t.me/rnnni"}
+},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+end
 ]] 
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="🎖اوامر الادمنيه",callback_data="/HelpList2:"..msg.sender_user_id_},{text="🎖اوامر الحمايه",callback_data="/HelpList1:"..msg.sender_user_id_}},{{text="🎖اوامر المنشئين",callback_data="/HelpList4:"..msg.sender_user_id_},{text="🎖اوامر المدراء",callback_data="/HelpList3:"..msg.sender_user_id_}},{{text="🎖اوامر الاعضاء",callback_data="/HelpList6:"..msg.sender_user_id_},{text="اوامر Dev🎖",callback_data="/HelpList5:"..msg.sender_user_id_}},{{text="• اخفاء القائمة•",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
