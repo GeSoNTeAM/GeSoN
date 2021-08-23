@@ -3599,7 +3599,7 @@ end
 if ChatType == 'sp' or ChatType == 'gp' or ChatType == 'pv' then
 if text == 'بوت' or text == 'بوتت' then 
 NameBot = (DevAbs:get(GeSoN..'Abs:NameBot') or 'جيسون')
-local rnnni = {' قولحبيبي ؟ اني '..NameBot..' ',' شتبي يا ورع  '..NameBot..' ',' اسمي الملك '..NameBot..' '}
+local rnnni = {' قولحبيبي ؟ اني '..NameBot..' ',' شتبي يا عيون  '..NameBot..' ',' اسمي اسمي '..NameBot..' '}
 DevAbs2 = math.random(#rnnni) 
 Dev_Abs(msg.chat_id_, msg.id_, 1, rnnni[DevAbs2] , 1, 'html') 
 return false
@@ -4463,22 +4463,23 @@ DevAbs:set(GeSoN..'Abs:viewget'..msg.sender_user_id_,true)
 Dev_Abs(msg.chat_id_, msg.id_, 1, '-› حسنا قم باعادة توجيه للمنشور الذي تريدني حساب مشاهداته', 1, 'md')
 end
 --     Source GeSoN     --
-if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then
-local Text =[[
-🎖︙Source Dilar .
-
-]]
+if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'ياسورس' or text == '›  السورس' then
+Text = "[🎖 Welcome to Source](t.me/rnnni)\n[🎖 SOURCE GeSoN](t.me/rnnni)\n🎖 Source version : 1.1"
 keyboard = {} 
 keyboard.inline_keyboard = {
-
+{{text = 'قناة سورس🎖',url="t.me/rnnni"},
 {
-{text = '- Sorce GeSoN .', url = "https://t.me/rnnni"}
+{text = 'شروحات سورس🎖',url="t.me/SourceGeSoN"}
 },
 {
-{text = '- Dev🎖 .', url = "https://t.me/GGI55"}
+{{text = 'تنصيب سورس🎖',url="https://t.me/iiiziiii"}
 },
 {
-{text = '-  BOT Sorce.', url = "https://t.me/GeS0Bot"}
+{text = 'قروب سورس🎖',url="https://t.me/joinchat/E8g4prm9erozY2Y0"}
+},
+{
+{{text = 'Dev🎖',url="t.me/GGI55"}
+},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/rnnni&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
