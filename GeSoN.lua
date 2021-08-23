@@ -4467,10 +4467,14 @@ if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or te
 Text = "[🎖 Welcome to Source -](t.me/rnnni)\n[🎖 - SOURCE GeSoN -](t.me/rnnni)\n🎖 Source version : 1.1"
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'Channel Source🎖',url="t.me/rnnni"},
-{text = 'Update Source🎖',url="t.me/SourceGeSoN"}},
-{{text = 'Install Source🎖',url="https://t.me/SourceGeSoN"},
-{text = 'Source Group🎖',url="https://t.me/joinchat/VWldbmm1mhJjOTFk"}},
+{{text = 'قناة السورس🎖',url="t.me/rnnni"},
+
+{text = 'شروحات السورس🎖',url="t.me/SourceGeSoN"}},
+
+{{text = 'لتنصيب السورس🎖',url="https://t.me/iiiziiii"},
+
+{text = 'قروب السورس🎖',url="https://t.me/joinchat/E8g4prm9erozY2Y0"}},
+
 {{text = 'Dev🎖',url="t.me/GGI55"}},
 }
 local msg_id = msg.id_/2097152/0.5
