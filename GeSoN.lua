@@ -4467,15 +4467,15 @@ if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or te
 Text = "[🎖 Welcome to Source -](t.me/rnnni)\n[🎖 - SOURCE GeSoN -](t.me/rnnni)\n🎖 Source version : 1.1"
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'قناة سورس🎖',url="t.me/rnnni"},
+{{text = '- قناة سورس.',url="t.me/rnnni"},
 
-{text = 'شروحات سورس🎖',url="t.me/SourceGeSoN"}},
+{text = '- شروحات سورس.',url="t.me/SourceGeSoN"}},
 
-{{text = 'تنصيب سورس🎖',url="https://t.me/SourceGeSoN"},
+{{text = '- تنصيب سورس.',url="https://t.me/SourceGeSoN"},
 
-{text = 'Dev🎖',url="t.me/IIIZIIII"}},
+{text = '- Dev.',url="t.me/IIIZIIII"}},
 
-{{text = 'Dev🎖',url="t.me/GGI55"}},
+{{text = '- Dev.',url="t.me/GGI55"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/rnnni&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -10478,19 +10478,19 @@ end
 if text == "الاوامر" and ChCheck(msg) or text == "اوامر" and ChCheck(msg) or text == "مساعده" and ChCheck(msg) then
 local Help = DevAbs:get(GeSoN..'Abs:Help')
 local Text = [[
--› اهلا بك في قائمة الاوامر › 🎖 
+•› اهلا بك في قائمة الاوامر › 🎖 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
--› م1 › 🎖اوامر الحمايه
--› م2 › 🎖اوامر الادمنيه
--› م3 › 🎖اوامر المدراء
--› م4 › 🎖اوامر المنشئين
--› م5 › اوامر Dev🎖
--› م6 › 🎖اوامر الاعضاء
+•› م1 › اوامر الحمايه
+•› م2 › اوامر الادمنيه
+•› م3 › اوامر المدراء
+•› م4 › اوامر المنشئين
+•› م5 › اوامر Dev🎖
+•› م6 › اوامر الاعضاء
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
--› [Source Channel](https://t.me/rnnni)
+•› [Source Channel](https://t.me/rnnni)
 ]] 
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="🎖اوامر الادمنيه",callback_data="/HelpList2:"..msg.sender_user_id_},{text="🎖اوامر الحمايه",callback_data="/HelpList1:"..msg.sender_user_id_}},{{text="🎖اوامر المنشئين",callback_data="/HelpList4:"..msg.sender_user_id_},{text="🎖اوامر المدراء",callback_data="/HelpList3:"..msg.sender_user_id_}},{{text="🎖اوامر الاعضاء",callback_data="/HelpList6:"..msg.sender_user_id_},{text="اوامر Dev🎖",callback_data="/HelpList5:"..msg.sender_user_id_}},{{text="• اخفاء القائمة•",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text=".اوامر الادمنيه-",callback_data="/HelpList2:"..msg.sender_user_id_},{text=".اوامر الحمايه-",callback_data="/HelpList1:"..msg.sender_user_id_}},{{text=".اوامر المنشئين-",callback_data="/HelpList4:"..msg.sender_user_id_},{text=".اوامر المدراء-",callback_data="/HelpList3:"..msg.sender_user_id_}},{{text=".اوامر الاعضاء-",callback_data="/HelpList6:"..msg.sender_user_id_},{text="اوامر Dev🎖",callback_data="/HelpList5:"..msg.sender_user_id_}},{{text="• اخفاء القائمة•",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
 Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Help or Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
