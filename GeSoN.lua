@@ -643,6 +643,44 @@ end
 end
 end
 --     Source GeSoN     --
+if text == "وضع شعار" or text == "ضع شعار" then 
+    redis:set("tt:add1"..bot_id..msg.chat_id_..msg.sender_user_id_,"GeSoN")
+    faederdx(msg.chat_id_, msg.id_, 1, "⇽ ارسل لي الشعار الان", 1, 'md')
+    return "GeSoN"
+    end
+    if redis:get("tt:add1"..bot_id..msg.chat_id_..msg.sender_user_id_) then 
+    DevAbs(msg.chat_id_, msg.id_, 1, "⇽ تم تعيين : { "..text.." }", 1, 'md')
+    redis:del("tt:add1"..bot_id..msg.chat_id_..msg.sender_user_id_)
+    redis:set("tohd1"..bot_id..msg.chat_id_,text)
+    end 
+    if text == "تفعيل الشعار" then 
+    DevAbs(msg.chat_id_, msg.id_, 1, "⇽ تم تفعيل الشعار", 1, 'md')
+    redis:set("Dev_Abs"..bot_id..msg.chat_id_,"Abs")
+    end
+    if text == "تعطيل الشعار" then 
+    DevAbs(msg.chat_id_, msg.id_, 1, "⇽ تم تعطيل الشعار", 1, 'md')
+    redis:del("DevAbs_Dx"..bot_id..msg.chat_id_)
+    end
+    
+    if not msg.forward_info_  then
+    if redis:get("DevAbs_Dx"..bot_id..msg.chat_id_) and redis:get("DevAbs"..bot_id..msg.chat_id_) then 
+    id = msg.sender_user_id_
+    function GeSoN_DevAbs(DevAbs,DevAbs2)
+    if DevAbs2 and DevAbs2.first_name_ then 
+    if DevAbs2.first_name_:match("(.*)"..redis:get("tohd1"..bot_id..msg.chat_id_).."(.*)") then 
+    redis:srem('DevAbs:'..bot_id..'muted:'..msg.chat_id_, msg.sender_user_id_)
+    else
+    local DevAbs_F = redis:get("tohd"..bot_id..msg.chat_id_) or 5
+    local DevAbs_F2 = redis:get("DevAbs"..bot_id..msg.chat_id_..msg.sender_user_id_) or 0
+    if (tonumber(DevAbs_F2) == tonumber(DevAbs_F) or tonumber(DevAbs_F2) > tonumber(DevAbs_F)) then 
+    redis:sadd(GeSoN..'bot:muted:'..msg.chat_id_, msg.sender_user_id_)
+    else
+    redis:incrby("DevAbs"..bot_id..msg.chat_id_..msg.sender_user_id_,1)
+    faederdx(msg.chat_id_, msg.id_, 1, "⇽ يالطيب  ["..DevAbs.first_name_.."](https://t.me/"..(DevAbs.username_ or "GeSoN_ch")..")\n⇽ لازم تحط شعار الحزب  { "..redis:get("tohd1"..bot_id..msg.chat_id_).." } جنب اسمك\n⇽ اذا ماحطيته بكتمك\n\n⇽ عدد المحاولات المتبقيه {"..(tonumber(DevAbs_F) - tonumber(DevAbs_F2)).."}", 1, 'md')
+    end end end end
+    getUser(id, GeSoN_DevAbs)
+    end end
+--     Source GeSoN     --
 function ReplyStatus(msg,user_id,status,text)
 tdcli_function ({ID = "GetUser",user_id_ = user_id},function(arg,dp) 
 if dp.first_name_ ~= false then
