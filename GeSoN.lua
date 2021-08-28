@@ -1217,7 +1217,7 @@ return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackq
 end
 local Help = DevAbs:get(GeSoN..'Abs:Help4')
 local Text = [[
--› اوامر المنشئين › 🎖
+-› اوامر المالكين › 🎖
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› تنزيل الكل
 -› الميديا • امسح
@@ -1236,7 +1236,7 @@ local Text = [[
 -› نزلني • امسح
 -› الحظر • الكتم
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
--› اوامر المنشئين الاساسيين › ⤈
+-› اوامر المالكين الاساسيين › ⤈
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› وضع لقب + اللقب
 -› تفعيل • تعطيل › الرفع
@@ -1248,9 +1248,9 @@ local Text = [[
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› اوامر المالكين › ⤈
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
--› رفع • تنزيل › منشئ اساسي
--› حذف المنشئين الاساسيين 
--› المنشئين الاساسيين 
+-› رفع • تنزيل › مالك اساسي
+-› حذف المالكين الاساسيين 
+-› المالكين الاساسيين 
 -› حذف جميع الرتب
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 -› [Source Channel](https://t.me/rnnni)
@@ -1934,8 +1934,8 @@ if text == '/start' and ChCheck(msg) then
 if not DevAbs:get(GeSoN..'Abs:Start:Time'..msg.sender_user_id_) then
 tdcli_function({ID="GetUser",user_id_=DevId},function(arg,dp) 
 local inline = {
-{{text="᥀ المطور🎖 .",url="t.me/"..(dp.username_ or "rnnni")}},
-{{text="᥀ السورس .",url="https://t.me/rnnni"},{text="᥀ لتنصيب بوت .",url="https://t.me/GGI55"}},
+{{text="• المطور🎖 .",url="t.me/"..(dp.username_ or "rnnni")}},
+{{text="• السورس .",url="https://t.me/rnnni"},{text="• لتنصيب بوت .",url="https://t.me/GGI55"}},
 }
 local start = DevAbs:get(GeSoN.."Abs:Start:Bot")
 if start then 
@@ -2272,7 +2272,7 @@ tdcli_function ({ID = "GetChatMember",chat_id_ = msg.chat_id_,user_id_ = msg.sen
 if ChatMem and ChatMem.status_.ID == "ChatMemberStatusEditor" or ChatMem and ChatMem.status_.ID == "ChatMemberStatusCreator" then
 if ChatMem and ChatMem.user_id_ == msg.sender_user_id_ then
 if ChatMem.status_.ID == "ChatMemberStatusCreator" then
-status = 'منشئ'
+status = 'مالك'
 elseif ChatMem.status_.ID == "ChatMemberStatusEditor" then
 status = 'ادمن'
 else 
@@ -3577,6 +3577,34 @@ end
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '-› جلب رابط المجموعه معطل', 1, 'md')
 end
+end
+--     Source GeSoN     --
+if text == "الرابط" then
+
+if not DevAbs:get(GeSoN.."Abs:Lock:GpLinksinline"..msg.chat_id_) then 
+
+tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
+
+local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..TokenBot..'/exportChatInviteLink?chat_id='..msg.chat_id_)) or DevAbs:get(GeSoN.."Private:Group:Link"..msg.chat_id_) 
+
+if linkgpp.ok == true then 
+
+local Text = '᥀︙𝖫𝗂𝗇𝗄 𝖦𝗋𝗈𝗎𝗉 ↬ ⤈\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n['..ta.title_..']('..linkgpp.result..')'
+
+local inline = {{{text = ta.title_, url=linkgpp.result}},
+
+} 
+
+SendInline(msg.chat_id_,Text,nil,inline,msg.id_/2097152/0.5) 
+
+else 
+
+end 
+
+end,nil) 
+
+end
+
 end
 --     Source GeSoN     --
 if msg.chat_id_ then
