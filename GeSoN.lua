@@ -403,19 +403,19 @@ end
 if v.AbsConstructors then
 for k,IdAbsConstructors in pairs(v.AbsConstructors) do
 DevAbs:sadd(GeSoN..'Abs:AbsConstructor:'..IdGps,IdAbsConstructors)  
-print('تم رفع منشئين المجموعات')
+print('تم رفع مالكين المجموعات')
 end
 end
 if v.BasicConstructors then
 for k,IdBasicConstructors in pairs(v.BasicConstructors) do
 DevAbs:sadd(GeSoN..'Abs:BasicConstructor:'..IdGps,IdBasicConstructors)  
-print('تم رفع ( '..k..' ) منشئين اساسيين')
+print('تم رفع ( '..k..' ) مالكين اساسيين')
 end
 end
 if v.Constructors then
 for k,IdConstructors in pairs(v.Constructors) do
 DevAbs:sadd(GeSoN..'Abs:Constructor:'..IdGps,IdConstructors)  
-print('تم رفع ( '..k..' ) منشئين')
+print('تم رفع ( '..k..' ) مالكين')
 end
 end
 if v.Managers then
@@ -692,13 +692,13 @@ local Check = https.request('https://api.telegram.org/bot'..TokenBot..'/getChatM
 local GetInfo = JSON.decode(Check)
 if GetInfo.ok == true then
 if GetInfo.result.status == "creator" then
-send(msg.chat_id_,msg.id_,'-› مالك المجموعه')   
+send(msg.chat_id_,msg.id_,'• مالك المجموعه')   
 return false  end 
 if GetInfo.result.status == "member" then
-send(msg.chat_id_,msg.id_,'-› مجرد عضو هنا')   
+send(msg.chat_id_,msg.id_,'• مجرد عضو هنا')   
 return false  end
 if GetInfo.result.status == 'left' then
-send(msg.chat_id_,msg.id_,'-› الشخص غير موجود هنا')   
+send(msg.chat_id_,msg.id_,'• الشخص غير موجود هنا')   
 return false  end
 if GetInfo.result.status == "administrator" then
 if GetInfo.result.can_change_info == true then EDT = '✔️' else EDT = '✖️' end
@@ -707,7 +707,7 @@ if GetInfo.result.can_invite_users == true then INV = '✔️' else INV = '✖�
 if GetInfo.result.can_pin_messages == true then PIN = '✔️' else PIN = '✖️' end
 if GetInfo.result.can_restrict_members == true then BAN = '✔️' else BAN = '✖️' end
 if GetInfo.result.can_promote_members == true then VIP = '✔️' else VIP = '✖️' end 
-send(msg.chat_id_,msg.id_,'-› صلاحيات '..GetCustomTitle(user_id,msg.chat_id_)..' هي › ⤈\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n-› حذف الرسائل › '..DEL..'\n-› دعوة المستخدمين › '..INV..'\n-› حظر المستخدمين › '..BAN..'\n-› تثبيت الرسائل › '..PIN..'\n-› تغيير المعلومات › '..EDT..'\n-› اضافة مشرفين › '..VIP..'\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉')
+send(msg.chat_id_,msg.id_,'• صلاحيات '..GetCustomTitle(user_id,msg.chat_id_)..' هي › ⤈\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n• حذف الرسائل - '..DEL..'\n• دعوة المستخدمين - '..INV..'\n• حظر المستخدمين - '..BAN..'\n• تثبيت الرسائل - '..PIN..'\n• تغيير المعلومات - '..EDT..'\n• اضافة مشرفين - '..VIP..'\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉')
 end
 end
 end
@@ -797,7 +797,7 @@ User = "https://t.me/"..GetInfo.result.username
 else
 User = GetInfo.result.invite_link
 end
-Text = "*-› عذرا لاتستطيع استخدام البوت !\n-› عليك الاشتراك في القناة اولا :*"
+Text = "*• عذرا لاتستطيع استخدام البوت !\n• عليك الاشتراك في القناة اولا •*"
 keyboard = {} 
 keyboard.inline_keyboard = {{{text=GetInfo.result.title,url=User}}} 
 Msg_id = msg.id_/2097152/0.5
@@ -821,25 +821,25 @@ if DataText == '/delyes' and DevAbs:get(GeSoN..'yes'..data.sender_user_id_) == '
 DevAbs:del(GeSoN..'yes'..data.sender_user_id_, 'delyes')
 DevAbs:del(GeSoN..'no'..data.sender_user_id_, 'delno')
 if RankChecking(data.sender_user_id_, data.chat_id_) then
-EditMsg(Chat_Id2, Msg_Id2, "-› لا استطيع طرد › "..IdRank(data.sender_user_id_, data.chat_id_)) 
+EditMsg(Chat_Id2, Msg_Id2, "• لا استطيع طرد › "..IdRank(data.sender_user_id_, data.chat_id_)) 
 return false
 end
 tdcli_function({ID="ChangeChatMemberStatus",chat_id_=data.chat_id_,user_id_=data.sender_user_id_,status_={ID="ChatMemberStatusKicked"},},function(arg,da) 
 if (da and da.code_ and da.code_ == 400 and da.message_ == "CHAT_ADMIN_REQUIRED") then 
-EditMsg(Chat_Id2, Msg_Id2, "-› ليس لدي صلاحية حظر المستخدمين يرجى تفعيلها !") 
+EditMsg(Chat_Id2, Msg_Id2, "• ليس لدي صلاحية حظر المستخدمين يرجى تفعيلها .") 
 return false  
 end
 if (da and da.code_ and da.code_ == 3) then 
-EditMsg(Chat_Id2, Msg_Id2, "-› البوت ليس ادمن يرجى ترقيتي !") 
+EditMsg(Chat_Id2, Msg_Id2, "• البوت ليس ادمن يرجى ترقيتي .") 
 return false  
 end
 if da and da.code_ and da.code_ == 400 and da.message_ == "USER_ADMIN_INVALID" then 
-EditMsg(Chat_Id2, Msg_Id2, "-› لا استطيع طرد مشرفين المجموعه") 
+EditMsg(Chat_Id2, Msg_Id2, "• لا استطيع طرد مشرفين المجموعه") 
 return false  
 end
 if da and da.ID and da.ID == "Ok" then
 ChatKick(data.chat_id_, data.sender_user_id_)
-EditMsg(Chat_Id2, Msg_Id2, "-› تم طردك من المجموعه") 
+EditMsg(Chat_Id2, Msg_Id2, "• تم طردك من المجموعه") 
 return false
 end
 end,nil)  
@@ -847,7 +847,7 @@ end
 if DataText == '/delno' and DevAbs:get(GeSoN..'no'..data.sender_user_id_) == 'delno' then
 DevAbs:del(GeSoN..'yes'..data.sender_user_id_, 'delyes')
 DevAbs:del(GeSoN..'no'..data.sender_user_id_, 'delno')
-EditMsg(Chat_Id2, Msg_Id2, "-› تم الغاء امر اطردني") 
+EditMsg(Chat_Id2, Msg_Id2, "• تم الغاء امر اطردني") 
 end
 --     Source GeSoN     --
 if DataText == '/yesdel' and DevAbs:get(GeSoN..'yesdel'..data.sender_user_id_) == 'delyes' then
@@ -872,28 +872,28 @@ DevAbs:srem(GeSoN..'Abs:Admins:'..data.chat_id_,data.sender_user_id_)
 DevAbs:srem(GeSoN..'Abs:VipMem:'..data.chat_id_,data.sender_user_id_)
 DevAbs:srem(GeSoN..'Abs:Cleaner:'..data.chat_id_,data.sender_user_id_)
 DevAbs:srem(GeSoN..'User:Donky:'..data.chat_id_,data.sender_user_id_)
-EditMsg(Chat_Id2, Msg_Id2, "-› تم تنزيلك من › ⤈\n~ ( "..constructor..Managers..admins..vipmem..cleaner..donky.." ) ~ \n") 
+EditMsg(Chat_Id2, Msg_Id2, "• تم تنزيلك من › \n~ ( "..constructor..Managers..admins..vipmem..cleaner..donky.." ) ~ \n") 
 else 
 if IdRank(data.sender_user_id_, data.chat_id_) == 'العضو' then
-EditMsg(Chat_Id2, Msg_Id2, "-› ليس لديك رتبه في البوت") 
+EditMsg(Chat_Id2, Msg_Id2, "• ليس لديك رتبه في البوت") 
 else 
-EditMsg(Chat_Id2, Msg_Id2, "-› لا استطيع تنزيل › "..IdRank(data.sender_user_id_, data.chat_id_)) 
+EditMsg(Chat_Id2, Msg_Id2, "• لا استطيع تنزيل › "..IdRank(data.sender_user_id_, data.chat_id_)) 
 end
 end
 end
 if DevAbs:get(GeSoN.."Abs:NewDev"..data.sender_user_id_) then
 if DataText == '/setno' then
-EditMsg(Chat_Id2, Msg_Id2, "-› تم الغاء امر تغير المطور الاساسي") 
+EditMsg(Chat_Id2, Msg_Id2, "• تم الغاء امر تغير المطور الاساسي") 
 DevAbs:del(GeSoN.."Abs:NewDev"..data.sender_user_id_)
 return false
 end
 if DataText == '/setyes' then
 local NewDev = DevAbs:get(GeSoN.."Abs:NewDev"..data.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = NewDev},function(arg,dp) 
-EditMsg(Chat_Id2, Msg_Id2, "-› المطور الجديد › ["..dp.first_name_.."](tg://user?id="..dp.id_..")\n-› تم تغير المطور الاساسي بنجاح") 
+EditMsg(Chat_Id2, Msg_Id2, "• المطور الجديد › ["..dp.first_name_.."](tg://user?id="..dp.id_..")\n• تم تغير المطور الاساسي بنجاح") 
 end,nil)
 tdcli_function ({ID = "GetUser",user_id_ = data.sender_user_id_},function(arg,dp) 
-SendText(NewDev,"-› بواسطة › ["..dp.first_name_.."](tg://user?id="..dp.id_..")\n-› لقد اصبحت انت مطور هذا البوت",0,'md')
+SendText(NewDev,"⇽ بواسطة › ["..dp.first_name_.."](tg://user?id="..dp.id_..")\n• لقد اصبحت انت مطور هذا البوت",0,'md')
 end,nil)
 local Create = function(data, file, uglify)  
 file = io.open(file, "w+")   
@@ -920,7 +920,7 @@ end
 if DataText == '/nodel' and DevAbs:get(GeSoN..'nodel'..data.sender_user_id_) == 'delno' then
 DevAbs:del(GeSoN..'yesdel'..data.sender_user_id_, 'delyes')
 DevAbs:del(GeSoN..'nodel'..data.sender_user_id_, 'delno')
-EditMsg(Chat_Id2, Msg_Id2, "-› تم الغاء امر نزلني") 
+EditMsg(Chat_Id2, Msg_Id2, "• تم الغاء امر نزلني") 
 end
 if DataText == '/YesRolet' and DevAbs:get(GeSoN.."Abs:WittingStartRolet"..data.chat_id_..data.sender_user_id_) then
 local List = DevAbs:smembers(GeSoN..'Abs:ListRolet'..data.chat_id_) 
@@ -930,7 +930,7 @@ DevAbs:incrby(GeSoN..'Abs:GamesNumber'..data.chat_id_..dp.id_, 5)
 end,nil) 
 DevAbs:del(GeSoN..'Abs:ListRolet'..data.chat_id_) 
 DevAbs:del(GeSoN.."Abs:WittingStartRolet"..data.chat_id_..data.sender_user_id_)
-EditMsg(Chat_Id2, Msg_Id2, "-› *صاحب الحظ* › ["..UserName.."]\n-› *مبروك لقد ربحت وحصلت على 5 نقاط يمكنك استبدالها بالرسائل*")
+EditMsg(Chat_Id2, Msg_Id2, "• *صاحب الحظ* › ["..UserName.."]\n• *مبروك لقد ربحت وحصلت على 5 نقاط يمكنك استبدالها بالرسائل*")
 end
 if DataText == '/NoRolet' then
 DevAbs:del(GeSoN..'Abs:ListRolet'..data.chat_id_) 
@@ -940,8 +940,8 @@ EditMsg(Chat_Id2, Msg_Id2, "-› تم الغاء اللعبه لاعادة ال�
 end
 if DataText == '/ListRolet' then
 local List = DevAbs:smembers(GeSoN..'Abs:ListRolet'..data.chat_id_) 
-local Text = '-› قائمة الاعبين › ⤈\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n' 
-local Textt = '┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n-› تم اكتمال العدد الكلي هل انت مستعد ؟'
+local Text = '• قائمة الاعبين › \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n' 
+local Textt = '┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n• تم اكتمال العدد الكلي هل انت مستعد ؟'
 for k, v in pairs(List) do 
 Text = Text..k.."~ : [" ..v.."]\n"  
 end 
@@ -961,7 +961,7 @@ end
 end
 if DataText and DataText:match('/DelRed:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/DelRed:'..tonumber(data.sender_user_id_)..'(.*)')
-EditMsg(Chat_Id2, Msg_Id2, "-› الكلمه › "..Abs.." تم حذفها") 
+EditMsg(Chat_Id2, Msg_Id2, "• الكلمه › "..Abs.." تم حذفها") 
 DevAbs:del(GeSoN..'Abs:Text:GpTexts'..Abs..data.chat_id_)
 DevAbs:srem(GeSoN..'Abs:Manager:GpRedod'..data.chat_id_,Abs)
 end
@@ -969,28 +969,28 @@ if DataText and DataText:match('/EndRedod:'..tonumber(data.sender_user_id_)..'(.
 local Abs = DataText:match('/EndRedod:'..tonumber(data.sender_user_id_)..'(.*)')
 local List = DevAbs:smembers(GeSoN..'Abs:Text:GpTexts'..Abs..data.chat_id_)
 if DevAbs:get(GeSoN..'Abs:Add:GpRedod'..data.sender_user_id_..data.chat_id_) then
-EditMsg(Chat_Id2, Msg_Id2, "-› تم انهاء وحفظ › "..#List.." من الردود المتعدده للامر › "..Abs) 
+EditMsg(Chat_Id2, Msg_Id2, "• تم انهاء وحفظ › "..#List.." من الردود المتعدده للامر › "..Abs) 
 DevAbs:del(GeSoN..'Abs:Add:GpRedod'..data.sender_user_id_..data.chat_id_)
 else
-EditMsg(Chat_Id2, Msg_Id2, "-› عذرا صلاحية الامر منتهيه !") 
+EditMsg(Chat_Id2, Msg_Id2, "• عذرا صلاحية الامر منتهيه !") 
 end
 end
 if DataText and DataText:match('/DelRedod:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/DelRedod:'..tonumber(data.sender_user_id_)..'(.*)')
 if DevAbs:get(GeSoN..'Abs:Add:GpRedod'..data.sender_user_id_..data.chat_id_) then
-EditMsg(Chat_Id2, Msg_Id2, "-› تم الغاء عملية حفظ الردود المتعدده للامر › "..Abs) 
+EditMsg(Chat_Id2, Msg_Id2, "• تم الغاء عملية حفظ الردود المتعدده للامر › "..Abs) 
 DevAbs:del(GeSoN..'Abs:Add:GpRedod'..data.sender_user_id_..data.chat_id_)
 DevAbs:del(GeSoN..'Abs:Text:GpTexts'..Abs..data.chat_id_)
 DevAbs:del(GeSoN..'Abs:Add:GpTexts'..data.sender_user_id_..data.chat_id_)
 DevAbs:srem(GeSoN..'Abs:Manager:GpRedod'..data.chat_id_,Abs)
 else
-EditMsg(Chat_Id2, Msg_Id2, "-› عذرا صلاحية الامر منتهيه !") 
+EditMsg(Chat_Id2, Msg_Id2, "• عذرا صلاحية الامر منتهيه .") 
 end
 end
 if DataText and DataText:match('/HideHelpList:(.*)') then
 local Abs = DataText:match('/HideHelpList:(.*)')
 if tonumber(Abs) == tonumber(data.sender_user_id_) then
-EditMsg(Chat_Id2, Msg_Id2, "-› تم اخفاء قائمة الاوامر") 
+EditMsg(Chat_Id2, Msg_Id2, "• تم اخفاء قائمة الاوامر") 
 else
 return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("᥀ عذرا الامر ليس لك .")..'&show_alert=true')
 end
@@ -1000,7 +1000,7 @@ local Abs = DataText:match('/HelpList:(.*)')
 if tonumber(Abs) == tonumber(data.sender_user_id_) then
 local Help = DevAbs:get(GeSoN..'Abs:Help')
 local Text = [[
-• اهلا بك في قائمة الاوامر › 🎖 
+• اهلا بك في قائمة الاوامر ›  
  ━━━━━
 • م1 › اوامر الحمايه
 • م2 › اوامر الادمنيه
