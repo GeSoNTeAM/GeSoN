@@ -1662,22 +1662,22 @@ function py_username(extra, result, success)
 if result.id_ then
 local mrAbs = DevAbs:get(GeSoN.."Comd:New:rt:Abs:"..text1[2]..msg.chat_id_)
 if mrAbs == "مميز" and VipMem(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› العضو › ❨ ['..result.title_..'](t.me/'..(text1[3] or 'rnnni')..')'..' ❩\n-› تم تنزيله ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• العضو ⇽ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'rnnni')..')'..' ❩\n-› تم تنزيله ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
 DevAbs:srem(GeSoN..'Abs:VipMem:'..msg.chat_id_, result.id_)
 DevAbs:del(GeSoN.."Comd:New:rt:User:"..msg.chat_id_..result.id_)
 elseif mrAbs == "ادمن" and Admin(msg) then 
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› العضو › ❨ ['..result.title_..'](t.me/'..(text1[3] or 'rnnni')..')'..' ❩\n-› تم تنزيله ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• العضو ⇽ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'rnnni')..')'..' ❩\n-› تم تنزيله ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
 DevAbs:srem(GeSoN..'Abs:Admins:'..msg.chat_id_, result.id_)
 DevAbs:del(GeSoN.."Comd:New:rt:User:"..msg.chat_id_..result.id_)
 elseif mrAbs == "مدير" and Manager(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› العضو › ❨ ['..result.title_..'](t.me/'..(text1[3] or 'rnnni')..')'..' ❩\n-› تم تنزيله ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• العضو ⇽ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'rnnni')..')'..' ❩\n-› تم تنزيله ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
 DevAbs:srem(GeSoN..'Abs:Managers:'..msg.chat_id_, result.id_)
 DevAbs:del(GeSoN.."Comd:New:rt:User:"..msg.chat_id_..result.id_)
 elseif mrAbs == "عضو" then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› العضو › ❨ ['..result.title_..'](t.me/'..(text1[3] or 'rnnni')..')'..' ❩\n-› تم تنزيله ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• العضو ⇽ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'rnnni')..')'..' ❩\n-› تم تنزيله ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
 end
 else
-Dev_Abs(msg.chat_id_, msg.id_, 1, "-› *المعرف غير صحيح*", 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, "• *المعرف غير صحيح*", 1, 'md')
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = text1[3]},py_username,nil) 
@@ -1941,7 +1941,7 @@ local start = DevAbs:get(GeSoN.."Abs:Start:Bot")
 if start then 
 Start_Source = start
 else
-Start_Source = "-› مرحبا انا بوت اسمي🎖 "..NameBot.."\n-› اختصاصي حماية المجموعات\n-› من التفليش والسبام والخخ .. . ،\n-› تفعيلي سهل ومجانا فقط قم برفعي ادمن في مجموعتك وارسل امر › تفعيل\n-› سيتم رفع الادمنيه والمنشئ تلقائيا\n-› ارسل امر /free او /play للتمتع باوامر الاعضاء"
+Start_Source = "• مرحبا انا بوت اسمي🎖 "..NameBot.."\n• اختصاصي حماية القروبات\n• من التفليش والسبام والخخ .. . ،\n• تفعيلي سهل ومجانا فقط قم برفعي ادمن في مجموعتك وارسل امر › تفعيل\n• سيتم رفع الادمنيه والمنشئ تلقائيا\n• ارسل امر /free او /play للتمتع باوامر الاعضاء"
 end 
 SendInline(msg.chat_id_,Start_Source,nil,inline)
 end,nil)
@@ -1952,12 +1952,12 @@ end
 --     Source GeSoN     --
 if not SecondSudo(msg) and not DevAbs:sismember(GeSoN..'Abs:Ban:Pv',msg.sender_user_id_) and not DevAbs:get(GeSoN..'Abs:Texting:Pv') then
 tdcli_function({ID="GetUser",user_id_=DevId},function(arg,chat) 
-Dev_Abs(msg.sender_user_id_, msg.id_, 1, '-› تم ارسال رسالتك الى [المطور](t.me/'..(chat.username_ or "rnnni")..')', 1, 'md') 
+Dev_Abs(msg.sender_user_id_, msg.id_, 1, '• ابشر رسلت رسالتك الى [المطور](t.me/'..(chat.username_ or "rnnni")..')', 1, 'md') 
 tdcli_function({ID="ForwardMessages",chat_id_=DevId,from_chat_id_= msg.sender_user_id_,message_ids_={[0]=msg.id_},disable_notification_=1,from_background_=1},function(arg,data) 
 tdcli_function({ID="GetUser",user_id_=msg.sender_user_id_},function(arg,dp) 
 if data and data.messages_ and data.messages_[0] ~= false and data.ID ~= "Error" then
 if data and data.messages_ and data.messages_[0].content_.sticker_ then
-SendText(DevId,'-› تم ارسال الملصق من › ⤈\n['..string.sub(dp.first_name_,0, 40)..'](tg://user?id='..dp.id_..')',0,'md') 
+SendText(DevId,'• ابشر رسلت الملصق من › ⤈\n['..string.sub(dp.first_name_,0, 40)..'](tg://user?id='..dp.id_..')',0,'md') 
 return false
 end;end;end,nil);end,nil);end,nil);end
 if SecondSudo(msg) and msg.reply_to_message_id_ ~= 0  then    
@@ -1967,13 +1967,13 @@ id_user = result.forward_info_.sender_user_id_
 end 
 tdcli_function ({ID = "GetUser",user_id_ = id_user},function(arg,data) 
 if text == 'حظر' or text == 'حضر' then
-local Text = '-› العضو › ['..string.sub(data.first_name_,0, 40)..'](tg://user?id='..data.id_..')'..'\n-› تم حظره من التواصل'
+local Text = '• الحلو ⇽ ['..string.sub(data.first_name_,0, 40)..'](tg://user?id='..data.id_..')'..'\n• ابشر حظرته من التواصل'
 SendText(DevId,Text,msg.id_/2097152/0.5,'md') 
 DevAbs:sadd(GeSoN..'Abs:Ban:Pv',data.id_)  
 return false  
 end 
 if text == 'الغاء الحظر' or text == 'الغاء حظر' then
-local Text = '-› العضو › ['..string.sub(data.first_name_,0, 40)..'](tg://user?id='..data.id_..')'..'\n-› تم الغاء حظره من التواصل'
+local Text = '• الحلو ⇽ ['..string.sub(data.first_name_,0, 40)..'](tg://user?id='..data.id_..')'..'\n• ابشر لغيت حظره من التواصل'
 SendText(DevId,Text,msg.id_/2097152/0.5,'md') 
 DevAbs:srem(GeSoN..'Abs:Ban:Pv',data.id_)  
 return false  
@@ -1981,24 +1981,24 @@ end
 tdcli_function({ID='GetChat',chat_id_ = id_user},function(arg,dataq)
 tdcli_function ({ ID = "SendChatAction",chat_id_ = id_user, action_ = {  ID = "SendMessageTypingAction", progress_ = 100} },function(arg,dp) 
 if dp.code_ == 400 or dp.code_ == 5 then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› العضو قام بحظر البوت لا تستطيع ارسال الرسائل له', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '-› الحلو قام بحظر البوت لا تستطيع ارسال الرسائل له', 1, 'md')
 return false  
 end 
 if text then
 Dev_Abs(id_user, 0, 1, text, 1, "md")  
-Text = '-› تم ارسال الرساله الى › ⤈'
+Text = '• ابشر رسلت الرساله الى ⇽ ⤈'
 elseif msg.content_.ID == 'MessageSticker' then    
 sendSticker(id_user, msg.id_, 0, 1,nil, msg.content_.sticker_.sticker_.persistent_id_)   
-Text = '-› تم ارسال الملصق الى › ⤈'
+Text = '• ابشر رسلت الملصق الى ⇽ ⤈'
 elseif msg.content_.ID == 'MessagePhoto' then    
 sendPhoto(id_user, msg.id_, 0, 1,nil, msg.content_.photo_.sizes_[0].photo_.persistent_id_,(msg.content_.caption_ or ''))    
-Text = '-› تم ارسال الصوره الى › ⤈'
+Text = '• ابشر رسلت الصوره الى ⇽ ⤈'
 elseif msg.content_.ID == 'MessageAnimation' then    
 sendDocument(id_user, msg.id_, 0, 1,nil, msg.content_.animation_.animation_.persistent_id_)    
-Text = '-› تم ارسال المتحركه الى › ⤈'
+Text = '• ابشر رسلت المتحركه الى ⇽ ⤈'
 elseif msg.content_.ID == 'MessageVoice' then    
 sendVoice(id_user, msg.id_, 0, 1,nil, msg.content_.voice_.voice_.persistent_id_)    
-Text = '-› تم ارسال البصمه الى › ⤈'
+Text = '• ابشر رسلت البصمه الى ⇽ ⤈'
 end     
 SendText(DevId, Text..'\n'..'['..string.sub(data.first_name_,0, 40)..'](tg://user?id='..data.id_..')',0,'md') 
 end,nil);
@@ -2034,7 +2034,7 @@ local start = DevAbs:get(GeSoN.."Abs:Start:Bot")
 if start then 
 Start_Source = start
 else
-Start_Source = "-› مرحبا انا بوت اسمي🎖 "..NameBot.."\n-› اختصاصي حماية المجموعات\n-› من التفليش والسبام والخخ .. . ،\n-› تفعيلي سهل ومجانا فقط قم برفعي ادمن في مجموعتك وارسل امر › تفعيل\n-› سيتم رفع الادمنيه والمنشئ تلقائيا"
+Start_Source = "• مرحبا انا بوت اسمي🎖 "..NameBot.."\n• اختصاصي حماية المجموعات\n• من التفليش والسبام والخخ .. . ،\n• تفعيلي سهل ومجانا فقط قم برفعي ادمن في مجموعتك وارسل امر › تفعيل\n• سيتم رفع الادمنيه والمنشئ تلقائيا"
 end 
 Dev_Abs(msg.chat_id_, msg.id_, 1, Start_Source, 1, 'md')
 return false
@@ -2076,7 +2076,7 @@ end
 if text == 'المطور' or text == 'مطور' or text == '›  المطور' then
 tdcli_function({ID="GetUser",user_id_=DevId},function(arg,result)
 local msg_id = msg.id_/2097152/0.5
-Text = "*-› Dev Name ↬ * ["..result.first_name_.."](T.me/"..result.username_..")\n*-› Dev User ↬* [@"..result.username_.."]"
+Text = "*• Dev Name . * ["..result.first_name_.."](T.me/"..result.username_..")\n*• Dev User ↬* [@"..result.username_.."]"
 keyboard = {} 
 keyboard.inline_keyboard = {{{text = ''..result.first_name_..' ',url="t.me/"..result.username_ or rnnni}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..result.username_..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -2085,7 +2085,7 @@ end
 --     Source GeSoN     --
 if text == "معرفي" and ChCheck(msg) or text == "›  معرفي" and ChCheck(msg) then
 function get_username(extra,result,success)
-text = '-› معرفك › ❨ User ❩'
+text = '• معرفك ⇽ ❨ User ❩'
 local text = text:gsub('User',('@'..result.username_ or ''))
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 end
@@ -2093,7 +2093,7 @@ getUser(msg.sender_user_id_,get_username)
 end
 if text == "اسمي" and ChCheck(msg) or text == "›  اسمي" and ChCheck(msg) then
 function get_firstname(extra,result,success)
-text = '-› اسمك › firstname lastname'
+text = '• اسمك ⇽ firstname lastname'
 local text = text:gsub('firstname',(result.first_name_ or ''))
 local text = text:gsub('lastname',(result.last_name_ or ''))
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, 'html')
@@ -2139,7 +2139,7 @@ keyboard.inline_keyboard = {
 {{text="🦖 لعبة التنين 🦖",url='https://t.me/T4TTTTBOT?game=dragon'},{text="🐍 لعبة الافعى 🐍",url='https://t.me/T4TTTTBOT?game=snake'}},
 {{text="🔵 لعبة الالوان 🔴",url='https://t.me/T4TTTTBOT?game=color'}},
 {{text="🚀 لعبة الصاروخ 🚀",url='https://t.me/T4TTTTBOT?game=rocket'},{text="🏹 لعبة السهام 🏹",url='https://t.me/T4TTTTBOT?game=arrow'}},
-{{text = '᥀ GeSoN TeaM .', url="t.me/rnnni"}},
+{{text = '• GeSoN TeaM .', url="t.me/rnnni"}},
 
 }
 local msg_id = msg.id_/2097152/0.5
@@ -2336,7 +2336,7 @@ else
 LinkGroup = 'لا يوجد'
 end
 DevAbs:set(GeSoN.."Abs:Groups:Links"..msg.chat_id_,LinkGroup) 
-SendText(DevId,"-› تم تفعيل مجموعه جديده › ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n-› بواسطة › "..Name.."\n-› موقعه في المجموعه › "..status.."\n-› اسم المجموعه › ["..NameChat.."]\n-› عدد اعضاء المجموعه › ❨ *"..NumMem.."* ❩\n-› ايدي المجموعه › ⤈ \n❨ `"..msg.chat_id_.."` ❩\n-› رابط المجموعه › ⤈\n❨ ["..LinkGroup.."] ❩\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n-› الوقت › "..os.date("%I:%M%p").."\n-› التاريخ › "..os.date("%Y/%m/%d").."",0,'md')
+SendText(DevId,"• تم تفعيل مجموعه جديده › ⤈ \nيامطوري جانا قروب جديد\n• بواسطة › "..Name.."\n• موقعه في المجموعه › "..status.."\n• اسم المجموعه › ["..NameChat.."]\n• عدد اعضاء المجموعه › ❨ *"..NumMem.."* ❩\n• ايدي المجموعه › ⤈ \n❨ `"..msg.chat_id_.."` ❩\n• رابط المجموعه › ⤈\n❨ ["..LinkGroup.."] ❩\nيارب\n• الوقت › "..os.date("%I:%M%p").."\n• التاريخ › "..os.date("%Y/%m/%d").."",0,'md')
 end
 end end
 end,nil)
@@ -2344,7 +2344,7 @@ end,nil)
 end,nil)
 end,nil)
 else
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› لا تستطيع تفعيل هذه المجموعه بسبب تعطيل البوت الخدمي من قبل Dev الاساسي', 1, 'md') 
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• لا تستطيع تفعيل هذه المجموعه بسبب تعطيل البوت الخدمي من قبل Dev الاساسي', 1, 'md') 
 end 
 end 
 --     Source GeSoN     --
@@ -2365,7 +2365,7 @@ if DevAbs:get(GeSoN..'Abs:Lock:Robot'..msg.chat_id_) then
 tdcli_function({ID="GetUser",user_id_=msg.sender_user_id_},function(arg,dp) 
 HTTPS.request("https://api.telegram.org/bot"..TokenBot.."/restrictChatMember?chat_id="..msg.chat_id_.."&user_id="..dp.id_)
 DevAbs:sadd(GeSoN..'Abs:Tkeed:'..msg.chat_id_, dp.id_)
-local Text = '-› اهلا عزيزي › ['..string.sub(dp.first_name_,0, 40)..'](tg://user?id='..dp.id_..')\n-› يجب علينا التأكد أنك لست روبوت\n-› تم تقيدك اضغط الزر بالاسفل لفكه'
+local Text = '• اهلا عزيزي ⇽ ['..string.sub(dp.first_name_,0, 40)..'](tg://user?id='..dp.id_..')\n-› يجب علينا التأكد أنك لست روبوت\n-› تم تقيدك اضغط الزر بالاسفل لفكه'
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="اضغط هنا لفك تقيدك",callback_data="/UnTkeed"}}} 
 Msg_id = msg.id_/2097152/0.5
@@ -2383,7 +2383,7 @@ if not Manager(msg) then
 local filter = DevAbs:smembers(GeSoN.."Abs:FilterPhoto"..msg.chat_id_)
 for k,v in pairs(filter) do
 if v == msg.content_.photo_.id_ then
-ReplyStatus(msg,msg.sender_user_id_,"WrongWay","-› الصوره التي ارسلتها تم منعها من المجموعه")  
+ReplyStatus(msg,msg.sender_user_id_,"WrongWay","• الصوره التي ارسلتها تم منعها من المجموعه")  
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 return false   
 end
@@ -2395,7 +2395,7 @@ if not Manager(msg) then
 local filter = DevAbs:smembers(GeSoN.."Abs:FilterAnimation"..msg.chat_id_)
 for k,v in pairs(filter) do
 if v == msg.content_.animation_.animation_.persistent_id_ then
-ReplyStatus(msg,msg.sender_user_id_,"WrongWay","-› المتحركه التي ارسلتها تم منعها من المجموعه")  
+ReplyStatus(msg,msg.sender_user_id_,"WrongWay","• المتحركه التي ارسلتها تم منعها من المجموعه")  
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})       
 return false   
 end
@@ -2407,7 +2407,7 @@ if not Manager(msg) then
 local filter = DevAbs:smembers(GeSoN.."Abs:FilterSteckr"..msg.chat_id_)
 for k,v in pairs(filter) do
 if v == msg.content_.sticker_.sticker_.persistent_id_ then
-ReplyStatus(msg,msg.sender_user_id_,"WrongWay","-› الملصق الذي ارسلته تم منعه من المجموعه")  
+ReplyStatus(msg,msg.sender_user_id_,"WrongWay","• الملصق الذي ارسلته تم منعه من المجموعه")  
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 return false   
 end
@@ -2419,7 +2419,7 @@ if text and text:match("^(.*)$") then
 local DelGpRedRedods = DevAbs:get(GeSoN..'Abs:Add:GpRedod'..msg.sender_user_id_..msg.chat_id_)
 local GetGpTexts = DevAbs:get(GeSoN..'Abs:Add:GpTexts'..msg.sender_user_id_..msg.chat_id_)
 if DelGpRedRedods == 'DelGpRedRedods' then
-Dev_Abs(msg.chat_id_, msg.id_, 1,'-› الرد › '..msg.content_.text_..' للكلمه › '..GetGpTexts..' تم حذفها',  1, "html")
+Dev_Abs(msg.chat_id_, msg.id_, 1,'• الرد ⇽ '..msg.content_.text_..' للكلمه › '..GetGpTexts..' تم حذفها',  1, "html")
 DevAbs:del(GeSoN..'Abs:Add:GpRedod'..msg.sender_user_id_..msg.chat_id_)
 DevAbs:srem(GeSoN..'Abs:Text:GpTexts'..GetGpTexts..msg.chat_id_,msg.content_.text_)
 return false
@@ -2428,7 +2428,7 @@ end
 if text and text:match("^(.*)$") then
 local DelGpRed = DevAbs:get(GeSoN..'Abs:Add:GpRedod'..msg.sender_user_id_..msg.chat_id_)
 if DelGpRed == 'DelGpRedod' then
-Dev_Abs(msg.chat_id_, msg.id_, 1,'-› الكلمه › '..msg.content_.text_..' تم حذفها',  1, "html")
+Dev_Abs(msg.chat_id_, msg.id_, 1,'• الكلمه ⇽ '..msg.content_.text_..' تم حذفها',  1, "html")
 DevAbs:del(GeSoN..'Abs:Add:GpRedod'..msg.sender_user_id_..msg.chat_id_)
 DevAbs:del(GeSoN..'Abs:Text:GpTexts'..msg.content_.text_..msg.chat_id_)
 DevAbs:srem(GeSoN..'Abs:Manager:GpRedod'..msg.chat_id_,msg.content_.text_)
@@ -2438,7 +2438,7 @@ end
 if text and text:match("^(.*)$") then
 local DelGpRed = DevAbs:get(GeSoN..'Abs:Add:GpRed'..msg.sender_user_id_..msg.chat_id_)
 if DelGpRed == 'DelGpRed' then
-Dev_Abs(msg.chat_id_, msg.id_, 1,'-› الكلمه › '..msg.content_.text_..' تم حذفها',  1, "html")
+Dev_Abs(msg.chat_id_, msg.id_, 1,'• الكلمه ⇽ '..msg.content_.text_..' تم حذفها',  1, "html")
 DevAbs:del(GeSoN..'Abs:Add:GpRed'..msg.sender_user_id_..msg.chat_id_)
 DevAbs:del(GeSoN..'Abs:Gif:GpRed'..msg.content_.text_..msg.chat_id_)
 DevAbs:del(GeSoN..'Abs:Voice:GpRed'..msg.content_.text_..msg.chat_id_)
@@ -2455,7 +2455,7 @@ end
 if text and text:match("^(.*)$") then
 local DelAllRed = DevAbs:get(GeSoN.."Abs:Add:AllRed"..msg.sender_user_id_)
 if DelAllRed == 'DelAllRed' then
-Dev_Abs(msg.chat_id_, msg.id_, 1,'-› الكلمه › '..msg.content_.text_..' تم حذفها',  1, "html")
+Dev_Abs(msg.chat_id_, msg.id_, 1,'• الكلمه ⇽ '..msg.content_.text_..' تم حذفها',  1, "html")
 DevAbs:del(GeSoN.."Abs:Add:AllRed"..msg.sender_user_id_)
 DevAbs:del(GeSoN.."Abs:Gif:AllRed"..msg.content_.text_)
 DevAbs:del(GeSoN.."Abs:Voice:AllRed"..msg.content_.text_)
@@ -2476,7 +2476,7 @@ if SaveGpRedod == 'SaveGpRedod' then
 local GetGpTexts = DevAbs:get(GeSoN..'Abs:Add:GpTexts'..msg.sender_user_id_..msg.chat_id_)
 local List = DevAbs:smembers(GeSoN..'Abs:Text:GpTexts'..GetGpTexts..msg.chat_id_)
 if text == "الغاء" then 
-Dev_Abs(msg.chat_id_, msg.id_, 1, "-› -› تم الغاء عملية حفظ الردود المتعدده للامر › "..GetGpTexts ,  1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "•› تم الغاء عملية حفظ الردود المتعدده للامر › "..GetGpTexts ,  1, "md")
 DevAbs:del(GeSoN..'Abs:Add:GpRedod'..msg.sender_user_id_..msg.chat_id_)
 DevAbs:del(GeSoN..'Abs:Text:GpTexts'..GetGpTexts..msg.chat_id_)
 DevAbs:del(GeSoN..'Abs:Add:GpTexts'..msg.sender_user_id_..msg.chat_id_)
@@ -2486,11 +2486,11 @@ end
 Text = text:gsub('"',""):gsub('"',""):gsub("`",""):gsub("*","")
 DevAbs:sadd(GeSoN..'Abs:Text:GpTexts'..GetGpTexts..msg.chat_id_,Text)
 if #List == 4 then 
-Dev_Abs(msg.chat_id_, msg.id_, 1, "-› تم حفظ › 5 من الردود المتعدده للامر › "..GetGpTexts ,  1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "• تم حفظ › 5 من الردود المتعدده للامر › "..GetGpTexts ,  1, "md")
 DevAbs:del(GeSoN..'Abs:Add:GpRedod'..msg.sender_user_id_..msg.chat_id_)
 return false
 end
-local Abs = "-› تم حفظ الرد رقم › "..(#List+1).."\n-› قم بارسال الرد رقم › "..(#List+2)
+local Abs = "• تم حفظ الرد رقم ⇽ "..(#List+1).."\n• قم بارسال الرد رقم ⇽ "..(#List+2)
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="انهاء وحفظ "..(#List+1).." من الردود",callback_data="/EndRedod:"..msg.sender_user_id_..GetGpTexts}},{{text="الغاء وحذف التخزين",callback_data="/DelRedod:"..msg.sender_user_id_..GetGpTexts}}} 
 Msg_id = msg.id_/2097152/0.5
@@ -2511,7 +2511,7 @@ if SaveGpRed == 'SaveGpRed' then
 if text == 'الغاء' then
 local DelManagerRep = DevAbs:get(GeSoN..'DelManagerRep'..msg.chat_id_)
 DevAbs:srem(GeSoN..'Abs:Manager:GpRed'..msg.chat_id_,DelManagerRep)
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› تم الغاء حفظ الرد', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• تم الغاء حفظ الرد', 1, 'md')
 DevAbs:del(GeSoN..'Abs:Add:GpText'..msg.sender_user_id_..msg.chat_id_)
 DevAbs:del(GeSoN..'Abs:Add:GpRed'..msg.sender_user_id_..msg.chat_id_)
 DevAbs:del(GeSoN..'DelManagerRep'..msg.chat_id_)
@@ -2549,7 +2549,7 @@ end
 if msg.content_.text_ then
 DevAbs:set(GeSoN..'Abs:Text:GpRed'..SaveGpRed..msg.chat_id_, msg.content_.text_)
 end 
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› تم حفظ الرد الجديد', 1, 'md') 
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• تم حفظ الرد الجديد', 1, 'md') 
 DevAbs:del(GeSoN..'Abs:Add:GpText'..msg.sender_user_id_..msg.chat_id_)
 DevAbs:del(GeSoN..'DelManagerRep'..msg.chat_id_)
 return false 
@@ -2602,7 +2602,7 @@ if SaveAllRed == 'SaveAllRed' then
 if text == 'الغاء' then
 local DelSudoRep = DevAbs:get(GeSoN..'DelSudoRep')
 DevAbs:del(GeSoN.."Abs:Sudo:AllRed",DelSudoRep)
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› تم الغاء حفظ الرد', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• تم الغاء حفظ الرد', 1, 'md')
 DevAbs:del(GeSoN.."Abs:Add:AllText"..msg.sender_user_id_)
 DevAbs:del(GeSoN.."Abs:Add:AllRed"..msg.sender_user_id_)
 DevAbs:del(GeSoN.."DelSudoRep")
@@ -2646,7 +2646,7 @@ end
 if msg.content_.text_ then
 DevAbs:set(GeSoN.."Abs:Text:AllRed"..SaveAllRed, msg.content_.text_)
 end 
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› تم حفظ الرد الجديد', 1, 'md') 
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• تم حفظ الرد الجديد', 1, 'md') 
 DevAbs:del(GeSoN.."Abs:Add:AllText"..msg.sender_user_id_)
 DevAbs:del(GeSoN..'DelSudoRep')
 return false end end
@@ -2707,7 +2707,7 @@ DeleteMessage(msg.chat_id_, {[0] = data.messages_[0].id_})
 end;end;end, nil)
 msgm = msgm - 1048576
 end
-Text = '-› العضو › '..GetName..' \n-› قام بالتكرار المحدد تم طرده '
+Text = '• العضو ⇽ '..GetName..' \n• قام بالتكرار المحدد تم طرده '
 SendText(msg.chat_id_,Text,0,'md')
 return false  
 end 
@@ -2729,7 +2729,7 @@ DeleteMessage(msg.chat_id_, {[0] = data.messages_[0].id_})
 end;end;end, nil)
 msgm = msgm - 1048576
 end
-Text = '-› العضو › '..GetName..' \n-› قام بالتكرار المحدد تم تقيده '
+Text = '• العضو ⇽ '..GetName..' \n• قام بالتكرار المحدد تم تقيده '
 SendText(msg.chat_id_,Text,0,'md')
 return false  
 end  
@@ -2746,7 +2746,7 @@ DeleteMessage(msg.chat_id_, {[0] = data.messages_[0].id_})
 end;end;end, nil)
 msgm = msgm - 1048576
 end
-Text = '-› العضو › '..GetName..' \n-› قام بالتكرار المحدد تم كتمه '
+Text = '• العضو ⇽ '..GetName..' \n• قام بالتكرار المحدد تم كتمه '
 SendText(msg.chat_id_,Text,0,'md')
 return false  
 end
@@ -2811,7 +2811,7 @@ if DevAbs:get(GeSoN..'Abs:viewget'..msg.sender_user_id_) then
 if not msg.forward_info_ then
 DevAbs:del(GeSoN..'Abs:viewget'..msg.sender_user_id_)
 else
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› عدد مشاهدات المنشور هي › ('..msg.views_..')', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• عدد مشاهدات المنشور هي › ('..msg.views_..')', 1, 'md')
 DevAbs:del(GeSoN..'Abs:viewget'..msg.sender_user_id_)
 end
 end
@@ -2944,7 +2944,7 @@ function get_welcome(extra,result,success)
 if DevAbs:get(GeSoN..'Abs:Groups:Welcomes'..msg.chat_id_) then
 Welcomes = DevAbs:get(GeSoN..'Abs:Groups:Welcomes'..msg.chat_id_)
 else
-Welcomes = '• نورت حبي \n• firstname \n• username'
+Welcomes = '• نورت عيوني \n• firstname \n• username'
 end
 local Welcomes = Welcomes:gsub('"',"") Welcomes = Welcomes:gsub("'","") Welcomes = Welcomes:gsub(",","") Welcomes = Welcomes:gsub("*","") Welcomes = Welcomes:gsub(";","") Welcomes = Welcomes:gsub("`","") Welcomes = Welcomes:gsub("{","") Welcomes = Welcomes:gsub("}","") 
 local Welcomes = Welcomes:gsub('firstname',('['..result.first_name_..']' or ''))
@@ -3316,14 +3316,14 @@ end
 --     Source GeSoN     --
 if DevAbs:get(GeSoN.."Abs:Set:Groups:Links"..msg.chat_id_..msg.sender_user_id_) then
 if text == "الغاء" then
-send(msg.chat_id_,msg.id_,"-› تم الغاء حفظ الرابط")       
+send(msg.chat_id_,msg.id_,"• تم الغاء حفظ الرابط")       
 DevAbs:del(GeSoN.."Abs:Set:Groups:Links"..msg.chat_id_..msg.sender_user_id_) 
 return false
 end
 if msg.content_.text_:match("(https://telegram.me/joinchat/%S+)") or msg.content_.text_:match("(https://t.me/joinchat/%S+)") then
 local Link = msg.content_.text_:match("(https://telegram.me/joinchat/%S+)") or msg.content_.text_:match("(https://t.me/joinchat/%S+)")
 DevAbs:set(GeSoN.."Abs:Groups:Links"..msg.chat_id_,Link)
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› تم حفظ الرابط بنجاح', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• تم حفظ الرابط بنجاح', 1, 'md')
 DevAbs:del(GeSoN.."Abs:Set:Groups:Links"..msg.chat_id_..msg.sender_user_id_) 
 return false 
 end
@@ -3335,14 +3335,14 @@ if text and Constructor(msg) then
 if DevAbs:get('rnnni:'..GeSoN.."numadd:user"..msg.chat_id_.."" .. msg.sender_user_id_) then 
 if text and text:match("^الغاء$") then 
 DevAbs:del('rnnni:'..GeSoN..'id:user'..msg.chat_id_)  
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› تم الغاء الامر', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• تم الغاء الامر', 1, 'md')
 DevAbs:del('rnnni:'..GeSoN.."numadd:user"..msg.chat_id_.."" .. msg.sender_user_id_)  
 return false  end 
 DevAbs:del('rnnni:'..GeSoN.."numadd:user"..msg.chat_id_.."" .. msg.sender_user_id_)  
 local numadded = string.match(text, "(%d+)") 
 local iduserr = DevAbs:get('rnnni:'..GeSoN..'id:user'..msg.chat_id_)  
 DevAbs:incrby(GeSoN..'Abs:UsersMsgs'..msg.chat_id_..':'..iduserr,numadded)
-Dev_Abs(msg.chat_id_, msg.id_,  1, "-› تم اضافة "..numadded..' رساله', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_,  1, "• تم اضافة "..numadded..' رساله', 1, 'md')
 DevAbs:del('rnnni:'..GeSoN..'id:user'..msg.chat_id_) 
 end
 end
@@ -3350,14 +3350,14 @@ if text and Constructor(msg) then
 if DevAbs:get('rnnni:'..GeSoN.."nmadd:user"..msg.chat_id_.."" .. msg.sender_user_id_) then 
 if text and text:match("^الغاء$") then 
 DevAbs:del('rnnni:'..GeSoN..'ids:user'..msg.chat_id_)  
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› تم الغاء الامر', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• تم الغاء الامر', 1, 'md')
 DevAbs:del('rnnni:'..GeSoN.."nmadd:user"..msg.chat_id_.."" .. msg.sender_user_id_)  
 return false  end 
 DevAbs:del('rnnni:'..GeSoN.."nmadd:user"..msg.chat_id_.."" .. msg.sender_user_id_)  
 local numadded = string.match(text, "(%d+)") 
 local iduserr = DevAbs:get('rnnni:'..GeSoN..'ids:user'..msg.chat_id_)  
 DevAbs:incrby(GeSoN..'Abs:GamesNumber'..msg.chat_id_..iduserr,numadded)  
-Dev_Abs(msg.chat_id_, msg.id_,  1, "-› تم اضافة "..numadded..' نقطه', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_,  1, "• تم اضافة "..numadded..' نقطه', 1, 'md')
 DevAbs:del('rnnni:'..GeSoN..'ids:user'..msg.chat_id_)  
 end
 end
@@ -3365,12 +3365,12 @@ end
 if text and (text:match("طيز") or text:match("ديس") or text:match("انيج") or text:match("نيج") or text:match("ديوس") or text:match("عير") or text:match("كسختك") or text:match("كسمك") or text:match("كسربك") or text:match("بلاع") or text:match("ابو العيوره") or text:match("منيوج") or text:match("كحبه") or text:match("كحاب") or text:match("الكحبه") or text:match("كسك") or text:match("طيزك") or text:match("كس امك") or text:match("صرم") or text:match("كس اختك")) then
 if not DevAbs:get(GeSoN.."Abs:Lock:Fshar"..msg.chat_id_) and not VipMem(msg) then
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
-ReplyStatus(msg,msg.sender_user_id_,"WrongWay","-› ممنوع الفشار في المجموعه")  
+ReplyStatus(msg,msg.sender_user_id_,"WrongWay","• ممنوع الفشار في المجموعه")  
 end end
 if text and (text:match("ڬ") or text:match("ٺ") or text:match("چ") or text:match("ڇ") or text:match("ڿ") or text:match("ڀ") or text:match("ڎ") or text:match("ݫ") or text:match("ژ") or text:match("ڟ") or text:match("ݜ") or text:match("ڸ") or text:match("پ") or text:match("۴") or text:match("مک") or text:match("زدن") or text:match("دخترا") or text:match("دیوث") or text:match("کلیپشن") or text:match("خوششون") or text:match("میدا") or text:match("که") or text:match("بدانیم") or text:match("باید") or text:match("زناشویی") or text:match("آموزش") or text:match("راحتی") or text:match("خسته") or text:match("بیام") or text:match("بپوشم") or text:match("كرمه")) then
 if DevAbs:get(GeSoN.."Abs:Lock:Farsi"..msg.chat_id_) and not VipMem(msg) then
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
-ReplyStatus(msg,msg.sender_user_id_,"WrongWay","-› ممنوع التكلم بالغه الفارسيه هنا")  
+ReplyStatus(msg,msg.sender_user_id_,"WrongWay","• ممنوع التكلم بالغه الفارسيه هنا")  
 end end
 if text and (text:match("ڬ") or text:match("ٺ") or text:match("چ") or text:match("ڇ") or text:match("ڿ") or text:match("ڀ") or text:match("ڎ") or text:match("ݫ") or text:match("ژ") or text:match("ڟ") or text:match("ݜ") or text:match("ڸ") or text:match("پ") or text:match("۴") or text:match("مک") or text:match("زدن") or text:match("دخترا") or text:match("دیوث") or text:match("کلیپشن") or text:match("خوششون") or text:match("میدا") or text:match("که") or text:match("بدانیم") or text:match("باید") or text:match("زناشویی") or text:match("آموزش") or text:match("راحتی") or text:match("خسته") or text:match("بیام") or text:match("بپوشم") or text:match("كرمه")) then
 if DevAbs:get(GeSoN.."Abs:Lock:FarsiBan"..msg.chat_id_) and not VipMem(msg) then
@@ -3380,12 +3380,12 @@ end end
 if text and (text:match("خره بحظي") or text:match("خبربك") or text:match("كسدينربك") or text:match("خرب بالله") or text:match("خرب الله") or text:match("خره بربك") or text:match("الله الكواد") or text:match("خره بمحمد") or text:match("كسم الله") or text:match("كسم ربك") or text:match("كسربك") or text:match("كسختالله") or text:match("كسخت الله") or text:match("خره بدينك") or text:match("خرهبدينك") or text:match("كسالله") or text:match("خربالله")) then
 if not DevAbs:get(GeSoN.."Abs:Lock:Kfr"..msg.chat_id_) and not VipMem(msg) then
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
-ReplyStatus(msg,msg.sender_user_id_,"WrongWay","-› ممنوع الكفر في المجموعه") 
+ReplyStatus(msg,msg.sender_user_id_,"WrongWay","• ممنوع الكفر في المجموعه") 
 end end
 if text and (text:match("سني نكس") or text:match("شيعه") or text:match("الشيعه") or text:match("السنه") or text:match("طائفتكم") or text:match("شيعي") or text:match("انا سني") or text:match("مسيحي") or text:match("يهودي") or text:match("صابئي") or text:match("ملحد") or text:match("بالسنه") or text:match("شيعة")) then
 if not DevAbs:get(GeSoN.."Abs:Lock:Taf"..msg.chat_id_) and not VipMem(msg) then
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
-ReplyStatus(msg,msg.sender_user_id_,"WrongWay","-› ممنوع التكلم بالطائفيه هنا") 
+ReplyStatus(msg,msg.sender_user_id_,"WrongWay","• ممنوع التكلم بالطائفيه هنا") 
 end end
 --     Source GeSoN     --
 if SecondSudo(msg) then
@@ -3577,7 +3577,7 @@ local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..TokenB
 
 if linkgpp.ok == true then 
 
-local Text = '᥀︙𝖫𝗂𝗇𝗄 𝖦𝗋𝗈𝗎𝗉 ↬ ⤈\nاستلم رابط قروبك\n['..ta.title_..']('..linkgpp.result..')'
+local Text = '•𝖫𝗂𝗇𝗄 𝖦𝗋𝗈𝗎𝗉 ⇽ \nاستلم رابط قروبك\n['..ta.title_..']('..linkgpp.result..')'
 
 local inline = {{{text = ta.title_, url=linkgpp.result}},
 
@@ -3636,9 +3636,9 @@ return false
 end
 if text =='نقاطي' and ChCheck(msg) then 
 if tonumber((DevAbs:get(GeSoN..'Abs:GamesNumber'..msg.chat_id_..msg.sender_user_id_) or 0)) == 0 then
-Dev_Abs(msg.chat_id_, msg.id_, 1,'-› لم تربح اي نقطه\n-› ارسل › الالعاب للعب', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1,'• لم تربح اي نقطه\n• ارسل ⇽ الالعاب للعب', 1, 'md')
 else 
-Dev_Abs(msg.chat_id_, msg.id_, 1,'-› عدد النقاط التي ربحتها › '..(DevAbs:get(GeSoN..'Abs:GamesNumber'..msg.chat_id_..msg.sender_user_id_)), 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1,'• عدد النقاط التي ربحتها ⇽ '..(DevAbs:get(GeSoN..'Abs:GamesNumber'..msg.chat_id_..msg.sender_user_id_)), 1, 'md')
 end
 end
 if text ==  'حذف رسائلي' and ChCheck(msg) or text ==  'مسح رسائلي' and ChCheck(msg) then DevAbs:del(GeSoN..'Abs:UsersMsgs'..msg.chat_id_..':'..msg.sender_user_id_) Dev_Abs(msg.chat_id_, msg.id_, 1, '-› تم حذف جميع رسائلك', 1, 'md') end
@@ -3766,13 +3766,13 @@ name = string.gsub(name,'⏰','⏰')
 name = string.gsub(name,'📺','📺')
 name = string.gsub(name,'🎚','🎚')
 name = string.gsub(name,'☎️','☎️')
-rnnni = '-› اول واحد يدز هذا السمايل يربح › '..name
+rnnni = '• اول واحد يدز هذا السمايل يربح › '..name
 Dev_Abs(msg.chat_id_, msg.id_, 1,rnnni, 1, 'md')
 return false
 end end
 if text == DevAbs:get(GeSoN..'Abs:GameNum'..msg.chat_id_) and not DevAbs:get(GeSoN..'Abs:Games:Ids'..msg.chat_id_) then
 if not DevAbs:get(GeSoN..'Abs:Games:Ids'..msg.chat_id_) then 
-rnnni = '-› مبروك لقد ربحت في اللعبه \n-› ارسل › سمايلات للعب مره اخرى'
+rnnni = '• مبروك لقد ربحت في اللعبه \n• ارسل ⇽ سمايلات للعب مره اخرى'
 Dev_Abs(msg.chat_id_, msg.id_, 1,rnnni, 1, 'md')
 DevAbs:incrby(GeSoN..'Abs:GamesNumber'..msg.chat_id_..msg.sender_user_id_, 1)  
 end
@@ -4295,35 +4295,35 @@ end
 if text == 'الالعاب' and ChCheck(msg) or text == 'العاب' and ChCheck(msg) or text == 'اللعبه' and ChCheck(msg) or text == '› الالعاب' and ChCheck(msg) then
 if not DevAbs:get(GeSoN..'Abs:Lock:Games'..msg.chat_id_) then
 Dev_Abs(msg.chat_id_, msg.id_, 1,[[
--› قائمة العاب المجموعه › 🎖
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
--› لعبة التخمين › خمن
--› لعبة الامثله › امثله
--› لعبة العكس › العكس
--› لعبة الاسئله › اسئله
--› لعبة الروليت › روليت
--› لعبة الحزوره › حزوره
--› لعبة الترتيب › ترتيب
--› لعبة المعاني › معاني
--› لعبة التويت › كت تويت
--› لعبة المختلف › المختلف
--› لعبة السمايلات › سمايلات
--› لعبة المحيبس › المحيبس
--› لعبة الرياضيات › رياضيات
--› لعبة الانكليزيه › انكليزيه
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+• قائمة العاب المجموعه › 🎖
+ياهلاا بالطيب
+• لعبة التخمين › خمن
+• لعبة الامثله › امثله
+• لعبة العكس › العكس
+• لعبة الاسئله › اسئله
+• لعبة الروليت › روليت
+• لعبة الحزوره › حزوره
+• لعبة الترتيب › ترتيب
+• لعبة المعاني › معاني
+• لعبة التويت › كت تويت
+• لعبة المختلف › المختلف
+• لعبة السمايلات › سمايلات
+• لعبة المحيبس › المحيبس
+• لعبة الرياضيات › رياضيات
+• لعبة الانكليزيه › انكليزيه
+————
 -› نقاطي • بيع نقاطي
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+—————————
 -› [Source Channel](https://t.me/rnnni)
 ]], 1, 'md')
 else
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› عذرا الالعاب معطله في المجموعه', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• عذرا الالعاب معطله في المجموعه', 1, 'md')
 end
 end
 --     Source GeSoN     --
 if text == 'بيع نقاطي' and ChCheck(msg) then
 if tonumber((DevAbs:get(GeSoN..'Abs:GamesNumber'..msg.chat_id_..msg.sender_user_id_) or 0)) == 0 then
-Dev_Abs(msg.chat_id_, msg.id_, 1,'-› لم تربح اي نقطه\n-› ارسل › الالعاب للعب', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1,'• لم تربح اي نقطه\n• ارسل › الالعاب للعب', 1, 'md')
 else
 DevAbs0 = (DevAbs:get(GeSoN..'Abs:GamesNumber'..msg.chat_id_..msg.sender_user_id_) * 50)
 DevAbs:incrby(GeSoN..'Abs:UsersMsgs'..msg.chat_id_..':'..msg.sender_user_id_,DevAbs0)
@@ -4355,19 +4355,19 @@ DevAbs:sadd(GeSoN..'Abs:AbsConstructor:'..msg.chat_id_,Manager_id)
 end  
 end  
 if num == 0 then
-Dev_Abs(msg.chat_id_, msg.id_, 1, "-› لا يوجد ادمنيه ليتم رفعهم\n-› تم رفع مالك المجموعه", 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, "• لا يوجد ادمنيه ليتم رفعهم\n• ابشر رفعت مالك المجموعه", 1, 'md')
 else
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› تم رفع '..num..' من الادمنيه \n-› تم رفع مالك المجموعه', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• ابشر رفع '..num..' من الادمنيه \n• ابشر رفعت مالك المجموعه', 1, 'md')
 end
 end,nil) 
 end
 --     Source GeSoN     --
 if text == 'غادر' and SudoBot(msg) and ChCheck(msg) then
 if DevAbs:get(GeSoN.."Abs:Left:Bot"..GeSoN) then
-Dev_Abs(msg.chat_id_,msg.id_, 1, "-› المغادره معطله من قبل المطور الاساسي", 1, 'md')
+Dev_Abs(msg.chat_id_,msg.id_, 1, "• المغادره معطله من قبل المطور الاساسي", 1, 'md')
 return false  
 end
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› تم مغادرة المجموعه \n-› تم حذف جميع بياناتها ', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• تم مغادرة المجموعه \n• تم حذف جميع بياناتها ', 1, 'md')
 ChatLeave(msg.chat_id_, GeSoN)
 DevAbs:srem(GeSoN.."Abs:Groups",msg.chat_id_)
 end
@@ -4381,7 +4381,7 @@ rtpa = 'الادمن'
 elseif da.status_.ID == "ChatMemberStatusMember" then
 rtpa = 'عضو'
 end
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› موقعك › '..rtpa, 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• موقعك ⇽ '..rtpa, 1, 'md')
 end,nil)
 end
 --     Source GeSoN     --
@@ -4393,7 +4393,7 @@ local cont = (tonumber(DevAbs:get(GeSoN..'Abs:ContactNumber'..msg.chat_id_..':'.
 local user_nkt = tonumber(DevAbs:get(GeSoN..'Abs:GamesNumber'..msg.chat_id_..msg.sender_user_id_) or 0)
 if result.username_ then username = '@'..result.username_ else username = 'لا يوجد' end
 if result.last_name_ then lastname = result.last_name_ else lastname = '' end
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› اسمك › ❨ ['..result.first_name_..'] ❩\n-› معرفك › ❨ ['..username..'] ❩\n-› ايديك › ❨ `'..result.id_..'` ❩\n-› نقاطك › ❨ '..user_nkt..' ❩\n-› رسائلك › ❨ '..user_msgs..' ❩\n-› جهاتك › ❨ '..cont..' ❩\n-› تفاعلك › '..formsgs(msguser)..'\n-› رتبتك › '..IdRank(msg.sender_user_id_, msg.chat_id_), 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• اسمك ⇽ ❨ ['..result.first_name_..'] ❩\n• معرفك ⇽ ❨ ['..username..'] ❩\n-› ايديك › ❨ `'..result.id_..'` ❩\n-› نقاطك › ❨ '..user_nkt..' ❩\n-› رسائلك › ❨ '..user_msgs..' ❩\n-› جهاتك › ❨ '..cont..' ❩\n-› تفاعلك › '..formsgs(msguser)..'\n-› رتبتك › '..IdRank(msg.sender_user_id_, msg.chat_id_), 1, 'md')
 end
 getUser(msg.sender_user_id_,get_me)
 end
