@@ -5194,20 +5194,20 @@ end end
 --     Source GeSoN     --
 --  Set BasicConstructor  --
 if AbsConstructor(msg) then
-if text ==('رفع منشئ اساسي') and ChCheck(msg) then
+if text ==('رفع مالك اساسي') and ChCheck(msg) then
 function raf_reply(extra, result, success)
 if not AbsConstructor(msg) and DevAbs:get(GeSoN.."Abs:Lock:ProSet"..msg.chat_id_) then 
 Dev_Abs(msg.chat_id_, msg.id_, 1,'-› لاتستطيع رفع احد وذالك بسبب تعطيل الرفع', 1, 'md')
 return false
 end
 DevAbs:sadd(GeSoN..'Abs:BasicConstructor:'..msg.chat_id_,result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","-› تم رفعه منشئ اساسي")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","-› تم رفعه مالك اساسي")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),raf_reply)
 end end
-if text and text:match('^رفع منشئ اساسي @(.*)') and ChCheck(msg) then
-local username = text:match('^رفع منشئ اساسي @(.*)')
+if text and text:match('^رفع مالك اساسي @(.*)') and ChCheck(msg) then
+local username = text:match('^رفع مالك اساسي @(.*)')
 function promreply(extra,result,success)
 if not AbsConstructor(msg) and DevAbs:get(GeSoN.."Abs:Lock:ProSet"..msg.chat_id_) then 
 Dev_Abs(msg.chat_id_, msg.id_, 1,'-› لاتستطيع رفع احد وذالك بسبب تعطيل الرفع', 1, 'md')
@@ -5215,67 +5215,67 @@ return false
 end
 if result.id_ then
 DevAbs:sadd(GeSoN..'Abs:BasicConstructor:'..msg.chat_id_,result.id_)
-ReplyStatus(msg,result.id_,"Reply","-› تم رفعه منشئ اساسي")  
+ReplyStatus(msg,result.id_,"Reply","-› تم رفعه مالك اساسي")  
 else 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '-› *المعرف غير صحيح*', 1, 'md')
 end end 
 resolve_username(username,promreply)
 end
-if text and text:match('^رفع منشئ اساسي (%d+)') and ChCheck(msg) then
-local user = text:match('رفع منشئ اساسي (%d+)')
+if text and text:match('^رفع مالك اساسي (%d+)') and ChCheck(msg) then
+local user = text:match('رفع مالك اساسي (%d+)')
 if not AbsConstructor(msg) and DevAbs:get(GeSoN.."Abs:Lock:ProSet"..msg.chat_id_) then 
 Dev_Abs(msg.chat_id_, msg.id_, 1,'-› لاتستطيع رفع احد وذالك بسبب تعطيل الرفع', 1, 'md')
 return false
 end
 DevAbs:sadd(GeSoN..'Abs:BasicConstructor:'..msg.chat_id_,user)
-ReplyStatus(msg,user,"Reply","-› تم رفعه منشئ اساسي")  
+ReplyStatus(msg,user,"Reply","-› تم رفعه مالك اساسي")  
 end
 --     Source GeSoN     --
 --  Rem BasicConstructor  --
 if text ==('تنزيل منشئ اساسي') and ChCheck(msg) then
 function prom_reply(extra, result, success)
 DevAbs:srem(GeSoN..'Abs:BasicConstructor:'..msg.chat_id_,result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","-› تم تنزيله منشئ اساسي")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","-› تم تنزيله مالك اساسي")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
 end end
-if text and text:match('^تنزيل منشئ اساسي @(.*)') and ChCheck(msg) then
-local username = text:match('^تنزيل منشئ اساسي @(.*)')
+if text and text:match('^تنزيل مالك اساسي @(.*)') and ChCheck(msg) then
+local username = text:match('^تنزيل مالك اساسي @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 DevAbs:srem(GeSoN..'Abs:BasicConstructor:'..msg.chat_id_,result.id_)
-ReplyStatus(msg,result.id_,"Reply","-› تم تنزيله منشئ اساسي")  
+ReplyStatus(msg,result.id_,"Reply","-› تم تنزيله مالك اساسي")  
 else 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '-› *المعرف غير صحيح*', 1, 'md')
 end end 
 resolve_username(username,promreply)
 end
-if text and text:match('^تنزيل منشئ اساسي (%d+)') and ChCheck(msg) then
-local user = text:match('تنزيل منشئ اساسي (%d+)')
+if text and text:match('^تنزيل مالك اساسي (%d+)') and ChCheck(msg) then
+local user = text:match('تنزيل مالك اساسي (%d+)')
 DevAbs:srem(GeSoN..'Abs:BasicConstructor:'..msg.chat_id_,user)
-ReplyStatus(msg,user,"Reply","-› تم تنزيله منشئ اساسي")  
+ReplyStatus(msg,user,"Reply","-› تم تنزيله مالك اساسي")  
 end end
-if text ==('رفع منشئ اساسي') and not AbsConstructor(msg) then
+if text ==('رفع مالك اساسي') and not AbsConstructor(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '-› هذا الامر للمالكين والمطورين فقط', 1, 'md')
 end
 --     Source GeSoN     --
 --    Set  Constructor    --
 if BasicConstructor(msg) then
-if text ==('رفع منشئ') and ChCheck(msg) then
+if text ==('رفع مالك') and ChCheck(msg) then
 function raf_reply(extra, result, success)
 if not AbsConstructor(msg) and DevAbs:get(GeSoN.."Abs:Lock:ProSet"..msg.chat_id_) then 
 Dev_Abs(msg.chat_id_, msg.id_, 1,'-› لاتستطيع رفع احد وذالك بسبب تعطيل الرفع', 1, 'md')
 return false
 end
 DevAbs:sadd(GeSoN..'Abs:Constructor:'..msg.chat_id_,result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","-› تم رفعه في قائمة المنشئين")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","-› تم رفعه في قائمة المالكين")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),raf_reply)
 end end
-if text and text:match('^رفع منشئ @(.*)') and ChCheck(msg) then
-local username = text:match('^رفع منشئ @(.*)')
+if text and text:match('^رفع مالك @(.*)') and ChCheck(msg) then
+local username = text:match('^رفع مالك @(.*)')
 function promreply(extra,result,success)
 if not AbsConstructor(msg) and DevAbs:get(GeSoN.."Abs:Lock:ProSet"..msg.chat_id_) then 
 Dev_Abs(msg.chat_id_, msg.id_, 1,'-› لاتستطيع رفع احد وذالك بسبب تعطيل الرفع', 1, 'md')
@@ -5283,46 +5283,46 @@ return false
 end
 if result.id_ then
 DevAbs:sadd(GeSoN..'Abs:Constructor:'..msg.chat_id_,result.id_)
-ReplyStatus(msg,result.id_,"Reply","-› تم رفعه في قائمة المنشئين")  
+ReplyStatus(msg,result.id_,"Reply","-› تم رفعه في قائمة المالكين")  
 else 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '-› *المعرف غير صحيح*', 1, 'md')
 end end 
 resolve_username(username,promreply)
 end
-if text and text:match('^رفع منشئ (%d+)') and ChCheck(msg) then
-local user = text:match('رفع منشئ (%d+)')
+if text and text:match('^رفع مالك (%d+)') and ChCheck(msg) then
+local user = text:match('رفع مالك (%d+)')
 if not AbsConstructor(msg) and DevAbs:get(GeSoN.."Abs:Lock:ProSet"..msg.chat_id_) then 
 Dev_Abs(msg.chat_id_, msg.id_, 1,'-› لاتستطيع رفع احد وذالك بسبب تعطيل الرفع', 1, 'md')
 return false
 end
 DevAbs:sadd(GeSoN..'Abs:Constructor:'..msg.chat_id_,user)
-ReplyStatus(msg,user,"Reply","-› تم رفعه في قائمة المنشئين")  
+ReplyStatus(msg,user,"Reply","-› تم رفعه في قائمة الماليكن")  
 end
 --     Source GeSoN     --
 --    Rem  Constructor    --
-if text ==('تنزيل منشئ') and ChCheck(msg) then
+if text ==('تنزيل مالك') and ChCheck(msg) then
 function prom_reply(extra, result, success)
 DevAbs:srem(GeSoN..'Abs:Constructor:'..msg.chat_id_,result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","-› تم تنزيله من قائمة المنشئين")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","-› تم تنزيله من قائمة المالكين")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
 end end
-if text and text:match('^تنزيل منشئ @(.*)') and ChCheck(msg) then
-local username = text:match('^تنزيل منشئ @(.*)')
+if text and text:match('^تنزيل مالك @(.*)') and ChCheck(msg) then
+local username = text:match('^تنزيل مالك @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 DevAbs:srem(GeSoN..'Abs:Constructor:'..msg.chat_id_,result.id_)
-ReplyStatus(msg,result.id_,"Reply","-› تم تنزيله من قائمة المنشئين")  
+ReplyStatus(msg,result.id_,"Reply","-› تم تنزيله من قائمة المالكين")  
 else 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '-› *المعرف غير صحيح*', 1, 'md')
 end end 
 resolve_username(username,promreply)
 end
-if text and text:match('^تنزيل منشئ (%d+)') and ChCheck(msg) then
-local user = text:match('تنزيل منشئ (%d+)')
+if text and text:match('^تنزيل مالك (%d+)') and ChCheck(msg) then
+local user = text:match('تنزيل مالك (%d+)')
 DevAbs:srem(GeSoN..'Abs:Constructor:'..msg.chat_id_,user)
-ReplyStatus(msg,user,"Reply","-› تم تنزيله من قائمة المنشئين")  
+ReplyStatus(msg,user,"Reply","-› تم تنزيله من قائمة المالكين")  
 end 
 end
 --     Source GeSoN     --
@@ -6571,9 +6571,9 @@ text = "-› *لا يوجد مالكين*"
 end
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end 
-if text == "المنشئين الاساسيين" and ChCheck(msg) or text == "منشئين اساسيين" and ChCheck(msg) or text == "المنشئين الاساسين" and ChCheck(msg) then 
+if text == "المالكين الاساسيين" and ChCheck(msg) or text == "مالكين اساسيين" and ChCheck(msg) or text == "المالكين الاساسين" and ChCheck(msg) then 
 local List = DevAbs:smembers(GeSoN..'Abs:BasicConstructor:'..msg.chat_id_)
-text = "-› قائمة المنشئين الاساسيين › ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
+text = "-› قائمة المالكين الاساسيين › ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 for k,v in pairs(List) do
 local username = DevAbs:get(GeSoN..'Save:UserName'..v)
 if username then
@@ -6582,12 +6582,12 @@ else
 text = text..k.."~ : `"..v.."`\n"
 end end
 if #List == 0 then 
-text = "-› *لا يوجد منشئين اساسيين*"
+text = "-› *لا يوجد مالكين اساسيين*"
 end
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end 
 end 
-if text ==("المنشئ") and ChCheck(msg) or text ==("المالك") and ChCheck(msg) then
+if text ==("المالك") and ChCheck(msg) or text ==("المالك") and ChCheck(msg) then
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersAdministrators"},offset_ = 0,limit_ = 100},function(arg,data) 
 local admins = data.members_
 for i=0 , #admins do
@@ -6595,7 +6595,7 @@ if data.members_[i].status_.ID == "ChatMemberStatusCreator" then
 Manager_id = admins[i].user_id_
 tdcli_function ({ID = "GetUser",user_id_ = Manager_id},function(arg,dp) 
 if dp.first_name_ == false then
-Dev_Abs(msg.chat_id_, msg.id_, 1, "-› حساب المنشئ محذوف", 1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "-› حساب المالك محذوف", 1, "md")
 return false  
 end
 local UserName = (dp.username_ or "rnnni")
