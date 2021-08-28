@@ -3567,18 +3567,6 @@ DevAbs:set(GeSoN..'Abs:NameBot', text)
 return false 
 end
 --     Source GeSoN     --
-if text == "الرابط" and ChCheck(msg) then
-if not DevAbs:get(GeSoN.."Abs:Lock:GpLinks"..msg.chat_id_) then 
-if DevAbs:get(GeSoN.."Abs:Groups:Links"..msg.chat_id_) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, "-› 𝖦𝗋𝗈𝗎𝗉 𝖫𝗂𝗇𝗄 🎖 \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"..DevAbs:get(GeSoN.."Abs:Groups:Links"..msg.chat_id_), 1, "html")
-else 
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› لايوجد رابط ارسل › ضع رابط او ارسل › انشاء رابط للانشاء', 1, 'md')
-end
-else
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› جلب رابط المجموعه معطل', 1, 'md')
-end
-end
---     Source GeSoN     --
 if text == "الرابط" then
 
 if not DevAbs:get(GeSoN.."Abs:Lock:GpLinksinline"..msg.chat_id_) then 
@@ -3589,7 +3577,7 @@ local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..TokenB
 
 if linkgpp.ok == true then 
 
-local Text = '᥀︙𝖫𝗂𝗇𝗄 𝖦𝗋𝗈𝗎𝗉 ↬ ⤈\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n['..ta.title_..']('..linkgpp.result..')'
+local Text = '᥀︙𝖫𝗂𝗇𝗄 𝖦𝗋𝗈𝗎𝗉 ↬ ⤈\nاستلم رابط قروبك\n['..ta.title_..']('..linkgpp.result..')'
 
 local inline = {{{text = ta.title_, url=linkgpp.result}},
 
