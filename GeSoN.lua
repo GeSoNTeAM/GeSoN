@@ -1026,10 +1026,10 @@ return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackq
 end
 local Help = DevAbs:get(GeSoN..'Abs:Help1')
 local Text = [[
--› اوامر حماية المجموعه › 🎖
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
--› قفل • فتح › الروابط
--› قفل • فتح › المعرفات
+⇽ اوامر حماية المجموعه › 🎖
+——————
+⇽ قفل • فتح › الروابط
+⇽ قفل • فتح › المعرفات
 -› قفل • فتح › البوتات
 -› قفل • فتح › المتحركه
 -› قفل • فتح › الملصقات
@@ -1060,17 +1060,17 @@ local Text = [[
 -› قفل • فتح › الانكليزيه
 -› قفل • فتح › الفارسيه
 -› قفل • فتح › التفليش
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
--› اوامر حمايه اخرى › ⤈
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
--› قفل • فتح + الامر › ⤈
+—————————
+-› اوامر حمايه اخرى › 
+—————————
+-› قفل • فتح + الامر › 
 -› التكرار بالطرد
 -› التكرار بالكتم
 -› التكرار بالتقيد
 -› الفارسيه بالطرد
 -› البوتات بالطرد
 -› البوتات بالتقيد
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+—————————
 -› [Source Channel](https://t.me/rnnni)
 ]]
 keyboard = {} 
@@ -1089,7 +1089,7 @@ end
 local Help = DevAbs:get(GeSoN..'Abs:Help2')
 local Text = [[
 -› اوامر الادمنيه › 🎖
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+————————
 -› الاعدادت
 -› تاك للكل 
 -› انشاء رابط
@@ -1108,25 +1108,25 @@ local Text = [[
 -› ضع • حذف › قوانين
 -› اضف • حذف › صلاحيه
 -› الصلاحيات • حذف الصلاحيات
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+—————————
 -› ضع سبام + العدد
 -› ضع تكرار + العدد
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+———————————
 -› رفع مميز • تنزيل مميز
 -› المميزين • حذف المميزين
 -› كشف القيود • رفع القيود
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+————————————
 -› حذف • مسح + بالرد
 -› منع • الغاء منع
 -› قائمه المنع
 -› حذف قائمه المنع
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+———————————————
 -› تفعيل • تعطيل › الرابط
 -› تفعيل • تعطيل › الالعاب
 -› تفعيل • تعطيل › الترحيب
 -› تفعيل • تعطيل › التاك للكل
 -› تفعيل • تعطيل › كشف الاعدادات
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+———————————————
 -› طرد المحذوفين
 -› طرد › بالرد • بالمعرف • بالايدي
 -› كتم • الغاء كتم
@@ -1135,12 +1135,12 @@ local Text = [[
 -› المكتومين • حذف المكتومين
 -› المقيدين • حذف المقيدين
 -› المحظورين • حذف المحظورين
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+——————————
 -› تقييد دقيقه + عدد الدقائق
 -› تقييد ساعه + عدد الساعات
 -› تقييد يوم + عدد الايام
 -› الغاء تقييد › لالغاء التقييد بالوقت
-┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+—————————
 -› [Source Channel](https://t.me/rnnni)
 ]]
 keyboard = {} 
@@ -1429,7 +1429,7 @@ end
 if Constructor(msg) then
 if text == "الاوامر المضافه" and ChCheck(msg) then
 local List = DevAbs:smembers(GeSoN.."List:Cmd:Group:New"..msg.chat_id_.."") 
-t = "-› قائمة الاوامر المضافه › ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
+t = "• قائمة الاوامر المضافه › ⤈ \nاهلا بك\n"
 for k,v in pairs(List) do
 Cmds = DevAbs:get(GeSoN.."Set:Cmd:Group:New1"..msg.chat_id_..":"..v)
 if Cmds then 
@@ -1439,7 +1439,7 @@ t = t..k.."~ ("..v..") \n"
 end
 end
 if #List == 0 then
-t = "-› لاتوجد اوامر مضافه في المجموعه"
+t = "• لاتوجد اوامر مضافه في المجموعه"
 end
 Dev_Abs(msg.chat_id_, msg.id_, 1, t, 1, 'html')
 end
@@ -1490,7 +1490,7 @@ DevAbs:set(GeSoN.."Set:Cmd:Group:New1"..msg.chat_id_..":غ","غنيلي")
 DevAbs:sadd(GeSoN.."List:Cmd:Group:New"..msg.chat_id_,"غ")
 DevAbs:set(GeSoN.."Set:Cmd:Group:New1"..msg.chat_id_..":#","مسح قائمه العام")
 DevAbs:sadd(GeSoN.."List:Cmd:Group:New"..msg.chat_id_,"#")
-send(msg.chat_id_, msg.id_,"-› تم ترتيب الاوامر بالشكل التالي ~\n-›  ايدي - ا .\n-›  رفع مميز - م .\n-› رفع ادمن - اد .\n-›  رفع مدير - مد . \n-›  رفع منشى - من . \n-›  رفع منشئ الاساسي - اس  .\n-›  رفع مطور - مط .\n-› رفع مطور ثانوي - ثانوي .\n-›  تنزيل الكل - تك .\n-›  تعطيل الايدي بالصوره - تعط .\n-›  تفعيل الايدي بالصوره - تفع .\n-›  الرابط - ر .\n-›  ردود المدير - رر .\n-›  مسح المكتومين - ،، .\n-›  اضف رد - رد .\n-›  مسح سحكاتي - سح .\n-›  مسح رسائلي - رس .\n-›  غنيلي - غ .\n-› مسح قائمه العام - #")  
+send(msg.chat_id_, msg.id_,"• تم ترتيب الاوامر بالشكل التالي ~\n-›  ايدي - ا .\n-›  رفع مميز - م .\n-› رفع ادمن - اد .\n-›  رفع مدير - مد . \n-›  رفع منشى - من . \n-›  رفع منشئ الاساسي - اس  .\n-›  رفع مطور - مط .\n-› رفع مطور ثانوي - ثانوي .\n-›  تنزيل الكل - تك .\n-›  تعطيل الايدي بالصوره - تعط .\n-›  تفعيل الايدي بالصوره - تفع .\n-›  الرابط - ر .\n-›  ردود المدير - رر .\n-›  مسح المكتومين - ،، .\n-›  اضف رد - رد .\n-›  مسح سحكاتي - سح .\n-›  مسح رسائلي - رس .\n-›  غنيلي - غ .\n-› مسح قائمه العام - #")  
 end
 if text == "اضف امر" and ChCheck(msg) or text == "اضافة امر" and ChCheck(msg) or text == "اضافه امر" and ChCheck(msg) then
 DevAbs:set(GeSoN.."Set:Cmd:Group"..msg.chat_id_..":"..msg.sender_user_id_,"true") 
@@ -1510,7 +1510,7 @@ if #List == 0 then
 Dev_Abs(msg.chat_id_, msg.id_, 1, "-› لاتوجد صلاحيات مضافه", 1, 'html')
 return false
 end
-t = "-› قائمة الصلاحيات المضافه › ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
+t = "• قائمة الصلاحيات المضافه › ⤈ \nاهلا بك بقائمة صلاحيات\n"
 for k,v in pairs(List) do
 var = DevAbs:get(GeSoN.."Comd:New:rt:Abs:"..v..msg.chat_id_)
 if var then
@@ -1536,12 +1536,12 @@ ComdNew = text:match("^اضف صلاحيه (.*)$")
 DevAbs:set(GeSoN.."Comd:New:rt"..msg.chat_id_..msg.sender_user_id_,ComdNew)  
 DevAbs:sadd(GeSoN.."Coomds"..msg.chat_id_,ComdNew)  
 DevAbs:setex(GeSoN.."Comd:New"..msg.chat_id_..msg.sender_user_id_,200,true)  
-Dev_Abs(msg.chat_id_, msg.id_, 1, "-› ارسل نوع الصلاحيه \n{ عضو • مميز  • ادمن  • مدير }\n-› ارسل الغاء لالغاء الامر ", 1, 'html')
+Dev_Abs(msg.chat_id_, msg.id_, 1, "• ارسل نوع الصلاحيه \n{ عضو • مميز  • ادمن  • مدير }\n• ارسل الغاء لالغاء الامر ", 1, 'html')
 end
 if text and text:match("^حذف صلاحيه (.*)$") and ChCheck(msg) or text and text:match("^مسح صلاحيه (.*)$") and ChCheck(msg) then 
 ComdNew = text:match("^حذف صلاحيه (.*)$") or text:match("^مسح صلاحيه (.*)$")
 DevAbs:del(GeSoN.."Comd:New:rt:Abs:"..ComdNew..msg.chat_id_)
-Dev_Abs(msg.chat_id_, msg.id_, 1, "-› تم حذف الصلاحيه", 1, 'html')
+Dev_Abs(msg.chat_id_, msg.id_, 1, "-› ابشر حذفت الصلاحيه", 1, 'html')
 end
 if DevAbs:get(GeSoN.."Comd:New"..msg.chat_id_..msg.sender_user_id_) then 
 if text and text:match("^› الغاء$") then 
@@ -1551,26 +1551,26 @@ return false
 end 
 if text == "مدير" then
 if not Constructor(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, "-› تستطيع اضافة صلاحية ( عضو • مميز  • ادمن )\n-› ارسال نوع الصلاحيه مره اخرى", 1, 'html')
+Dev_Abs(msg.chat_id_, msg.id_, 1, "• تستطيع اضافة صلاحية ( عضو • مميز  • ادمن )\n• ارسال نوع الصلاحيه مره اخرى", 1, 'html')
 return false
 end
 end
 if text == "ادمن" then
 if not Manager(msg) then 
-Dev_Abs(msg.chat_id_, msg.id_, 1, "-› تستطيع اضافة صلاحية ( عضو • مميز )\n-› ارسال نوع الصلاحيه مره اخرى", 1, 'html')
+Dev_Abs(msg.chat_id_, msg.id_, 1, "• تستطيع اضافة صلاحية ( عضو • مميز )\n• ارسال نوع الصلاحيه مره اخرى", 1, 'html')
 return false
 end
 end
 if text == "مميز" then
 if not Admin(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, "-› تستطيع اضافة صلاحية ( عضو )\n-› ارسال نوع الصلاحيه مره اخرى", 1, 'html')
+Dev_Abs(msg.chat_id_, msg.id_, 1, "• تستطيع اضافة صلاحية ( عضو )\n• ارسال نوع الصلاحيه مره اخرى", 1, 'html')
 return false
 end
 end
 if text == "مدير" or text == "ادمن" or text == "مميز" or text == "عضو" then
 local textn = DevAbs:get(GeSoN.."Comd:New:rt"..msg.chat_id_..msg.sender_user_id_)  
 DevAbs:set(GeSoN.."Comd:New:rt:Abs:"..textn..msg.chat_id_,text)
-Dev_Abs(msg.chat_id_, msg.id_, 1, "-› تم اضافة الصلاحيه", 1, 'html')
+Dev_Abs(msg.chat_id_, msg.id_, 1, "• ابشر ضفت الصلاحيه", 1, 'html')
 DevAbs:del(GeSoN.."Comd:New"..msg.chat_id_..msg.sender_user_id_) 
 return false  
 end 
@@ -1582,19 +1582,19 @@ function by_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 local mrAbs = DevAbs:get(GeSoN.."Comd:New:rt:Abs:"..DEV_Abs..msg.chat_id_)
 if mrAbs == "مميز" and VipMem(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› العضو › ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'rnnni')..')'..' ❩\n-› تم رفعه ❨ '..DEV_Abs..' ❩ بنجاح', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• الحلو ⇽ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'rnnni')..')'..' ❩\n• ابشر رفعته ❨ '..DEV_Abs..' ❩ بنجاح', 1, 'md')
 DevAbs:set(GeSoN.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,DEV_Abs) 
 DevAbs:sadd(GeSoN..'Abs:VipMem:'..msg.chat_id_, result.sender_user_id_)
 elseif mrAbs == "ادمن" and Admin(msg) then 
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› العضو › ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'rnnni')..')'..' ❩\n-› تم رفعه ❨ '..DEV_Abs..' ❩ بنجاح', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• الحلو ⇽ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'rnnni')..')'..' ❩\n• ابشر رفعته ❨ '..DEV_Abs..' ❩ بنجاح', 1, 'md')
 DevAbs:set(GeSoN.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,DEV_Abs)
 DevAbs:sadd(GeSoN..'Abs:Admins:'..msg.chat_id_, result.sender_user_id_)
 elseif mrAbs == "مدير" and Manager(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› العضو › ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'rnnni')..')'..' ❩\n-› تم رفعه ❨ '..DEV_Abs..' ❩ بنجاح', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• الحلو ⇽ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'rnnni')..')'..' ❩\n• ابشر رفعته ❨ '..DEV_Abs..' ❩ بنجاح', 1, 'md')
 DevAbs:set(GeSoN.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,DEV_Abs)  
 DevAbs:sadd(GeSoN..'Abs:Managers:'..msg.chat_id_, result.sender_user_id_)
 elseif mrAbs == "عضو" then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› العضو › ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'rnnni')..')'..' ❩\n-› تم رفعه ❨ '..DEV_Abs..' ❩ بنجاح', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• الحلو ⇽ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'rnnni')..')'..' ❩\n• ابشر رفعته ❨ '..DEV_Abs..' ❩ بنجاح', 1, 'md')
 end
 end,nil)   
 end   
@@ -1608,19 +1608,19 @@ function by_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 local mrAbs = DevAbs:get(GeSoN.."Comd:New:rt:Abs:"..DEV_Abs..msg.chat_id_)
 if mrAbs == "مميز" and VipMem(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› العضو › ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'rnnni')..')'..' ❩\n-› تم تنزيله ❨ '..DEV_Abs..' ❩ بنجاح', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• الحلو › ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'rnnni')..')'..' ❩\n• ابشر نزلته ❨ '..DEV_Abs..' ❩ بنجاح', 1, 'md')
 DevAbs:srem(GeSoN..'Abs:VipMem:'..msg.chat_id_, result.sender_user_id_)
 DevAbs:del(GeSoN.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif mrAbs == "ادمن" and Admin(msg) then 
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› العضو › ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'rnnni')..')'..' ❩\n-› تم تنزيله ❨ '..DEV_Abs..' ❩ بنجاح', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• الحلو ⇽ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'rnnni')..')'..' ❩\n• ابشر نزلته ❨ '..DEV_Abs..' ❩ بنجاح', 1, 'md')
 DevAbs:srem(GeSoN..'Abs:Admins:'..msg.chat_id_, result.sender_user_id_)
 DevAbs:del(GeSoN.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif mrAbs == "مدير" and Manager(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› العضو › ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'rnnni')..')'..' ❩\n-› تم تنزيله ❨ '..DEV_Abs..' ❩ بنجاح', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• الحلو ⇽ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'rnnni')..')'..' ❩\n• ابشر نزلته ❨ '..DEV_Abs..' ❩ بنجاح', 1, 'md')
 DevAbs:srem(GeSoN..'Abs:Managers:'..msg.chat_id_, result.sender_user_id_)
 DevAbs:del(GeSoN.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif mrAbs == "عضو" then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› العضو › ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'rnnni')..')'..' ❩\n-› تم تنزيله ❨ '..DEV_Abs..' ❩ بنجاح', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• الحلو ⇽ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'rnnni')..')'..' ❩\n• ابشر نزلته ❨ '..DEV_Abs..' ❩ بنجاح', 1, 'md')
 end
 end,nil)   
 end   
@@ -1634,19 +1634,19 @@ function py_username(extra, result, success)
 if result.id_ then
 local mrAbs = DevAbs:get(GeSoN.."Comd:New:rt:Abs:"..text1[2]..msg.chat_id_)
 if mrAbs == "مميز" and VipMem(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› العضو › ❨ ['..result.title_..'](t.me/'..(text1[3] or 'rnnni')..')'..' ❩\n-› تم رفعه ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• العضو ⇽ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'rnnni')..')'..' ❩\n• ابشر رفعته ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
 DevAbs:sadd(GeSoN..'Abs:VipMem:'..msg.chat_id_, result.id_)
 DevAbs:set(GeSoN.."Comd:New:rt:User:"..msg.chat_id_..result.id_,text1[2])
 elseif mrAbs == "ادمن" and Admin(msg) then 
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› العضو › ❨ ['..result.title_..'](t.me/'..(text1[3] or 'rnnni')..')'..' ❩\n-› تم رفعه ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• العضو ⇽ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'rnnni')..')'..' ❩\n• ابشر رفعته ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
 DevAbs:sadd(GeSoN..'Abs:Admins:'..msg.chat_id_, result.id_)
 DevAbs:set(GeSoN.."Comd:New:rt:User:"..msg.chat_id_..result.id_,text1[2])
 elseif mrAbs == "مدير" and Manager(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› العضو › ❨ ['..result.title_..'](t.me/'..(text1[3] or 'rnnni')..')'..' ❩\n-› تم رفعه ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• العضو ⇽ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'rnnni')..')'..' ❩\n• ابشر رفعته ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
 DevAbs:sadd(GeSoN..'Abs:Managers:'..msg.chat_id_, result.id_)
 DevAbs:set(GeSoN.."Comd:New:rt:User:"..msg.chat_id_..result.id_,text1[2])
 elseif mrAbs == "عضو" then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '-› العضو › ❨ ['..result.title_..'](t.me/'..(text1[3] or 'rnnni')..')'..' ❩\n-› تم رفعه ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '• العضو ⇽ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'rnnni')..')'..' ❩\n• ابشر رفعته ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
 end
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, "-› *المعرف غير صحيح*", 1, 'md')
